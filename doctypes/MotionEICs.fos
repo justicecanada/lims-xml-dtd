@@ -1,0 +1,196 @@
+<e-i-c gi="BillNumber" context="MotionIdentifier">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt" weight="bold">
+<quadding quad="right">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="xml:lang" attloc="Bill" attval="en">
+<charsubset>
+<usetext source="\BILL \" placemnt="before">
+<subchars>
+<font></subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Bill" attval="fr">
+<charsubset>
+<usetext source="\PROJET DE LOI\,<textbreak.fmt>,</textbreak.fmt>" placemnt="before">
+<subchars>
+<font></subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="BilingualParagraph"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<highlt fontclr="#0066FF">
+<presp nominal="12pt"></charlist>
+</e-i-c>
+<e-i-c gi="CommentBlock">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold">
+<highlt inherit="1" fontclr="brown">
+<presp nominal="12pt"></charlist>
+<att>
+<specval attname="security" attval="public">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="private">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="white" bckclr="brown">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="CommentInline"><?Pub Lcl _id="f401">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="bold">
+<highlt fontclr="brown"></charlist>
+<att>
+<specval attname="security" attval="public">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="private">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="white" bckclr="brown">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="MarginalNote" context="Definition" occur="first">
+<charlist charsubsetref="block">
+<font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0"><leading>
+<indent leftind="-1pi"><quadding quad="left"><highlt inherit="1" fontclr="green">
+<presp nominal="24pt" priority="med"><postsp nominal="6pt" priority="high"></charlist>
+<att><specval attname="generate-in-text" attloc="Definition" attval="yes"><charsubset>
+<savetext textid="definedterm.txt" conrule="#CONTENT"></charsubset></att>
+</e-i-c>
+<e-i-c gi="MarginalNote" context="Definition" occur="notfirst"><charlist charsubsetref="block"><font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0"><leading><indent leftind="-1pi"><quadding quad="left"><highlt inherit="1" fontclr="green"><postsp nominal="6pt" priority="high"></charlist></e-i-c>
+<e-i-c gi="Text" context="Definition">
+<charlist inherit="1" charsubsetref="inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="generate-in-text" attloc="Definition" attval="yes">
+<charsubset>
+<usetext source="definedterm.txt" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset><textbrk startln="1" endln="1"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<textbrk endln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Motion">
+<charlist charsubsetref="Block">
+<font style="serif" famname="Times">
+<presp nominal="12pt"></charlist>
+</e-i-c>
+<e-i-c gi="MotionAmendment"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block"></charlist>
+<!--
+<att>
+<specval attname="change" attval="off">
+<charsubset>
+<highlt inherit="1" scoring="0" bckclr="white" fontclr="black" scorespc="0">
+</charsubset>
+</att>
+<att>
+<specval attname="change" attval="ins">
+<charsubset>
+<highlt inherit="1" bckclr="gray"></charsubset>
+</att>
+<att>
+<specval attname="change" attval="del">
+<charsubset>
+<font inherit="1" posture="upright">
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-"
+scorespc="1"></charsubset>
+</att>
+<att>
+<specval attname="change" attval="alt">
+<charsubset>
+<highlt inherit="1" fontclr="orange"></charsubset>
+</att>
+-->
+</e-i-c>
+<e-i-c gi="MotionIdentifier"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font weight="bold">
+<highlt fontclr="#0066FF">
+</charlist>
+</e-i-c>
+<e-i-c gi="MotionPages"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<quadding quad="right">
+<highlt inherit="1"></charlist>
+</e-i-c><e-i-c gi="MotionParagraph"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<highlt fontclr="#0066FF">
+<presp nominal="12pt"></charlist>
+</e-i-c>
+<e-i-c gi="MotionTarget"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<quadding quad="right">
+<highlt inherit="1"></charlist>
+</e-i-c>
+<e-i-c gi="MotionText"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<highlt inherit="1" fontclr="#0066FF">
+<presp nominal="0.5em">
+<postsp minimum="1em" nominal="1em" maximum="1em" priority="force"></charlist>
+</e-i-c>
+<e-i-c gi="MovedBy"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<quadding quad="left"></charlist>
+</e-i-c>
+
+<e-i-c gi="SignatureBlock">
+<?Pub Lcl _id="f393">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="SignatureLine">
+<?Pub Lcl _id="f576">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="24pt">
+<postsp nominal="6pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="SignatureName">
+<?Pub Lcl _id="f394">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="SignatureTitle">
+<?Pub Lcl _id="f395">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;
+</e-i-c>

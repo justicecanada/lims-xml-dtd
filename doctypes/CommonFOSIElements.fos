@@ -1,0 +1,3429 @@
+<?Pub UDT Placeholder _touchup>
+<?Pub CX outspec(>
+<rsrcdesc>
+<charfill literal="-" cfid="dash" mincount="3">
+<charfill literal="." cfid="leaders" mincount="3">
+<charfill literal="_" align="1" cfid="solidrule" mincount="3">
+<counter initial="0" enumid="part.ct">
+<counter initial="0" enumid="division.ct">
+<counter initial="0" enumid="subdivision.ct">
+<counter initial="0" enumid="explanatorynote.ct">
+<counter initial="0" enumid="strip.ct">
+<stringdecl textid="sectionLabel.txt" literal="" status="0">
+<stringdecl textid="toc.app" status="1">
+<stringdecl textid="dd.txt" status="1">
+<stringdecl textid="mm.txt" status="1">
+<stringdecl textid="yyyy.txt" status="1">
+<stringdecl textid="longTitle.txt">
+</rsrcdesc>
+<pagedesc>
+<pageset id="bill">
+<rectopg>
+<pagespec>
+<topmarg>
+<botmarg>
+<leftmarg>
+<rtmarg>
+<header>
+</header>
+<footer>
+</footer>
+<flowtext numcols="1">
+<column>
+</flowtext>
+</pagespec>
+</rectopg>
+</pageset>
+</pagedesc>
+<styldesc>
+<charsubset charsubsetid="Inline">
+<textbrk startln="0" endln="0">
+</charsubset>
+<charsubset charsubsetid="Block">
+<?Pub Lcl _id="f356">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="group1-part">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="group2-division">
+<?Pub Lcl _id="f356">
+<font inherit="1" smallcap="0">
+<highlt inherit="1">
+<presp nominal="24pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="group3-subdivision">
+<?Pub Lcl _id="f356">
+<font inherit="1" size="12pt" smallcap="0">
+<quadding quad="center">
+<highlt inherit="1" allcap="0">
+<presp nominal="24pt" priority="med">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="group4">
+<?Pub Lcl _id="f356">
+<font inherit="1" posture="upright">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="group5">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="section">
+<?Pub Lcl _id="f356">
+<font inherit="1" posture="upright" smallcap="0">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="subsection">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charsubset>
+<charsubset charsubsetid="paragraph">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent inherit="0" leftind="2pi" firstln="2pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="subparagraph">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent inherit="0" leftind="3pi" firstln="3pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="clause">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent inherit="0" leftind="4pi" firstln="4pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="subclause">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="5pi" firstln="5pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="subsubclause">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="6pi" firstln="6pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="definition">
+<?Pub Lcl _id="f356">
+<indent inherit="1">
+<presp nominal="6pt">
+<postsp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="continuedsecsubsec">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="continuedparagraph">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="2pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="continuedsubparagraph">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="3pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="continuedclause">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="4pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="continuedsubclause">
+<?Pub Lcl _id="f356">
+<font inherit="1">
+<indent leftind="5pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-0">
+<?Pub Lcl _id="f356">
+<indent leftind="1em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-1">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="2em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-2">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="3em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-3">
+<?Pub Lcl _id="f356">
+<indent inherit="1" leftind="4em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-4">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="5em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-5">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="6em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-1-0">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="1em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-2-1">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="2em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-3-2">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="3em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-4-3">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="4em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-5-4">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="5em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="firstline-6-5">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="6em" firstln="*1em">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-0-1">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="2em" firstln="1em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-1-2">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="3em" firstln="2em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-2-3">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="4em" firstln="3em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-3-4">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="5em" firstln="4em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-4-5">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="6em" firstln="5em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="hanging-5-6">
+<?Pub Lcl _id="f356">
+<indent inherit="0" leftind="7em" firstln="6em">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="centered">
+<?Pub Lcl _id="f356">
+<quadding quad="center">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="right-aligned">
+<?Pub Lcl _id="f356">
+<quadding quad="right">
+<textbrk endln="1">
+</charsubset>
+<docdesc>
+<?Pub Lcl _id="f184">
+<charlist>
+<font style="serif" famname="Times" size="12pt">
+<leading lead="1.2em">
+<indent leftind="1pi">
+<quadding quad="left">
+<highlt fontclr="black">
+</charlist>
+</docdesc>
+<e-i-c gi="gray.fmt">
+<?Pub Lcl _id="f649" _comment="Used to format text in the variable for DefinedTermEn.">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="bold">
+<highlt fontclr="navy">
+</charlist>
+</e-i-c>
+<e-i-c gi="textbreak.fmt">
+<?Pub Lcl _id="f650" _comment='Used in BillNumber element to put the bill number following "Projet de loi" on a separate line.'>
+<charlist inherit="1" charsubsetref="Inline">
+<textbrk startln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="AlternateText">
+<?Pub Lcl _id="f647" _comment="Inherits format from parant except for colour which is Violet. Used for explanations of graphics or other non-printable information.">
+<charlist inherit="1" charsubsetref="Block">
+<highlt inherit="1" fontclr="violet">
+</charlist>
+</e-i-c>
+<e-i-c gi="AmendedText">
+<?Pub Lcl _id="f538">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="medium">
+<highlt inherit="1">
+<presp nominal="18pt" priority="med">
+</charlist>
+&AmendedTextAtt;<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<specval attname="xml:lang" attloc="AmendedText" attval="fr">
+<charsubset>
+<highlt inherit="1" fontclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="xml:lang" attloc="AmendedText" attval="en">
+<charsubset>
+<highlt inherit="1" fontclr="blue">
+</charsubset>
+</att>
+&AmendedTextAtt;
+</e-i-c>
+<e-i-c gi="BilingualGroup">
+<?Pub Lcl _id="f377" _comment="Inherits indent from parant so BGItem1 and BGItem2 will inherit their indents based on the parant of BilingualGroup">
+<charlist charsubsetref="Block">
+<font inherit="1" famname="sanserif" size="10pt">
+<indent inherit="1">
+<highlt inherit="1">
+<postsp nominal="12pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="BilingualGroup" context="entry">
+<?Pub Lcl _id="f377" _comment="Inherits indent from parant so BGItem1 and BGItem2 will inherit their indents based on the parant of BilingualGroup">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1">
+<highlt inherit="1">
+<postsp nominal="12pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="BilingualItemEn">
+<?Pub Lcl _id="f509" _comment="Inherits initial indent from parant then creates a hanging indent based on parant's indent as BilingualGroup can appear in many structures">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="0pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font posture="italic">
+<indent leftind="3em" firstln="2em">
+<highlt fontclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<indent leftind="2em" firstln="1em">
+</charsubset>
+</att>
+<att>
+<specval attname="font-style" attval="italic">
+<charsubset>
+<font posture="italic">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="BilingualItemFr">
+<?Pub Lcl _id="f380" _comment="Inherits initial indent from parant then creates a hanging indent based on parant's indent as BilingualGroup can appear in many structures. If BGItem2 appears after BGItem1 it does not have any Prespace. If it appears by itself then it has 12 pts of Prespace">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="0pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<indent leftind="2em" firstln="1em">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font posture="italic">
+<indent leftind="3em" firstln="2em">
+<highlt fontclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="font-style" attval="italic">
+<charsubset>
+<font posture="italic">
+</charsubset>
+</att>
+</e-i-c>
+<!-- List and Item FOSI added by Eric Bisaillon -->
+<e-i-c gi="List">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1">
+<highlt inherit="1">
+<postsp nominal="6pt" priority="high">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Item">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" firstln="@+2em" leftind="@+2em">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="4pt" priority="high">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Text" context="Item">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="0pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<indent firstln="@+1em" leftind="@">
+<highlt fontclr="red">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<indent firstln="@+1.5em" leftind="@+1.5em">
+</charsubset>
+</att>
+
+</e-i-c>
+<!-- / List and Item FOSI -->
+
+&UniqueEICs;
+<e-i-c gi="Caption">
+<?Pub Lcl _id="f399">
+<charlist charsubsetref="Block">
+<font size="10pt" weight="bold">
+<quadding quad="left" lastquad="relative">
+<highlt inherit="1">
+<presp nominal="18pt" priority="med">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Chapter">
+<?Pub Lcl _id="f373">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Clause">
+<charlist charsubsetref="clause">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Clause" context="SectionPiece">
+<?Pub Lcl _id="f643" _comment='This is used when a Clause is contained within AmendedText where the attribute "type" is set to "definition". This adds an extra indent level to the Clause.'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="4pi" firstln="4pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ContinuedClause">
+<?Pub Lcl _id="f461">
+<charlist charsubsetref="continuedclause">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="repeal">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedClause" context="SectionPiece">
+<?Pub Lcl _id="f461">
+<charlist charsubsetref="continuedclause">
+<indent inherit="1" firstln="4pi">
+<textbrk startln="1">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedDefinition">
+<?Pub Lcl _id="f434">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="1pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ContinuedFormulaParagraph">
+<?Pub Lcl _id="f441" _comment='The indent can be changed with the value of the attribute "indent-level".'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="@">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ContinuedParagraph">
+<?Pub Lcl _id="f464">
+<charlist charsubsetref="continuedparagraph">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ContinuedParagraph" context="SectionPiece">
+<?Pub Lcl _id="f464">
+<charlist charsubsetref="continuedparagraph">
+<indent inherit="1" firstln="2pi">
+<textbrk startln="1">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedSectionSubsection">
+<?Pub Lcl _id="f470">
+<charlist charsubsetref="continuedsecsubsec">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedSubclause">
+<?Pub Lcl _id="f540">
+<charlist charsubsetref="continuedsubclause">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedSubclause" context="SectionPiece">
+<?Pub Lcl _id="f540">
+<charlist charsubsetref="continuedsubclause">
+<indent inherit="1" firstln="5pi">
+<textbrk startln="1">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedSubparagraph">
+<?Pub Lcl _id="f465">
+<charlist charsubsetref="continuedsubparagraph">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ContinuedSubparagraph" context="SectionPiece">
+<?Pub Lcl _id="f465">
+<charlist charsubsetref="continuedsubparagraph">
+<indent inherit="1" firstln="3pi">
+<textbrk startln="1">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Date">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+</e-i-c>
+<!--<e-i-c gi="Date" context="AnnualStatuteID">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+</e-i-c>
+-->
+<e-i-c gi="DD">
+<?Pub Lcl _id="f372">
+<charlist charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+<suppress sup="1">
+<savetext textid="dd.txt" conrule="#CONTENT">
+</charlist>
+</e-i-c>
+<e-i-c gi="DefinedTermEn">
+<?Pub Lcl _id="f636" _comment="The contents of this element are saved in a variable and output with Use Text (quotation marks). The language attribute on the root element determines the colour of the output. This is the first DefinedTermEn in the definition so the prespace is set to 12 points.">
+<charlist inherit="0" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" weight="bold">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<charsubset>
+<font posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font weight="bold" size="10pt" posture="italic">
+<highlt inherit="1" fontclr="navy">
+<presp nominal="12pt" priority="med">
+<postsp nominal="0pt" priority="high">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font posture="italic" size="10pt">
+<highlt inherit="1" fontclr="blue">
+<presp nominal="12pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinedTermEn" context="* ExplanatoryNote">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<charsubset>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font weight="bold" posture="italic">
+<highlt fontclr="navy">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font posture="italic">
+<highlt fontclr="blue">
+<presp nominal="24pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinedTermEn" context="* Text">
+<?Pub Lcl _id="f586" _comment="This is for an inline DefinedTermEn. It does not require any special formats as in regular defined terms. Use Text generates quotation marks and colour and font style are dependant on the language attribute on the root element.">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<charsubset>
+<font famname="sanserif" weight="bold" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font size="10pt" famname="sanserif" weight="bold" posture="italic">
+<highlt fontclr="navy">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font size="10pt" famname="sanserif" posture="italic">
+<highlt fontclr="blue">
+<presp nominal="24pt" priority="med">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinedTermFr">
+<?Pub Lcl _id="f637" _comment="The contents of this element are saved in a variable and output with Use Text (quotation marks). The language attribute on the root element determines the colour of the output. This is the first DefinedTermFr in the definition so the Prespace is set to 12 points.">
+<charlist inherit="0" charsubsetref="Inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font famname="sanserif" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font famname="sanserif" weight="bold" posture="italic">
+<highlt inherit="1" fontclr="navy">
+<presp nominal="12pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font famname="sanserif" posture="italic">
+<highlt inherit="1" fontclr="blue">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinedTermFr" context="* Text">
+<?Pub Lcl _id="f586" _comment="This is for an inline DefinedTermEn. It does not require any special formats as in regular defined terms. Use Text generates quotation marks and colour and font style are dependant on the language attribute on the root element.">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<charsubset>
+<font famname="sanserif" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font famname="sanserif" size="10pt" weight="bold" posture="italic">
+<highlt fontclr="navy">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font famname="sanserif" size="10pt" posture="italic">
+<highlt fontclr="blue">
+<presp nominal="24pt" priority="med">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinedTermFr" context="* ExplanatoryNote">
+<?Pub Lcl _id="f589" _comment="DefinedTerms are not output as marginal notes in Explanatory Notes. The content of the element is saved in a variable and output before the first occurrence of Text in a Definition. Use Text creates quotation marks around the DefinedTerm. The colour, font and style of quotation marks are determined by attribute rules based on the language attribute of the root element.">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" weight="bold">
+</charlist>
+<att>
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font famname="sanserif" weight="bold" posture="italic">
+<highlt fontclr="navy">
+<presp nominal="24pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font famname="sanserif" posture="italic">
+<highlt fontclr="blue">
+<postsp nominal="6pt" priority="high">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="DefinitionRef">
+<charlist inherit="1" charsubsetref="Inline">
+<font posture="italic">
+</charlist>
+<att>
+<charsubset>
+<highlt inherit="1" fontclr="navy">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Definition">
+<?Pub Lcl _id="f429" _comment="The indent is set to -1 picas so the defined terms contained within this element will appear as marginal notes. They are inline elements set to inherit this indent from Definition, their parant element.">
+<charlist inherit="1" charsubsetref="definition">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Definition" context="* ExplanatoryNote">
+<?Pub Lcl _id="f640" _comment="When Definitions appear in Explanatory Notes they do not require their Defined Terms to appear as marginal notes so the left-indent is set to 1 picas so the Defined Terms will inherit this indent.">
+<charlist inherit="1" charsubsetref="Block">
+<indent inherit="1" leftind="1pi">
+<presp nominal="6pt" priority="med">
+</charlist>
+</e-i-c>
+<e-i-c gi="DefinitionEnOnly">
+<?Pub Lcl _id="f534">
+<charlist inherit="0" charsubsetref="Block">
+<font size="10" posture="italic" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" fontclr="blue">
+<presp nominal="0pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="DefinitionEnOnly" context="* Text">
+<?Pub Lcl _id="f534">
+<charlist inherit="0" charsubsetref="Inline">
+<font famname="sanserif" size="10" posture="italic" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" fontclr="blue">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="DefinitionFrOnly">
+<?Pub Lcl _id="f572">
+<charlist inherit="0" charsubsetref="Block">
+<font famname="sanserif" size="10pt" posture="italic" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" fontclr="navy">
+<presp nominal="0pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="DefinitionFrOnly" context="* Text">
+<?Pub Lcl _id="f534">
+<charlist inherit="0" charsubsetref="Inline">
+<font famname="sanserif" size="10" posture="italic" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" fontclr="navy">
+</charlist>
+</e-i-c>
+<e-i-c gi="Del"><?Pub Lcl _id="f409">
+<charlist inherit="1" charsubsetref="Inline">
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-"
+scorespc="1"></charlist>
+</e-i-c>
+<e-i-c gi="DocumentInternal">
+<?Pub Lcl _id="f531">
+<charlist charsubsetref="Block">
+<font>
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Emphasis">
+<?Pub Lcl _id="f492" _comment='Used for stylistic formatting based on the value of the "style" attribute. Note that "overbar" does not work.'>
+<charlist inherit="1" charsubsetref="Inline">
+<font>
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="style" attloc="Emphasis" attval="bold">
+<charsubset>
+<font weight="bold">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="italic">
+<charsubset>
+<font smallcap="0" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="overbar">
+<charsubset>
+<font>
+<highlt scoring="1" scoreoff="-1pi" scorespc="1">
+</charsubset>
+</att>
+&EmphasisAtt;
+<att>
+<specval attname="style" attloc="Emphasis" attval="smallcaps">
+<charsubset>
+<font smallcap="1">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="underline">
+<charsubset>
+<font>
+<highlt scoring="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Enacts">
+<?Pub Lcl _id="f426">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="36pt" priority="med">
+</charlist>
+</e-i-c>
+<e-i-c gi="ExistingText">
+<?Pub Lcl _id="f539">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1" size="10pt" weight="medium">
+<highlt inherit="1">
+<presp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="ExplanatoryNote">
+<?Pub Lcl _id="f623" _comment="This is a container element for all Explanatory Notes. A counter is set to 1 when this element occurs. When TitleText is found in ExplanatoryNote, if the counter is set to 1, TitleText is set in 9pt caps. TitleText increments the counter again. This is used only for the first title of all Explanatory Notes.">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt" weight="medium">
+<highlt inherit="1" fontclr="teal">
+<presp nominal="18pt" priority="med">
+<suppress sup="0">
+<enumerat increm="1" enumid="explanatorynote.ct" setvalue="0">
+</charlist>
+<att>
+<fillval attname="FOSIutils::repeatTitleText" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ExplanatoryText" context="ExplanatoryNote" occur="first">
+<?Pub Lcl _id="f497">
+<charlist inherit="1" charsubsetref="inline">
+<font size="12pt">
+<presp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="ExplanatoryText" context="ExplanatoryNote" occur="notfirst">
+<?Pub Lcl _id="f497">
+<charlist inherit="1" charsubsetref="Block">
+<font size="12pt">
+<indent inherit="1" firstln="*+1em">
+<presp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="Footnote">
+<?Pub Lcl _id="f396">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<highlt inherit="1" fontclr="green">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FootnoteRef">
+<?Pub Lcl _id="f415">
+<charlist inherit="1" charsubsetref="Inline">
+<font size="8pt" offset="6pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="FormGroup">
+<?Pub Lcl _id="f381">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="18pt" priority="med">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Formula">
+<?Pub Lcl _id="f436" _comment='The indent level for the Formula element is determined by the value of the attribute "indent-level".'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="12pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FormulaConnector">
+<?Pub Lcl _id="f437" _comment="The indent level for this element is determined by the value of the indent-level attribute.">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" leftind="@">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FormulaDefinition">
+<?Pub Lcl _id="f438" _comment="The value of the indent is determined by the value of the indent-level attribute.">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" leftind="@+1.5em" firstln="@">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToLeftIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FormulaDefinition" context="* FormulaDefinition">
+<?Pub Lcl _id="f438" _comment="The value of the indent is determined by the value of the indent-level attribute.">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" leftind="@+1.5em" firstln="@">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToLeftIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FormulaGroup">
+<?Pub Lcl _id="f435">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="@">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+</e-i-c>
+<e-i-c gi="FormulaGroup" context="* FormulaGroup">
+<?Pub Lcl _id="f435">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="^+1.5em">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;&FormulaColours;
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+</e-i-c>
+<e-i-c gi="FormulaParagraph">
+<?Pub Lcl _id="f440" _comment="The value of the indent can be changed with the value of the indent-level attribute.">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" leftind="@+1em" firstln="@+1em">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+<fillval attname="FOSIutils::appendUnitToIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="FormulaTerm">
+<?Pub Lcl _id="f439">
+<charlist inherit="1" charsubsetref="Inline">
+<indent inherit="1">
+<usetext source="@1pi" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="FormulaText">
+<?Pub Lcl _id="f1">
+<charlist inherit="1" charsubsetref="Inline">
+<indent inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Fraction">
+<?Pub Lcl _id="f417">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif">
+<highlt inherit="1" fontclr="gray5">
+</charlist>
+</e-i-c>
+<e-i-c gi="graphic">
+<?Pub Lcl _id="f508">
+<charlist>
+<quadding quad="center">
+</charlist>
+</e-i-c>
+<e-i-c gi="Group">
+<charlist>
+<highlt inherit="1">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="Group" context="Group">
+<charlist>
+<indent leftind="^+1em">
+<highlt inherit="1">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="GroupHeading">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="0">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="format-ref" attval="group1-part">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="18pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group2-division">
+<charsubset>
+<font smallcap="0">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="18pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group3-subdivision">
+<charsubset charsubsetref="group3-subdivision">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="18pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group4">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="18pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group5">
+<charsubset charsubsetref="group5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-0">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-1">
+<charsubset charsubsetref="flush-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-2">
+<charsubset charsubsetref="flush-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-3">
+<charsubset charsubsetref="flush-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-4">
+<charsubset charsubsetref="flush-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-5">
+<charsubset charsubsetref="flush-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-0">
+<charsubset charsubsetref="firstline-1-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-1">
+<charsubset charsubsetref="firstline-2-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-2">
+<charsubset charsubsetref="firstline-3-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-3">
+<charsubset charsubsetref="firstline-4-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-4">
+<charsubset charsubsetref="firstline-5-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-6-5">
+<charsubset charsubsetref="firstline-6-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-1">
+<charsubset charsubsetref="hanging-0-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-2">
+<charsubset charsubsetref="hanging-1-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-3">
+<charsubset charsubsetref="hanging-2-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-4">
+<charsubset charsubsetref="hanging-3-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-5">
+<charsubset charsubsetref="hanging-4-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-6">
+<charsubset charsubsetref="hanging-5-6">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="right-align">
+<charsubset charsubsetref="right-aligned">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-hang-on-label">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<charsubset charsubsetref="Block">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Heading" context="TableOfProvisions">
+<?Pub Lcl _id="f472">
+<charlist charsubsetref="Block">
+<font famname="sanserif" inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<postsp nominal="12pt" priority="high">
+</charlist>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<!--
+	The following att group is included for ease of use, but
+	it is commented out because we do not actually modify level
+	1 or level 4 headings (they are both full size regular text)
+-->
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="1">
+<charsubset>
+<font size="14pt" >
+<quadding quad="left">
+<highlt fontclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="2">
+<charsubset>
+<font size="13pt">
+<!--font smallcap="0"-->
+<quadding quad="left">
+<highlt fontclr="blue">
+<usetext source="@4em">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="3">
+<charsubset>
+<font size="12pt">
+<!--font posture="normal"-->
+<quadding quad="left">
+<highlt fontclr="blue">
+<usetext source="@4em">
+</usetext>
+</charsubset>
+</att>
+<!--
+	The following att group is included for ease of use, but
+	it is commented out because we do not actually modify level
+	1 or level 4 headings (they are both full size regular text)-->
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="4">
+<charsubset>
+<font size="10pt">
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="5">
+<charsubset>
+<font size="9.5pt">
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#ANY">
+<charsubset>
+<usetext source="\Manual style specified on the Heading above\" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Heading">
+<?Pub Lcl _id="f472">
+<charlist charsubsetref="Block">
+<font famname="sanserif" inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<postsp nominal="18pt" priority="high">
+</charlist>
+<att>
+<specval attname="type" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<!--
+	The following att group is included for ease of use, but
+	it is commented out because we do not actually modify level
+	1 or level 4 headings (they are both full size regular text)
+-->
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="1">
+<charsubset>
+<font famname="sanserif" size="18pt">
+<quadding quad="left">
+<highlt inherit="1" fontclr="navy">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="2">
+<charsubset>
+<font famname="sanserif" size="16pt">
+<!--font smallcap="0"-->
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="3">
+<charsubset>
+<font style="Arial" size="14pt">
+<!--font posture="normal"-->
+<quadding quad="left">
+</charsubset>
+</att>
+<!--
+	The following att group is included for ease of use, but
+	it is commented out because we do not actually modify level
+	1 or level 4 headings (they are both full size regular text)-->
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="4">
+<charsubset>
+<font famname="sanserif" size="13pt">
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#NONE">
+<specval attname="level" attval="5">
+<charsubset>
+<font famname="sanserif" size="12pt">
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attval="#ANY">
+<charsubset>
+<usetext source="\Manual style specified on the Heading above\" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Identification">
+<?Pub Lcl _id="f351">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<postsp nominal="36pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="Image">
+<?Pub Lcl _id="f398">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+</e-i-c>
+<e-i-c gi="InLineHeading">
+<?Pub Lcl _id="f528">
+<charlist inherit="1" charsubsetref="Inline">
+<textbrk endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Ins">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::underlineIns" attloc="system-func" attval="0">
+<charsubset>
+<highlt inherit="1" bckclr="gray">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::underlineIns" attloc="system-func" attval="1">
+<charsubset>
+<highlt inherit="1" scoring="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Introduction">
+<?Pub Lcl _id="f422">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Label">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1"  weight="bold" famname="sanserif">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Paragraph">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1" size="10pt" famname="sanserif" weight="bold">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Item">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" inherit="1">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Subparagraph">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" inherit="1"  weight="bold">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Clause">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" inherit="1"  weight="bold">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Subclause">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" inherit="1"  weight="bold">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="ExplanatoryNote">
+<?Pub Lcl _id="f560" _comment='The Label in an ExplanatoryNote is the "Clause xx" or "Article xx" which precedes ExplanatoryText.'>
+<charlist inherit="1" charsubsetref="Inline">
+<font size="12pt">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Footnote">
+<?Pub Lcl _id="f578" _comment="The Label for a Footnote is the Footnote reference used in the text of the Footnote.">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="8pt" offset="6pt"  weight="bold">
+<usetext source="3pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="FormSecPara">
+<?Pub Lcl _id="f648" _comment="This is the numbered paragraphs in a Form.">
+<charlist inherit="1" charsubsetref="Inline">
+<usetext source="1pi" placemnt="before">
+</usetext>
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="FormulaParagraph">
+<charlist inherit="1" charsubsetref="Inline">
+<!--
+<usetext source="1pi" placemnt="before">
+</usetext>
+-->
+<font famname="sanserif" size="10pt" inherit="1" weight="bold">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Heading">
+<?Pub Lcl _id="f402">
+<charlist inherit="1">
+<font famname="sanserif" size="10pt" weight="bold">
+<quadding quad="left">
+<highlt inherit="1">
+<presp minimum="18pt" nominal="18pt" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="ScheduleFormHeading">
+<?Pub Lcl _id="f402">
+<charlist inherit="1">
+<font famname="sanserif" size="18pt">
+<indent inherit="1">
+<presp minimum="12pt" nominal="12pt" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="ScheduleFormHeading">
+<?Pub Lcl _id="f402">
+<charlist inherit="1">
+<font famname="sanserif" size="10pt" weight="bold">
+<quadding quad="left">
+<highlt inherit="1">
+<presp minimum="5pt" nominal="5pt" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="OriginatingRef" context="ScheduleFormHeading">
+<?Pub Lcl _id="f402">
+<charlist inherit="1">
+<font famname="sanserif" size="9pt" weight="bold">
+<indent inherit="1">
+<presp minimum="6pt" nominal="6pt" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Provision">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="10pt" inherit="1" weight="bold">
+<indent inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+<att>
+<specval attname="FOSIutils::setFirstLineIndent" attloc="system-func" attval="1">
+<charsubset>
+<textbrk startln="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Label" context="SchFormHeading">
+<?Pub Lcl _id="f574">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="36pt" priority="med">
+<postsp nominal="12pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="Section" occur="notfirst">
+<?Pub Lcl _id="f565" _comment="This would apply to paragraphs and below in the structure. Subsection has its  own declarations.">
+<charlist inherit="1" charsubsetref="Inline">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<presp minimum="18pt" nominal="18pt" priority="force">
+<textbrk startln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Label" context="Section" occur="first">
+<?Pub Lcl _id="f468" _comment="Used for the bold, numbered section label.">
+<charlist inherit="1" charsubsetref="Inline">
+<font size="11pt" famname="sanserif" weight="bold">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<presp minimum="18pt" nominal="18pt" priority="high">
+<textbrk startln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Label" context="Subsection">
+<?Pub Lcl _id="f469" _comment='If the attribute "type" is set to amending or transitional the label is set bold. If the value of the attribute "display" is "inline", no space is set before it as it follows a section label. If the "display" attribute is not set then space is set before and after the label.'>
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" inherit="1" size="11pt" weight="bold">
+<highlt inherit="1">
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+<att>
+<specval attname="type" attloc="Subsection" attval="amending">
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::childOfAFirstSubsection" attloc="SYSTEM-FUNC" attval="0">
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<presp minimum="18pt" nominal="18pt">
+<textbrk startln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Label" context="TableOfProvisions">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="9pt">
+<indent inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Language">
+<?Pub Lcl _id="f420">
+<charlist inherit="1" charsubsetref="Inline">
+<font>
+</charlist>
+<att>
+<specval attname="xml:lang" attloc="Language" attval="la">
+<charsubset>
+<font posture="italic">
+<highlt fontclr="olive">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<specval attname="xml:lang" attloc="Language" attval="fr">
+<charsubset>
+<highlt fontclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="xml:lang" attloc="Language" attval="en">
+<charsubset>
+<highlt fontclr="blue">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="LeaderRightJustified">
+<?Pub Lcl _id="f421">
+<charlist inherit="1" charsubsetref="Inline">
+<quadding lastquad="ljustify">
+</charlist>
+<att>
+<specval attname="leader" attloc="LeaderRightJustified" attval="dash">
+<charsubset>
+<usetext source="dash" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="leader" attloc="LeaderRightJustified" attval="dot">
+<charsubset>
+<usetext source="leaders" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="leader" attloc="LeaderRightJustified" attval="solid">
+<charsubset>
+<usetext source="solidrule" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="LongTitle">
+<?Pub Lcl _id="f364">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="5pi" firstln="*-4pi">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt">
+<savetext textid="longtitle.txt" conrule="#CONTENT">
+</charlist>
+</e-i-c>
+<e-i-c gi="MarginalNote">
+<?Pub Lcl _id="f489">
+<charlist charsubsetref="Block">
+<font inherit="1" famname="sanserif" size="11pt" posture="upright" weight="bold" smallcap="0" >
+<leading>
+<quadding quad="left">
+<highlt inherit="1" fontclr="green">
+<presp nominal="18pt" priority="high">
+<postsp nominal="6pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::includeInToP" attloc="system-func" attval="1">
+<charsubset>
+<savetext textid="sectionLabel.txt" conrule="#CONTENT">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Member">
+<?Pub Lcl _id="f368">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="bold">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="MM">
+<?Pub Lcl _id="f371">
+<charlist inherit="1" charsubsetref="Inline">
+<suppress sup="1">
+<savetext textid="mm.txt" conrule="#CONTENT">
+<usetext source="\ \" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Monarch">
+<?Pub Lcl _id="f363">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+<usetext source="\, \" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="Note">
+<?Pub Lcl _id="f495">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<leading lead="2pt">
+<highlt inherit="1">
+<usetext source="1pi" placemnt="before">
+</usetext>
+<usetext source="6pt" placemnt="after">
+</usetext>
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Number">
+<?Pub Lcl _id="f358">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendOrdinal" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="after">
+<subchars>
+<font size="8pt" offset="6pt">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\ Parliament\" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\ législature\" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="OriginatingRef">
+<?Pub Lcl _id="f452">
+<charlist charsubsetref="Block">
+<font famname="sanserif" size="9pt" weight="bold">
+<indent inherit="1">
+<presp minimum="6pt" nominal="6pt" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="HistoricalNote">
+<?Pub Lcl _id="f452">
+<charlist charsubsetref="Block">
+<font famname="sanserif" size="8pt">
+<quadding quad="left" lastquad="relative">
+<highlt fontclr="olive">
+<presp nominal="6pt" priority="high">
+<postsp nominal="6pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="Paragraph">
+<?Pub Lcl _id="f462">
+<charlist charsubsetref="paragraph">
+</charlist>
+<att>
+<specval attname="type" attloc="Paragraph" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Paragraph" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Paragraph" context="* AmendedText">
+<?Pub Lcl _id="f641" _comment='This is used when a Paragraph is contained within AmendedText where the attribute "type" is set to "definition". This adds an extra indent level to the Paragraph.'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="0" leftind="2pi" firstln="2pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<specval attname="type" attloc="Paragraph" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Paragraph" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Parliament" context="*">
+<?Pub Lcl _id="f353">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<postsp nominal="24pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentOrigin" attloc="system-func" attval="commons">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="<parliament.fmt>
+,\HOUSE OF COMMONS OF CANADA\,</parliament.fmt>
+" placemnt="after"><subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentOrigin" attloc="system-func" attval="senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="<parliament.fmt>
+,\SENATE OF CANADA\,</parliament.fmt>
+" placemnt="after"><subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentOrigin" attloc="system-func" attval="commons">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="<parliament.fmt>
+,\CHAMBRE DES COMMUNES DU CANADA\,</parliament.fmt>
+" placemnt="after"><subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentOrigin" attloc="system-func" attval="senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="<parliament.fmt>
+,\S&#x00E9;NAT DU CANADA\,</parliament.fmt>
+" placemnt="after"><subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="parliament.fmt">
+<?Pub Lcl _id="f630">
+<charlist charsubsetref="Block">
+<font inherit="1" size="14pt" weight="bold">
+<quadding quad="center">
+<highlt inherit="1" allcap="1">
+<presp nominal="30pt" priority="force">
+<postsp nominal="30pt" priority="force">
+</charlist>
+</e-i-c>
+<e-i-c gi="Portfolio">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1" smallcap="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Provision">
+<charlist>
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+<textbrk startln="1">
+</charlist>
+<att>
+<specval attname="format-ref" attval="group1-part">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group2-division">
+<charsubset>
+<font smallcap="0">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group3-subdivision">
+<charsubset charsubsetref="group3-subdivision">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group4">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group5">
+<charsubset charsubsetref="group5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-0">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-1">
+<charsubset charsubsetref="flush-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-2">
+<charsubset charsubsetref="flush-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-3">
+<charsubset charsubsetref="flush-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-4">
+<charsubset charsubsetref="flush-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-5">
+<charsubset charsubsetref="flush-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-0">
+<charsubset charsubsetref="firstline-1-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-1">
+<charsubset charsubsetref="firstline-2-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-2">
+<charsubset charsubsetref="firstline-3-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-3">
+<charsubset charsubsetref="firstline-4-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-4">
+<charsubset charsubsetref="firstline-5-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-6-5">
+<charsubset charsubsetref="firstline-6-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-1">
+<charsubset charsubsetref="hanging-0-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-2">
+<charsubset charsubsetref="hanging-1-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-3">
+<charsubset charsubsetref="hanging-2-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-4">
+<charsubset charsubsetref="hanging-3-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-5">
+<charsubset charsubsetref="hanging-4-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-6">
+<charsubset charsubsetref="hanging-5-6">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="right-align">
+<charsubset charsubsetref="right-aligned">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-hang-on-label">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<charsubset>
+<indent leftind="0em" firstln="0em">
+<presp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Unknown format-ref value\">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Attribut format-réf inconnu\">
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+<att>
+<fillval attname="FOSIutils::appendUnitToFirstLineIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="FOSIutils::appendUnitToSubsequentIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="justification" fillcat="quadding" fillchar="quad">
+</att>
+<att>
+<fillval attname="pointsize" fillcat="font" fillchar="size">
+</att>
+<att>
+<fillval attname="topmarginspacing" fillcat="presp" fillchar="nominal">
+<charsubset>
+<presp priority="high">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Provision" context="Provision">
+<charlist>
+<font inherit="1">
+<indent leftind="^+1em">
+<highlt inherit="1">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToFirstLineIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="FOSIutils::appendUnitToSubsequentIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="justification" fillcat="quadding" fillchar="quad">
+</att>
+<att>
+<fillval attname="pointsize" fillcat="font" fillchar="size">
+</att>
+<att>
+<fillval attname="topmarginspacing" fillcat="presp" fillchar="nominal">
+<charsubset>
+<presp priority="high">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group1-part">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group2-division">
+<charsubset>
+<font smallcap="0">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group3-subdivision">
+<charsubset charsubsetref="group3-subdivision">
+<font posture="normal">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group4">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group5">
+<charsubset charsubsetref="group5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-0">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-1">
+<charsubset charsubsetref="flush-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-2">
+<charsubset charsubsetref="flush-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-3">
+<charsubset charsubsetref="flush-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-4">
+<charsubset charsubsetref="flush-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-5">
+<charsubset charsubsetref="flush-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-0">
+<charsubset charsubsetref="firstline-1-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-1">
+<charsubset charsubsetref="firstline-2-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-2">
+<charsubset charsubsetref="firstline-3-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-3">
+<charsubset charsubsetref="firstline-4-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-4">
+<charsubset charsubsetref="firstline-5-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-6-5">
+<charsubset charsubsetref="firstline-6-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-1">
+<charsubset charsubsetref="hanging-0-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-2">
+<charsubset charsubsetref="hanging-1-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-3">
+<charsubset charsubsetref="hanging-2-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-4">
+<charsubset charsubsetref="hanging-3-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-5">
+<charsubset charsubsetref="hanging-4-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-6">
+<charsubset charsubsetref="hanging-5-6">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-hang-on-label">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="right-align">
+<charsubset charsubsetref="right-aligned">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<specval attname="FOSIutils::asSubsection" attloc="system-func" attval="0">
+<charsubset>
+<indent leftind="@+1em">
+<presp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<specval attname="FOSIutils::asSubsection" attloc="system-func" attval="1">
+<charsubset>
+<indent leftind="@" firstln="^">
+<presp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Unknown format-ref value\">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Attribut format-réf inconnu\">
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+
+<e-i-c gi="Provision" context="Provision" occur="first">
+<charlist>
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+<textbrk startln="1">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendUnitToFirstLineIndent" attloc="system-func" fillcat="indent" fillchar="firstln" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="FOSIutils::appendUnitToSubsequentIndent" attloc="system-func" fillcat="indent" fillchar="leftind" conrule="source">
+</att>
+<att logic="and">
+<fillval attname="justification" fillcat="quadding" fillchar="quad">
+</att>
+<att>
+<fillval attname="pointsize" fillcat="font" fillchar="size">
+</att>
+<att>
+<fillval attname="topmarginspacing" fillcat="presp" fillchar="nominal">
+<charsubset>
+<presp priority="high">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group1-part">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group2-division">
+<charsubset>
+<font smallcap="0">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group3-subdivision">
+<charsubset charsubsetref="group3-subdivision">
+<font posture="normal">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group4">
+<charsubset>
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="group5">
+<charsubset charsubsetref="group5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-0">
+<charsubset charsubsetref="Inline">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-0">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-1">
+<charsubset charsubsetref="flush-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-2">
+<charsubset charsubsetref="flush-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-3">
+<charsubset charsubsetref="flush-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-4">
+<charsubset charsubsetref="flush-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-5">
+<charsubset charsubsetref="flush-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-1">
+<charsubset charsubsetref="firstline-2-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-2">
+<charsubset charsubsetref="firstline-3-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-3">
+<charsubset charsubsetref="firstline-4-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-4">
+<charsubset charsubsetref="firstline-5-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-6-5">
+<charsubset charsubsetref="firstline-6-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-0-1">
+<charsubset charsubsetref="hanging-0-1">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-1-2">
+<charsubset charsubsetref="hanging-1-2">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-2-3">
+<charsubset charsubsetref="hanging-2-3">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-3-4">
+<charsubset charsubsetref="hanging-3-4">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-4-5">
+<charsubset charsubsetref="hanging-4-5">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-5-6">
+<charsubset charsubsetref="hanging-5-6">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="indent-hang-on-label">
+<charsubset charsubsetref="flush-0">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="right-align">
+<charsubset charsubsetref="right-aligned">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<specval attname="FOSIutils::asSubsection" attloc="system-func" attval="0">
+<charsubset>
+<indent leftind="@+1em">
+<presp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="#NONE">
+<specval attname="FOSIutils::asSubsection" attloc="system-func" attval="1">
+<charsubset>
+<indent leftind="@" firstln="^">
+<presp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Unknown format-ref value\">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::validFormatRef" attloc="system-func" attval="0">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<indent leftind="0" firstln="0">
+<presp nominal="12pt">
+<usetext source="\Attribut format-réf inconnu\">
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+
+<e-i-c gi="Provision" context="Footer">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold" size="10pt">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Provision" context="Header">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold" size="10pt">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+</e-i-c>
+
+<e-i-c gi="ProvisionHeading">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1" famname="sanserif" size="12pt" weight="Bold">
+<textbrk endln="1">
+</charlist>
+<att>
+<specval attname="format-ref" attval="centered">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+<presp nominal="12pt">
+<postsp nominal="12pt">
+</charsubset>
+</att>
+<att>
+<specval attname="format-ref" attval="right-align">
+<charsubset charsubsetref="right-aligned">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ReaderNote">
+<?Pub Lcl _id="f375">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Recommendation">
+<?Pub Lcl _id="f423">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<highlt inherit="1" fontclr="teal">
+</charlist>
+</e-i-c>
+<e-i-c gi="RegnalYear">
+<?Pub Lcl _id="f362">
+<charlist>
+<font inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+<textbrk startln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Schedule">
+<?Pub Lcl _id="f447">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="ScheduleFormHeading">
+<?Pub Lcl _id="f448">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="ScheduleFormHeading" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Section">
+<charlist charsubsetref="section">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="repeal">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Section" context="* AmendedText">
+<charlist charsubsetref="section">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="repeal">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="SectionPiece">
+<?Pub Lcl _id="f499">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1" weight="medium">
+</charlist>
+</e-i-c>
+<e-i-c gi="Session">
+<?Pub Lcl _id="f357">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<fillval attname="FOSIutils::appendOrdinal" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="after">
+<subchars>
+<font size="8pt" offset="6pt">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="6pt,\Session, \" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="6pt,\session, \" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ShortTitle">
+<?Pub Lcl _id="f365">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="bold">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<savetext textid="shorttitle.txt" conrule="#CONTENT">
+</charlist>
+</e-i-c>
+<e-i-c gi="SourceCitation">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="bold">
+<presp nominal="24pt" priority="med">
+<usetext source="\&#x2014;\,2pi" placemnt="before">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="StageText">
+<?Pub Lcl _id="f494">
+<charlist charsubsetref="Inline Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="StatuteYear">
+<?Pub Lcl _id="f374">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Sub">
+<?Pub Lcl _id="f413">
+<charlist inherit="1" charsubsetref="Inline">
+<font size="8pt" offset="-3pt">
+<highlt>
+</charlist>
+</e-i-c>
+<e-i-c gi="Subclause">
+<?Pub Lcl _id="f458">
+<charlist charsubsetref="subclause">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subclause" context="SectionPiece">
+<?Pub Lcl _id="f645" _comment='This is used when a Subclause is contained within AmendedText where the attribute "type" is set to "definition". This adds an extra indent level to the Subclause.'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="5pi" firstln="5pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subparagraph">
+<?Pub Lcl _id="f463">
+<charlist charsubsetref="subparagraph">
+</charlist>
+<att>
+<specval attname="type" attloc="Subparagraph" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Subparagraph" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subparagraph" context="SectionPiece">
+<?Pub Lcl _id="f642" _comment='This is used when a Subparagraph is contained within AmendedText where the attribute "type" is set to "definition". This adds an extra indent level to the Subparagraph.'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="3pi" firstln="3pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+<att>
+<specval attname="type" attloc="Subparagraph" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Subparagraph" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsection" context="Section" occur="first">
+<charlist charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="type" attloc="Subsection" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt inherit="1">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt inherit="1">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsection" context="Section" occur="notfirst">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="type" attloc="Subsection" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt inherit="1">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt inherit="1">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsection">
+<?Pub Lcl _id="f467">
+<charlist charsubsetref="subsection">
+<indent leftind="1pi" firstln="1pi">
+</charlist>
+<att>
+<specval attname="type" attloc="Subsection" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsection" context="* AmendedText">
+<charlist charsubsetref="subsection">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="Subsection" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att logic="or">
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsection" context="* AmendedText" occur="first">
+<charlist charsubsetref="subsection">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="Subsection" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att logic="or">
+<specval attname="type" attloc="Subsection" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="#8403fc">
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsubclause">
+<?Pub Lcl _id="f453">
+<charlist charsubsetref="subsubclause">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Subsubclause" context="SectionPiece">
+<?Pub Lcl _id="f644" _comment='This is used when a SubSubclause is contained within AmendedText where the attribute "type" is set to "definition". This adds an extra indent level to the Subsubclause.'>
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="6pi" firstln="6pi">
+<highlt inherit="1">
+<presp nominal="6pt">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Summary">
+<?Pub Lcl _id="f424">
+<charlist charsubsetref="Block">
+<font inherit="1" size="12pt">
+<highlt inherit="1" fontclr="teal">
+</charlist>
+</e-i-c>
+<e-i-c gi="Sup">
+<?Pub Lcl _id="f414">
+<charlist inherit="1" charsubsetref="Inline">
+<font smallcap="0" size="8pt" offset="6pt">
+<indent inherit="0" leftind="0" rightind="0" firstln="0">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="table">
+<?Pub Lcl _id="f386">
+<charlist charsubsetref="Block">
+<font inherit="1" famname="sanserif">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="TableGroup">
+<?Pub Lcl _id="f507">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="medium">
+<highlt inherit="1">
+</charlist>
+<att>
+<fillval attname="pointsize" fillcat="font" fillchar="size">
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Text">
+<?Pub Lcl _id="f403">
+<charlist inherit="1" charsubsetref="Inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<textbrk startln="1" endln="1">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<textbrk endln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Text" context="TableOfProvisions">
+<charlist>
+<font size="9pt">
+<textbrk endln="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::hasLabelSibling" attloc="system-func" attval="1">
+<charsubset>
+<usetext source="@4em">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Text" context="Definition * ExplanatoryNote">
+<?Pub Lcl _id="f590">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+</e-i-c>
+<e-i-c gi="Title" context="Heading">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="18pt">
+<postsp nominal="12pt">
+</charlist>
+</e-i-c>
+<e-i-c gi="Title" context="Schedule">
+<?Pub Lcl _id="f451">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="18pt">
+<usetext source="\Clause \" placemnt="before">
+</usetext>
+<usetext source="1pi,\- -\,1pi" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="title">
+<?Pub Lcl _id="f546">
+<charlist charsubsetref="Block">
+<font size="17pt">
+<indent inherit="0">
+<quadding inherit="1">
+<highlt inherit="1">
+<presp nominal="12" priority="med">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="TitleText">
+<?Pub Lcl _id="f546">
+<charlist charsubsetref="Block">
+<font inherit="1" famname="sanserif">
+<indent inherit="0">
+<quadding inherit="1">
+<highlt inherit="1">
+<presp nominal="18" priority="med">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="TitleText" context="GroupHeading">
+<charlist inherit="1">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Label" context="GroupHeading">
+<charlist inherit="1">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="TitleText" context="ExplanatoryNote">
+<?Pub Lcl _id="f621" _comment="The ExplanatoryNote counter is checked. If the value is 1, the TitleText element is set in 9pt caps. The counter is then incremented. This is used only for the first title of all Explanatory Notes.">
+<charlist charsubsetref="Block">
+<font inherit="1" size="17pt">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<postsp nominal="12pt" priority="high">
+</charlist>
+<att>
+<specval attname="explanatorynote.ct" attloc="#FOSI" attval="1">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\NOTES EXPLICATIVES\">
+<subchars>
+<font size="10pt" weight="bold" posture="upright">
+<quadding quad="left">
+<highlt inherit="1" allcap="1">
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="explanatorynote.ct" attloc="#FOSI" attval="1">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<enumerat increm="1" enumid="explanatorynote.ct" setvalue="0">
+<usetext source="\EXPLANATORY NOTES\">
+<subchars>
+<font size="10pt" weight="bold" posture="upright">
+<quadding quad="left">
+<highlt inherit="1" allcap="1">
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="TitleText" context="Recommendation">
+<?Pub Lcl _id="f627">
+<charlist inherit="1" charsubsetref="Block">
+<font famname="sanserif" inherit="1" size="10pt" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" allcap="1">
+<presp nominal="18pt" priority="med">
+<postsp nominal="12pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="TitleText" context="Summary" occur="first">
+<?Pub Lcl _id="f593">
+<charlist inherit="1" charsubsetref="Block">
+<font famname="sanserif" inherit="1" size="10pt" weight="bold">
+<quadding quad="left">
+<highlt inherit="1" allcap="1">
+<presp nominal="18pt" priority="med">
+<postsp nominal="12pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="TitleText" context="BilingualGroup" occur="first">
+<?Pub Lcl _id="f593">
+<charlist inherit="1" charsubsetref="Block">
+<font famname="sanserif" inherit="1" size="10pt" weight="bold">
+<quadding quad="left">
+<presp nominal="12pt" priority="med">
+<postsp nominal="10pt" priority="high">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="XRefExternal">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::italicizeXRefExternal" attloc="system-func" attval="1">
+<charsubset>
+<font posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="act">
+<charsubset>
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="other">
+<charsubset>
+<highlt fontclr="#FF00AA">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="regulation">
+<charsubset>
+<highlt fontclr="green">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="standard">
+<charsubset>
+<highlt fontclr="#ff6666">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="number">
+<charsubset>
+<font posture="upright">
+<highlt fontclr="#FF1493">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="XRefInternal">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1" weight="bold">
+</charlist>
+<att><specval attname="FOSIutils::underlineIns" attloc="system-func" attval="0">
+<charsubset><highlt inherit="1" bckclr="blue">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-style" attval="red">
+<charsubset>
+<highlt fontclr="red">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Year-s">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+<usetext source="\ \" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<e-i-c gi="YYYY">
+<charlist inherit="1" charsubsetref="Inline">
+<suppress sup="1">
+<savetext textid="yyyy.txt" conrule="#CONTENT">
+<usetext source="\ \" placemnt="after">
+</usetext>
+</charlist>
+</e-i-c>
+<!--The following e-i-c's are  for the  TableOfProvisions pseudo-elements-->
+<e-i-c gi="toc.fmt">
+<charlist inherit="1">
+<quadding quad="left">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="tocHeading1.fmt">
+<charlist inherit="1">
+<quadding quad="left">
+<presp minimum="4pi" condit="keep" priority="force">
+<postsp minimum="4pi" condit="keep" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="tocTitleText1.fmt">
+<charlist inherit="1">
+<font size="75%">
+<quadding quad="left">
+<presp minimum="14pi" condit="keep" priority="force">
+<postsp minimum="14pi" condit="keep" priority="force">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="entry">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="rowheader" attval="yes">
+<charsubset>
+<highlt fontclr="green">
+</charsubset>
+</att>
+</e-i-c>
+</styldesc>
+<?Pub *0000083781>

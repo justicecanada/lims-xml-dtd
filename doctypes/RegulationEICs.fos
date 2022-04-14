@@ -1,0 +1,505 @@
+<e-i-c gi="Regulation">
+<charlist charsubsetref="Block">
+<font style="serif" famname="Times">
+<presp nominal="12pt"></charlist>
+</e-i-c>
+<e-i-c gi="ImageGroup">
+<?Pub Lcl _id="f397">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+</charlist>
+&ChangeAtt;
+<att>
+<specval attname="position" attval="center">
+<charsubset>
+<quadding quad="center">
+</charsubset>
+</att>
+<att>
+<specval attname="position" attval="left">
+<charsubset>
+<quadding quad="left">
+</charsubset>
+</att>
+<att>
+<specval attname="position" attval="right">
+<charsubset>
+<quadding quad="right">
+</charsubset>
+</att>
+<att>
+<specval attname="position" attval="inline">
+<charsubset charsubsetref="Inline">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="LineBreak">
+<charlist>
+<indent inherit="1">
+<highlt inherit="1">
+<textbrk endln="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="HistoricalNoteSubItem"><?Pub Lcl _id="f362">
+<charlist charsubsetref="inline">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Oath">
+<?Pub Lcl _id="f527">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<indent leftind="1pi" firstln="2pi">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Reserved">
+<charlist charsubsetref="Block">
+<indent inherit="1" leftind="1em" firstln="*1em">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<textbrk startln="2" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="SignatureBlock">
+<?Pub Lcl _id="f393">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="justification" attval="center">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="right">
+<charsubset>
+<quadding quad="right">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="justify">
+<charsubset>
+<quadding quad="justify">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="SignatureLine">
+<?Pub Lcl _id="f576">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="24pt">
+<postsp nominal="6pt" priority="high">
+</charlist>
+<att>
+<specval attname="justification" attval="center">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="right">
+<charsubset>
+<quadding quad="right">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="justify">
+<charsubset>
+<quadding quad="justify">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="SignatureName">
+<?Pub Lcl _id="f394">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="justification" attval="center">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="right">
+<charsubset>
+<quadding quad="right">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="justify">
+<charsubset>
+<quadding quad="justify">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="SignatureTitle">
+<?Pub Lcl _id="f395">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="justification" attval="center">
+<charsubset charsubsetref="centered">
+<quadding quad="center">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="right">
+<charsubset>
+<quadding quad="right">
+</charsubset>
+</att>
+<att>
+<specval attname="justification" attval="justify">
+<charsubset>
+<quadding quad="justify">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Body">
+<charlist charsubsetref="Block">
+<postsp nominal="2em">
+</charlist>
+<att>
+<fillval attname="FOSIutils::getLongTitle" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="before">
+<subchars>
+<quadding quad="center">
+<postsp minimum="12pt" nominal="12pt" maximum="20pt" priority="high">
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Recommendation" context="Regulation">
+<charlist>
+<quadding quad="center">
+<textbrk startpg="next">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Recommandation ministérielle\">
+<subchars>
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Ministerial Recommendation\">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Notice">
+<charlist>
+<quadding quad="center">
+<textbrk startpg="next">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Avis\">
+<subchars>
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Notice\">
+<subchars>
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Order">
+<charlist>
+<quadding quad="center">
+<textbrk startpg="next">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Décret\">
+<subchars>
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Order\">
+<subchars>
+<textbrk endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Title" context="Regulation">
+<charlist>
+<indent leftind="3em" firstln="0pt">
+<textbrk startpg="next" startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="ScheduleHeading">
+<charlist>
+<quadding quad="center">
+</charlist>
+</e-i-c>
+<e-i-c gi="touchup" gitype="pi">
+<charlist>
+</charlist>
+<att>
+<specval attname="FOSIutils::showBrackets" attloc="system-func" attval="1">
+<charsubset>
+<usetext source="\[ \" placemnt="before">
+</usetext>
+<usetext source="\ ]\" placemnt="after">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="ExplanatoryNote" context="Regulation">
+<charlist>
+<quadding quad="center">
+<textbrk startpg="next">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\NOTE EXPLICATIVE\">
+<subchars>
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\EXPLANATORY NOTE\">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="CommentBlock"><?Pub Lcl _id="f376">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold">
+<highlt inherit="1" fontclr="brown">
+<presp nominal="12pt"></charlist>
+&securityAtt;
+</e-i-c>
+<e-i-c gi="CommentInline"><?Pub Lcl _id="f401">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="bold">
+<highlt fontclr="brown"></charlist>
+&securityAtt;
+</e-i-c>
+<e-i-c gi="Footer">
+<charlist inherit="1">
+<highlt inherit="1">
+<presp nominal="12pt">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Header">
+<charlist inherit="1">
+<highlt inherit="1">
+<presp nominal="12pt">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="InstrumentNumber">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Instrument Number: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\[Enregistrement : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="RegistrationDate">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Registration Date: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\[Date d&#x2019;enregistrement] : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="EnablingAuthority">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Enabling Act: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\[Loi habilitante] : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="EnablingAct">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Enabling Act: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\[Loi habilitante] : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="MarginalNote" context="Definition" occur="first">
+<charlist charsubsetref="block">
+<font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0">
+<leading>
+<indent leftind="-1pi">
+<quadding quad="left">
+<highlt inherit="1" fontclr="green">
+<presp nominal="24pt" priority="med">
+<postsp nominal="6pt" priority="high">
+</charlist>
+<att><specval attname="generate-in-text" attloc="Definition" attval="yes">
+<charsubset>
+<savetext textid="definedterm.txt" conrule="#CONTENT">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="MarginalNote" context="Definition" occur="notfirst">
+<charlist charsubsetref="block">
+<font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0">
+<leading><indent leftind="-1pi">
+<quadding quad="left">
+<highlt inherit="1" fontclr="green">
+<postsp nominal="6pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="Text" context="Definition">
+<charlist inherit="1" charsubsetref="inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="generate-in-text" attloc="Definition" attval="yes">
+<charsubset>
+<usetext source="definedterm.txt" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset><textbrk startln="1" endln="1"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<textbrk endln="1">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="RelatedProvision">
+<charlist>
+<font weight="bold" inherit="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\[RELATED PROVISION:\" placemnt="before">
+<subchars>
+<postsp nominal="12pt" priority="med">
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\[DISPOSITION TRANSITOIRE:\" placemnt="before">
+<subchars>
+<postsp nominal="12pt" priority="med">
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Source">
+<charlist>
+<font inherit="1">
+<postsp nominal="12pt" priority="med">
+<textbrk startln="1" endln="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="LastAmendedDate">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1"></charlist>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\No amendments since: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Aucune modification depuis : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="PageBreak">
+<charlist>
+<textbrk startpg="next">
+</charlist>
+</e-i-c>

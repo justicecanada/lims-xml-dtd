@@ -1,0 +1,9 @@
+<e-i-c gi="Stages">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1" size="10pt">
+<indent>
+<quadding quad="right">
+<highlt inherit="1">
+<presp nominal="36pt" priority="high">
+</charlist>
+</e-i-c>

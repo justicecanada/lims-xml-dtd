@@ -1,0 +1,285 @@
+<e-i-c gi="Stages">
+<charlist inherit="1" charsubsetref="Block">
+<font inherit="1" size="10pt">
+<indent>
+<quadding quad="right">
+<highlt inherit="1">
+<presp nominal="36pt" priority="high">
+</charlist>
+<att>
+<specval attname="stage" attval="assented-to">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font posture="italic">
+<quadding quad="right">
+<usetext source="\[Assented To: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="assented-to">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font posture="italic">
+<quadding quad="right">
+<usetext source="\[Sanctionn&#x00E9;e le : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt,\]\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="committee-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Committee House: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="committee-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Comit&#x00E9; - Communes: \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="committee-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Committee Senate: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="committee-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Comit&#x00E9; - S&#x00E9;nat : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="consolidation">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Consolidation: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="consolidation">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Codification : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="first-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\First Reading House: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="first-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Premi&#x00E8;re lecture - Communes : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="first-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\First Reading Senate: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="first-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Premi&#x00E8;re lecture - S&#x00E9;nat : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="gazette">
+<charsubset>
+<usetext source="\Gazette: \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="report-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Report House: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="report-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Repport - Communes : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="report-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Report Senate: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="report-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Repport - S&#x00E9;nat : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="second-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Second Reading House: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="second-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Deuxi&#x00E8;me lecture - Communes : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="second-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Second Reading Senate: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="second-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Deuxi&#x00E8;me lecture - S&#x00E9;nat : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="tabled">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Tabled: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="tabled">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\D&#x00E9;pos&#x00E9; : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="third-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Third Reading House: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="third-reading-house">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Troisi&#x00E8;me lecture -Communes : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="third-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Third Reading Senate: \,yyyy.txt,\-\,mm.txt,\-\,dd.txt,\]\" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="stage" attval="third-reading-senate">
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Troisi&#x00E8;me lecture - S&#x00E9;nat : \,dd.txt,\-\,mm.txt,\-\,yyyy.txt" placemnt="before">
+<subchars>
+</subchars>
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="StageText">
+<?Pub Lcl _id="f494">
+<charlist charsubsetref="Inline Block">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>

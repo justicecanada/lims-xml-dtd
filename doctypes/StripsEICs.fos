@@ -1,0 +1,217 @@
+<e-i-c gi="CommentBlock"><?Pub Lcl _id="f376">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold">
+<highlt inherit="1" fontclr="brown">
+<presp nominal="12pt"></charlist>
+<att>
+<specval attname="security" attval="public">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="private">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="white" bckclr="brown">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="CommentInline"><?Pub Lcl _id="f401">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="bold">
+<highlt fontclr="brown"></charlist>
+<att>
+<specval attname="security" attval="public">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="private">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="white" bckclr="brown">
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="BillRefNumber" context="Strips"><?Pub Lcl _id="f1" _comment="Outputs the date-time attributes preceded by an em dash.">
+<charlist charsubsetref="Block">
+<font inherit="1" size="1.5em">
+<quadding quad="left">
+<highlt inherit="1" fontclr="navy">
+<presp nominal="24pt" priority="med"></charlist>
+<att>
+<fillval attname="date-time" attloc="BillRefNumber" fillcat="savetext" fillchar="conrule">
+<charsubset>
+<savetext textid="date.tmp">
+<usetext source="\&mdash;\,date.tmp" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="en">
+<charsubset>
+<usetext source="\Bill Reference Number: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="fr">
+<charsubset>
+<usetext source="\Numéro de référence du projet de loi : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Instruction"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold">
+<highlt inherit="1" fontclr="brown">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="en">
+<charsubset>
+<usetext source="\Instruction: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="fr">
+<charsubset>
+<usetext source="\Instruction : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Path"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="0" weight="bold">
+<highlt inherit="1" fontclr="brown">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="en">
+<charsubset>
+<usetext source="\Path to this file: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="fr">
+<charsubset>
+<usetext source="\Chemin d&#x2019;accès au fichier : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Instruction" context="Strips"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="0" size="1.5em" weight="bold">
+<highlt inherit="1" fontclr="maroon">
+<presp nominal="3em">
+<postsp nominal="3em"></charlist>
+</e-i-c>
+<e-i-c gi="Drafter"><?Pub Lcl _id="f1">
+<charlist>
+<font size="1.5em"></charlist>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="en">
+<charsubset>
+<usetext source="\Drafter: \" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="fr">
+<charsubset>
+<usetext source="\Rédacteur : \" placemnt="before"></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Oath">
+<?Pub Lcl _id="f527">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<indent leftind="1pi" firstln="2pi">
+<highlt inherit="1">
+</charlist>
+&ChangeAtt;
+</e-i-c>
+<e-i-c gi="Strip"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<postsp nominal="2em">
+<enumerat increm="1" enumid="strip.ct" setvalue="0"></charlist>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="en">
+<charsubset>
+<usetext source="\-- END STRIP \" placemnt="after"></usetext>
+<usetext source="strip.ct" placemnt="after"></usetext>
+<usetext source="\ --\" placemnt="after"></usetext>
+<usetext source="\-- BEGIN STRIP \" placemnt="before"></usetext>
+<usetext source="strip.ct" placemnt="before"></usetext>
+<usetext source="\ --\" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Strips" attval="fr">
+<charsubset>
+<usetext source="\-- Fin du béquet \" placemnt="after"></usetext>
+<usetext source="strip.ct" placemnt="after"></usetext>
+<usetext source="\ --\" placemnt="after"></usetext>
+<usetext source="\-- Début du béquet \" placemnt="before"></usetext>
+<usetext source="strip.ct" placemnt="before"></usetext>
+<usetext source="\ --\" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<fillval attname="FOSIutils::getStripDrafterName" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="before"><subchars><textbrk startln="1"></subchars></usetext>
+</charsubset>
+</att>
+<att>
+<fillval attname="FOSIutils::getStripPathName" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="before"><subchars><textbrk startln="1"></subchars></usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="StripText"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+
+<!--COPIED FROM BILLAUTHORING.FOS-->
+<e-i-c gi="MarginalNote" context="Definition" occur="first">
+<charlist charsubsetref="block">
+<font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0"><leading>
+<indent leftind="-1pi"><quadding quad="left"><highlt inherit="1" fontclr="green">
+<presp nominal="24pt" priority="med"><postsp nominal="6pt" priority="high"></charlist>
+<att><specval attname="generate-in-text" attloc="Definition" attval="yes"><charsubset>
+<savetext textid="definedterm.txt" conrule="#CONTENT"></charsubset></att>
+</e-i-c>
+<e-i-c gi="MarginalNote" context="Definition" occur="notfirst"><charlist charsubsetref="block"><font inherit="1" size="10pt" posture="upright" weight="bold" smallcap="0"><leading><indent leftind="-1pi"><quadding quad="left"><highlt inherit="1" fontclr="green"><postsp nominal="6pt" priority="high"></charlist></e-i-c>
+<e-i-c gi="Text" context="Definition">
+<charlist inherit="1" charsubsetref="inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="generate-in-text" attloc="Definition" attval="yes">
+<charsubset>
+<usetext source="definedterm.txt" placemnt="before"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset><textbrk startln="1" endln="1"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<textbrk endln="1">
+</charsubset>
+</att>
+</e-i-c>
+<!--COPIED FROM BILLAUTHORING.FOS-->
+
+<e-i-c gi="Bill">
+<charlist charsubsetref="Block">
+<font style="serif" famname="Times">
+<presp nominal="12pt"></charlist>
+</e-i-c>

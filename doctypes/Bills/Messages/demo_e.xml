@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Messages PUBLIC "-//Justice Canada//DTD Bill Messages v2.4.2//EN"
+ "Messages.dtd">
+<?Pub UDT template _font?>
+<?Pub UDT instructions _comment FontColor="red"?>
+<?Pub Inc?>
+<Message xml:lang="en">
+<BillNumber>179985</BillNumber>
+<Instruction><?Pub Tag template?>Type general instructions here<?Pub Caret?><?Pub /template?></Instruction>
+<MessageItem>
+<Instruction>The following Messages are blah blah blah</Instruction>
+<MessageText><Section><Label>12.</Label><Text>Here is the text of a section
+that</Text><Paragraph><Label>(a)</Label><Text>does something or other</Text>
+</Paragraph>
+<Paragraph><Label>(b)</Label><Text>that I have not thought out</Text></Paragraph>
+<ContinuedSectionSubsection><Text>entirely as carefully as one might wish.</Text>
+</ContinuedSectionSubsection>
+</Section>
+</MessageText>
+</MessageItem>
+<MessageItem>
+<Instruction>Paste this is at line blah blah:</Instruction>
+<MessageText>
+<SectionPiece><Definition>
+<MarginalNote><DefinedTermEn>carving stone</DefinedTermEn></MarginalNote>
+<MarginalNote><DefinedTermFr>pierre à sculpter</DefinedTermFr></MarginalNote>
+<Text><DefinedTermEn>carving stone</DefinedTermEn> means serpentinite, argillite
+or soapstone that is suitable for carving.</Text></Definition>
+</SectionPiece>
+</MessageText>
+</MessageItem>
+</Message>
+<?Pub *0000001434 0?>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Arbortext, Inc., 1988-2010, v.4002--><!DOCTYPE DocumentTypeConfiguration PUBLIC "-//Arbortext//DTD Document Type Configuration 2.0//EN" "dcfdtd.dtd"><DocumentTypeConfiguration>
+<Options allowApplicationToolbar="no" allowComposeStylesheetList="no"/>
+<NewDialog>
+<New description="Message in English" templateFile="template_e.xml"/>
+<New description="Message en français" templateFile="template_f.xml"/><?Pub Caret 0?>
+</NewDialog>
+<ElementOptions>
+<ElementOption element="_touchup" allowSpellChecking="no"/></ElementOptions>
+<Specials>
+<Graphic element="Image" filename="source"/></Specials>
+</DocumentTypeConfiguration>

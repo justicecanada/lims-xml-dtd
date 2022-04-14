@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Bill PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2//EN"
+ "BillExchange.dtd">
+<?Pub Inc?>
+<Bill bill-origin="commons" bill-type="govt-public" xml:lang="en">
+<Identification>
+<BillNumber>C-</BillNumber>
+<Parliament><Session>1</Session><Number>42</Number>
+<RegnalYear><Year-s>64</Year-s><Monarch>Elizabeth II</Monarch></RegnalYear>
+<Year-s>2015</Year-s></Parliament>
+<LongTitle><?Pub Caret?></LongTitle>
+<ShortTitle></ShortTitle>
+<BillHistory>
+<Stages><Date><YYYY></YYYY><MM></MM><DD></DD></Date></Stages>
+</BillHistory>
+<BillSponsor></BillSponsor>
+</Identification>
+<Introduction>
+<Summary>
+<TitleText>SUMMARY</TitleText>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>This enactment </Text></Provision>
+</Summary>
+<Enacts>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>Her Majesty,
+by and with the advice and consent of the Senate and House of Commons of Canada,
+enacts as follows:</Text></Provision>
+</Enacts>
+</Introduction>
+<Body></Body></Bill>
+<?Pub *0000001079 0?>

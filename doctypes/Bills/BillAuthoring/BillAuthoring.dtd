@@ -1,0 +1,180 @@
+<?xml encoding="utf-8"?>
+<!-- Bill Authoring DTD v2.4.2 == 20160629 -->
+
+<!-- Bill Authoring DTD v2.4.0 == 20050311 -->
+
+<!-- Bill Authoring DTD v2.3.1 == 20050311 -->
+
+<!-- Bill Authoring DTD v2.3.0 == 20050124 -->
+
+<!-- Bill Authoring DTD v2.2.0 == 20040916 -->
+
+<!-- Bill Authoring DTD v2.1.0 == 20040716 -->
+
+<!-- Bill Authoring DTD v2.0.0 == 20040528 -->
+
+<!-- Sep. 2002 - removed the "inline" attribute from Provision since
+	it was redundant.  -->
+
+<!-- Feb. 2002 - removed common elements to a separate file called
+     billCommonElements.ent...Julie Julian  -->
+             
+<!-- Jan. 2002 -  Removed most comments to a separate dtd documentation file.
+     Reorganized dtd to put attributes after their associated elements, and to
+     group associated elements together. Added comment banners to distinguish
+     sections for readability.
+     Made several changes - documented in DTDChanges2002.doc file...Julie Julian-->
+
+<!-- The BillAuthoring DTD includes the change attribute with its modified content model. -->
+<!ENTITY % ignorechange 'INCLUDE'>
+
+<!-- The BillAuthoring DTD includes the authoring entity which allows the CommentBlock 
+element while excluding the HistoricalNote element. -->
+<!ENTITY % authoring 'INCLUDE'>
+<!ENTITY % exchange 'IGNORE'>
+<!ENTITY % statute 'IGNORE'>
+
+<!-- The BillAuthoring DTD excludes both the flat entity and the nested entity as its Body and Heading elements are defined in the authoring entity. -->
+<!ENTITY % flat 'IGNORE' >
+<!ENTITY % nested 'IGNORE' >
+
+<!ENTITY % changeatt  "
+             change  (ins | del | off | alt)   #IMPLIED " >
+
+<!-- The following line identifies the billCommonElements.ent to be included 
+     in BillAuthoring.dtd -->
+<!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                             ENTITIES                                -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Del | Sub | Sup | Emphasis | Language 
+                           | FootnoteRef | XRefInternal | XRefExternal
+                           | PageBreak | Keep | LineBreak" >
+
+<!ENTITY % changedtext  "(#PCDATA | Emphasis | CommentInline  | DefinedTermEn
+                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
+                          | LeaderRightJustified | Sub | Sup | XRefInternal 
+                          | XRefExternal | Provision)*" >
+
+<!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | CommentInline 
+                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
+                     | Language | Leader | LeaderRightJustified | XRefInternal 
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+
+
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis 
+               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | BilingualGroup | FootnoteRef | Formula 
+               | XRefInternal | XRefExternal | ImageGroup | Provision
+               | Language | Leader | SignatureBlock | LeaderRightJustified 
+               | PageBreak | Keep)* " >
+
+
+<!-- The following line imports the contents of billCommonElements.dtd so that
+     elements from the common elements pool can be included in BillAuthoring.dtd 
+     This reference must be positioned after the entity references. -->
+ 
+%commonelements;
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                        HIGHEST LEVEL ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Bill  (Identification, Introduction?, Body, Schedule*) >
+
+<!ATTLIST Bill
+               bill-origin (commons | senate | other)   #REQUIRED
+               bill-type (private-public | private-private | govt-public) 
+               						"govt-public"
+               document-id  CDATA    #IMPLIED 
+               date-time  CDATA    #IMPLIED 
+               xml:lang (en | fr)   #REQUIRED  >
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       IDENTIFICATION ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Introduction  (Recommendation?, Summary?, TableOfProvisions?, 
+                        ((Preamble, Enacts?) | Enacts)?) >
+
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       IDENTIFICATION ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+  
+<!ELEMENT Identification  (BillNumber?, Parliament?, LongTitle, 
+                           ShortTitle?, RunningHead?, BillHistory?, BillSponsor?,
+                           BillRefNumber?) >
+
+<!ATTLIST Identification 
+	icase-ref-number CDATA #IMPLIED
+	team-no CDATA #IMPLIED
+	drafter-1 CDATA #IMPLIED
+	drafter-2 CDATA #IMPLIED
+	>
+
+	       
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       BLOCK TEXT ELEMENTS                           -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+                                                                                     
+<!ELEMENT CommentBlock  (%lowleveltext;)* >
+<!ATTLIST CommentBlock
+               security (public | public-juril | private)  "private"
+               author  CDATA    #IMPLIED 
+               date-time  CDATA    #IMPLIED  >
+
+<!ELEMENT ExplanatoryNote  (TitleText*, Label, ExplanatoryText+, ExistingText?) >
+<!ATTLIST ExplanatoryNote
+               id  ID    #IMPLIED  >
+               
+<!ELEMENT ExplanatoryText  %inline; >
+
+<!ELEMENT ExistingText  %docpart; >
+<!ATTLIST ExistingText
+               xml:lang (en | fr)   #IMPLIED  >
+
+<!ELEMENT AmendedText  (CommentBlock*, (%docpart; | BillInternal | OriginatingRef | Schedule)) >
+<!ATTLIST AmendedText
+               xml:lang (en | fr )   #IMPLIED 
+               change  (ins | off) #IMPLIED
+               include-in-TableOfProvisions (yes | no)  "no" >
+
+                                         
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       INLINE TEXT ELEMENTS                          -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT CommentInline  (%lowleveltext;)* >
+<!ATTLIST CommentInline
+               author  CDATA    #IMPLIED 
+               date-time  CDATA    #IMPLIED 
+               security (public | public-juril | private)  "private" >
+
+<!ELEMENT Del  %changedtext; >
+
+
+<!ELEMENT Ins  %changedtext; >
+
+<!ELEMENT Keep  (%lowleveltext;)* >
+<!ATTLIST Keep        
+               svc CDATA #IMPLIED >
+
+
+

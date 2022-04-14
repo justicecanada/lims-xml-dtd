@@ -1,0 +1,73 @@
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE OUTSPEC PUBLIC "-//ArborText//DTD OUTPUT SPEC MIL-PRF-28001 REV B AMEND 1 19961231//EN" [
+<!ENTITY XRefColour '<att logic="or">
+<specval attname="reference-type" attloc="XRefExternal" attval="regulation">
+<charsubset>
+<font posture="italic">
+<highlt fontclr="#CDCD00">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attloc="XRefExternal" attval="act">
+<charsubset>
+<font posture="italic">
+<highlt fontclr="maroon"></charsubset>
+</att>
+'>
+<!ENTITY ChangeAtt '
+<att>
+<specval attname="in-force" attval="#ANY">
+<charsubset>
+<highlt inherit="1" bckclr="red"></charsubset>
+</att>'>
+<!ENTITY AmendedTextAtt "">
+<!ENTITY FormulaColours '<att>
+<specval attname="FOSIutils::FormulaGroupNesting" attloc="SYSTEM-FUNC" attval="1">
+<charsubset>
+<highlt bckclr="brown"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::FormulaGroupNesting" attloc="SYSTEM-FUNC" attval="2">
+<charsubset>
+<highlt bckclr="green"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::FormulaGroupNesting" attloc="SYSTEM-FUNC" attval="3">
+<charsubset>
+<highlt bckclr="yellow"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::FormulaGroupNesting" attloc="SYSTEM-FUNC" attval="4">
+<charsubset>
+<highlt bckclr="blue"></charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::FormulaGroupNesting" attloc="SYSTEM-FUNC" attval="#GT#\4\">
+<charsubset>
+<highlt bckclr="black" fontclr="white"></charsubset>
+</att>'>
+<!ENTITY EmphasisAtt '<att>
+<specval attname="style" attloc="Emphasis" attval="regular">
+<charsubset>
+<font weight="normal" posture="upright" smallcap="0">
+<highlt scoring="0">
+</charsubset>
+</att>'>
+<!ENTITY UniqueEICs PUBLIC "-//Justice Canada//FOSI Statute Elements//EN" "../../StatuteEICs.fos">
+<!ENTITY CommonFOSIElements SYSTEM "../../CommonFOSIElements.fos">
+]>
+<!--May 15, 2001-->
+<!--June 18, 2001, changes to SummarySection structure-->
+<!--June 22, 2001, changes to indent-level in Formula structure-->
+<!--July 10, 2001, changes to CommentBlock-->
+<!--July 12, 2001, changes according to drafters requests-->
+<!--July 13, 2001, changes to reflect new formats-->
+<!--Jan. 2002, changed to reflect DTD changes. J. Julian-->
+<!--Mar. 2002, changed to reflect DTD changes. J. Julian-->
+<!--Apr. 2002, changed to reflect DTD changes. J. Julian-->
+<!--May 2002, changed to reflect DTD changes. J. Julian-->
+<!--November 2002, changed to reflect DTD changes. D Topshee -->
+<outspec><?Pub Lcl _id="652" _label="Adept v8.0">
+&CommonFOSIElements;
+</outspec>
+<?Pub *0000143938>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE DocumentTypeConfiguration PUBLIC "-//Arbortext//DTD Document Type Configuration 2.0//EN" "dcfdtd.dtd">
+<DocumentTypeConfiguration>
+<Options allowApplicationToolbar="no" allowComposeStylesheetList="no" dictionaryName="apostrop"/><?Pub Caret?>
+<NewDialog>
+<New description="NCNR Act" templateFile="template_e.xml"/>
+<New description="Loi NCNR" templateFile="template_f.xml"/></NewDialog>
+<ElementOptions>
+<ElementOption element="_touchup" allowSpellChecking="no"/></ElementOptions>
+<Specials>
+<Link element="XRefInternal" primary="yes" idref="idref"/>
+<Graphic element="Image" filename="source"/></Specials>
+</DocumentTypeConfiguration>
+<?Pub *0000000799?>

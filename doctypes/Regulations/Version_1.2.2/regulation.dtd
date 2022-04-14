@@ -1,0 +1,120 @@
+<?xml encoding="utf-8"?>
+
+<!-- This is version 1.2.1 of the Regulations DTD -->
+
+<!ENTITY % regulationcontent PUBLIC "-//Justice Canada//Regulation content v1.2.2//EN" "regulationcontent.dtd">
+
+%regulationcontent;
+
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
+
+
+<!ELEMENT Regulation
+	(Identification,
+	Recommendation?,
+	Notice?,
+    	Repealed?, 
+	(
+	  (Order+, TableOfProvisions?,  Body?, ConventionAgreementTreaty?, Schedule*) |
+          ( 
+            TableOfProvisions?,
+            (
+	      (Body,ConventionAgreementTreaty?, Schedule*, Order?) |
+	      (ConventionAgreementTreaty, Schedule*, Order?) |
+	      (Schedule+, Order?)
+            )
+          )
+	),
+	RelatedProvision*,
+	ExplanatoryNote?)
+>
+
+<!ATTLIST Regulation
+    xml:lang  (en|fr)  #REQUIRED 
+    regulation-type CDATA #IMPLIED 
+    gazette-part (I | II) #IMPLIED 
+    in-force CDATA #IMPLIED
+	startdate CDATA #IMPLIED
+	enddate CDATA #IMPLIED
+	hasPreviousVersion CDATA #IMPLIED
+>
+
+<!ELEMENT Identification
+    (InstrumentNumber?, Note?, RegistrationDate?, 
+    	LastAmendedDate?, ConsolidationDate?, LastModifiedDate?, EnablingAuthority?,
+     (ShortTitle, Note*)?,
+     (LongTitle+, Note?)?,
+     RunningHead?,
+     Preamble?,
+     RegulationMakerOrder?,
+     Header?,
+     Footer?)
+>
+<!ATTLIST Identification 
+	file-number CDATA #IMPLIED
+	stage CDATA #IMPLIED
+	drafter-en CDATA #IMPLIED
+	drafter-fr CDATA #IMPLIED
+	hasPreviousVersion CDATA #IMPLIED
+	>
+
+
+<!ELEMENT InstrumentNumber (#PCDATA)>
+
+<!ELEMENT RegistrationDate (Date)>
+
+<!ELEMENT LastAmendedDate (Date)>
+
+<!ELEMENT LastModifiedDate %inline;>
+
+<!ELEMENT ConsolidationDate %inline;>
+
+<!ELEMENT EnablingAuthority (XRefExternal+ | OtherAuthority)>
+
+<!ELEMENT OrderDate %inline;>
+
+<!ELEMENT Order
+    (OrderNumber?, OrderDate?,
+     (Group | Provision | CommentBlock)+,
+     HistoricalNote?, Footnote*)
+>
+
+<!ELEMENT OtherAuthority %inline;>
+
+<!ELEMENT Organisation (#PCDATA)>
+
+<!ELEMENT RegulationMakerOrder (RegulationMaker, OrderNumber, Date)>
+<!ELEMENT OrderNumber %inline;>
+<!ELEMENT RegulationMaker %inline;>
+
+
+<!-- Do not confuse the following element with the 
+   	ExplanatoryNotes that appear in Bills -->
+<!ELEMENT ExplanatoryNote ( (Group | Provision)+) >
+
+<!ELEMENT Recommendation ( (Group | Provision | CommentBlock)+) >
+
+<!ELEMENT Notice ( (Group | Provision | CommentBlock)+, Footnote*) >
+<!ATTLIST Notice 
+	publication-requirement (STATUTORY | ADMINISTRATIVE) #REQUIRED 
+	>
+
+<!ELEMENT TableOfProvisions (Heading | (Label?, Text))+  >
+
+<!ELEMENT Header (Provision*) >
+
+<!ELEMENT Footer (Provision*) > 
+
+
+	<!ATTLIST Section in-force CDATA #IMPLIED>
+   <!ATTLIST Subsection in-force CDATA #IMPLIED>
+ 	<!ATTLIST Paragraph in-force CDATA #IMPLIED>
+   <!ATTLIST Subparagraph in-force CDATA #IMPLIED>
+   <!ATTLIST Clause in-force CDATA #IMPLIED>
+ 	<!ATTLIST Subclause in-force CDATA #IMPLIED>
+ 	<!ATTLIST Subsubclause in-force CDATA #IMPLIED>
+ 	<!ATTLIST Definition in-force CDATA #IMPLIED>
+ 	<!ATTLIST Schedule in-force CDATA #IMPLIED>
+ 	<!ATTLIST Provision in-force CDATA #IMPLIED> 

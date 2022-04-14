@@ -1,0 +1,48 @@
+<?aptxml encoding="utf-8"?>
+
+<!-- Bills Messages DTD -->
+
+<!ENTITY % billauthoring  PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "../BillAuthoring/billAuthoring.dtd">
+
+%billauthoring;
+
+<!-- Note:
+
+    The main structure below uses BillNumber as the main identifier
+    of the bill to which the message pertains.  I had been under the
+    impression that BillNumber represents the internal LSB number
+    assigned to a bill once it goes to first page proof.  This may
+    be wrong, in which case some other element(s) should be used to
+    indicate the bill to which the message(s) pertain.
+
+    The first optional CommentBlock is intended to for the drafter
+    to say something about the entire message file.  Thereafter, the
+    CommentBlock child of each Message element is intended to be used
+    for specific instructions regarding the location of the message
+    by line number in the page proof, and whatever else the drafter
+    wants to tell the technician handling the message.
+
+    The Message element is, of course that which contains the content
+    of the message, i.e., replacement text to be copied and pasted
+    into the page proof instance of the bill.
+
+-->
+
+<!ELEMENT Message (BillNumber, Instruction*, MessageItem+)>
+
+<!ATTLIST Message
+    xml:lang (en | fr) #REQUIRED
+	icase-ref-number CDATA #IMPLIED
+	team-no CDATA #IMPLIED
+	drafter-1 CDATA #IMPLIED
+	drafter-2 CDATA #IMPLIED
+>
+
+
+<!ELEMENT Instruction %inline; >
+
+<!ELEMENT MessageItem (Instruction, MessageText)>
+
+<!ELEMENT MessageText (LongTitle | Preamble | Enacts | Summary | Heading | Section 
+| Subsection | SectionPiece | Schedule | ScheduleFormHeading  
+| (%blockfragment;) | Formula | Group | GroupHeading | Provision | ExplanatoryNote | ExistingText)+ >

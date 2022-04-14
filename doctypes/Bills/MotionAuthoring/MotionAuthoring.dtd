@@ -1,0 +1,60 @@
+<?xml encoding="utf-8"?>
+
+<!-- The following line identifies the BillAuthoring.dtd to be included -->
+<!ENTITY % billDTD PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "../BillAuthoring/BillAuthoring.dtd">
+
+<!-- The following line imports the contents of BillAuthoring.dtd so that
+     elements from the Authoring elements pool can be included here.
+     This reference must be positioned after the entity references. -->
+ 
+%billDTD;
+
+<!-- Motions stuff -->
+
+<!ELEMENT Motion (UnilingualMotion | BilingualMotion)>
+
+<!ELEMENT UnilingualMotion
+    (
+        MotionIdentifier,
+        MotionText,
+        (
+	    MotionAmendment
+          |
+            MotionParagraph+
+        )?
+    )
+>
+<!ATTLIST UnilingualMotion
+    xml:lang (en | fr)   #REQUIRED  >
+
+<!ELEMENT BilingualMotion
+    (
+        MotionIdentifier, MotionIdentifier,
+        MotionText, MotionText,
+        (
+	    MotionAmendment
+          |
+            BilingualParagraph+
+        )?
+    )
+>
+
+<!ELEMENT MotionIdentifier (BillNumber, MotionTarget, MotionPages)>
+
+<!ELEMENT MotionText %inline; >
+
+<!ELEMENT MotionTarget (%lowleveltext; )* >
+
+<!ELEMENT MotionPages (%lowleveltext; )*>
+
+<!ELEMENT MotionParagraph (Label,Text,MotionAmendment?)>
+
+<!ELEMENT BilingualParagraph (Label,Text,Label,Text,MotionAmendment?)>
+
+<!ELEMENT MotionAmendment (Group | GroupHeading | Provision | LongTitle | Preamble | Heading | Section 
+                     | Subsection | SectionPiece | ScheduleFormHeading | Schedule 
+                     | Formula | BillInternal | (%blockfragment;) )+ >
+
+<!ATTLIST MotionAmendment
+    xml:lang (en | fr)   #REQUIRED 
+    change  (ins | off | del | alt) #IMPLIED>

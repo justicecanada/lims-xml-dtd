@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Bill PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2//EN"
+ "BillExchange.dtd">
+<?Pub UDT instructions _comment FontColor="red"?>
+<?Pub UDT template _font?>
+<?Pub Inc?>
+<Bill bill-origin="commons" bill-type="govt-public" xml:lang="fr">
+<Identification>
+<BillNumber>C-</BillNumber>
+<Parliament><Session>1</Session><Number>42</Number>
+<RegnalYear><Year-s>64</Year-s><Monarch>Elizabeth II</Monarch></RegnalYear>
+<Year-s>2015</Year-s></Parliament>
+<LongTitle><?Pub Caret?></LongTitle>
+<ShortTitle></ShortTitle>
+<BillHistory>
+<Stages><Date><YYYY></YYYY><MM></MM><DD></DD></Date></Stages>
+</BillHistory>
+</Identification>
+<Introduction>
+<Summary>
+<TitleText>SOMMAIRE</TitleText>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>Le texte a pour objet </Text></Provision>
+</Summary>
+<Enacts>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>Sa Majesté,
+sur l'avis et avec le consentement du Sénat et de la Chambre des communes
+du Canada, édicte :</Text></Provision>
+</Enacts>
+</Introduction>
+<Body></Body></Bill>
+<?Pub *0000001129 0?>

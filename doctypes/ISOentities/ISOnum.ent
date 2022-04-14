@@ -1,0 +1,81 @@
+<!-- iso-num.ent produced by Norman Walsh for the XML version of DocBook -->
+
+<!-- Derived from the corresponding ISO 8879 standard entity set
+     and the Unicode character mappings provided by Sebastian Rahtz -->
+
+<!ENTITY half	"&#38;#x00BD;"> <!-- VULGAR FRACTION ONE HALF -->
+<!ENTITY frac12	"&#38;#x00BD;"> <!-- VULGAR FRACTION ONE HALF -->
+<!ENTITY frac14	"&#38;#x00BC;"> <!-- VULGAR FRACTION ONE QUARTER -->
+<!ENTITY frac34	"&#38;#x00BE;"> <!-- VULGAR FRACTION THREE QUARTERS -->
+<!ENTITY frac18	"&#38;#x215B;"> <!--  -->
+<!ENTITY frac38	"&#38;#x215C;"> <!--  -->
+<!ENTITY frac58	"&#38;#x215D;"> <!--  -->
+<!ENTITY frac78	"&#38;#x215E;"> <!--  -->
+<!ENTITY sup1	"&#38;#x00B9;"> <!-- SUPERSCRIPT ONE -->
+<!ENTITY sup2	"&#38;#x00B2;"> <!-- SUPERSCRIPT TWO -->
+<!ENTITY sup3	"&#38;#x00B3;"> <!-- SUPERSCRIPT THREE -->
+<!ENTITY plus	"&#38;#x002B;"> <!-- PLUS SIGN -->
+<!ENTITY plusmn	"&#38;#x00B1;"> <!-- PLUS-MINUS SIGN -->
+<!--ENTITY lt	"&#38;#x003C;"--> <!-- LESS-THAN SIGN -->
+<!ENTITY equals	"&#38;#x003D;"> <!-- EQUALS SIGN -->
+<!ENTITY gt	"&#38;#x003E;"> <!-- GREATER-THAN SIGN -->
+<!ENTITY divide	"&#38;#x00F7;"> <!-- DIVISION SIGN -->
+<!ENTITY times	"&#38;#x00D7;"> <!-- MULTIPLICATION SIGN -->
+<!ENTITY curren	"&#38;#x00A4;"> <!-- CURRENCY SIGN -->
+<!ENTITY pound	"&#38;#x00A3;"> <!-- POUND SIGN -->
+<!ENTITY dollar	"&#38;#x0024;"> <!-- DOLLAR SIGN -->
+<!ENTITY cent	"&#38;#x00A2;"> <!-- CENT SIGN -->
+<!ENTITY yen	"&#38;#x00A5;"> <!-- YEN SIGN -->
+<!ENTITY num	"&#38;#x0023;"> <!-- NUMBER SIGN -->
+<!ENTITY percnt	"&#38;#x0025;"> <!-- PERCENT SIGN -->
+<!--ENTITY amp	"&#38;#x0026;"--> <!-- AMPERSAND -->
+<!ENTITY ast	"&#38;#x2217;"> <!-- ASTERISK OPERATOR -->
+<!ENTITY commat	"&#38;#x0040;"> <!-- COMMERCIAL AT -->
+<!ENTITY lsqb	"&#38;#x005B;"> <!-- LEFT SQUARE BRACKET -->
+<!ENTITY bsol	"&#38;#x005C;"> <!-- REVERSE SOLIDUS -->
+<!ENTITY rsqb	"&#38;#x005D;"> <!-- RIGHT SQUARE BRACKET -->
+<!ENTITY lcub	"&#38;#x007B;"> <!-- LEFT CURLY BRACKET -->
+<!ENTITY horbar	"&#38;#x2015;"> <!-- HORIZONTAL BAR -->
+<!ENTITY verbar	"&#38;#x007C;"> <!-- VERTICAL LINE -->
+<!ENTITY rcub	"&#38;#x007D;"> <!-- RIGHT CURLY BRACKET -->
+<!ENTITY micro	"&#38;#x00B5;"> <!-- MICRO SIGN -->
+<!ENTITY ohm	"&#38;#x2126;"> <!-- OHM SIGN -->
+<!ENTITY deg	"&#38;#x00B0;"> <!-- DEGREE SIGN -->
+<!ENTITY ordm	"&#38;#x00BA;"> <!-- MASCULINE ORDINAL INDICATOR -->
+<!ENTITY ordf	"&#38;#x00AA;"> <!-- FEMININE ORDINAL INDICATOR -->
+<!ENTITY sect	"&#38;#x00A7;"> <!-- SECTION SIGN -->
+<!ENTITY para	"&#38;#x00B6;"> <!-- PILCROW SIGN -->
+<!ENTITY middot	"&#38;#x00B7;"> <!-- MIDDLE DOT -->
+<!ENTITY larr	"&#38;#x2190;"> <!-- LEFTWARDS DOUBLE ARROW -->
+<!ENTITY rarr	"&#38;#x2192;"> <!-- RIGHTWARDS DOUBLE ARROW -->
+<!ENTITY uarr	"&#38;#x2191;"> <!-- UPWARDS ARROW -->
+<!ENTITY darr	"&#38;#x2193;"> <!-- DOWNWARDS ARROW -->
+<!ENTITY copy	"&#38;#x00A9;"> <!-- COPYRIGHT SIGN -->
+<!ENTITY reg	"&#38;#x00AE;"> <!-- REGISTERED TRADE MARK SIGN -->
+<!ENTITY trade	"&#38;#x2122;"> <!-- TRADE MARK SIGN -->
+<!ENTITY brvbar	"&#38;#x00A6;"> <!-- BROKEN BAR -->
+<!ENTITY not	"&#38;#x00AC;"> <!-- NOT SIGN -->
+<!ENTITY sung	"&#38;#x2669;"> <!--  -->
+<!ENTITY excl	"&#38;#x0021;"> <!-- EXCLAMATION MARK -->
+<!ENTITY iexcl	"&#38;#x00A1;"> <!-- INVERTED EXCLAMATION MARK -->
+<!ENTITY quot	"&#38;#x0022;"> <!-- QUOTATION MARK -->
+<!ENTITY apos	"&#38;#x0027;"> <!-- APOSTROPHE -->
+<!ENTITY lpar	"&#38;#x0028;"> <!-- LEFT PARENTHESIS -->
+<!ENTITY rpar	"&#38;#x0029;"> <!-- RIGHT PARENTHESIS -->
+<!ENTITY comma	"&#38;#x002C;"> <!-- COMMA -->
+<!ENTITY lowbar	"&#38;#x005F;"> <!-- LOW LINE -->
+<!ENTITY hyphen	"&#38;#xE4F8;"> <!--  -->
+<!ENTITY period	"&#38;#x002E;"> <!-- FULL STOP -->
+<!ENTITY sol	"&#38;#x002F;"> <!-- SOLIDUS -->
+<!ENTITY colon	"&#38;#x003A;"> <!-- COLON -->
+<!ENTITY semi	"&#38;#x003B;"> <!-- SEMICOLON -->
+<!ENTITY quest	"&#38;#x003F;"> <!-- QUESTION MARK -->
+<!ENTITY iquest	"&#38;#x00BF;"> <!-- INVERTED QUESTION MARK -->
+<!ENTITY laquo	"&#38;#x00AB;"> <!-- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK -->
+<!ENTITY raquo	"&#38;#x00BB;"> <!-- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK -->
+<!ENTITY lsquo	"&#38;#x2018;"> <!--  -->
+<!ENTITY rsquo	"&#38;#x2019;"> <!-- RIGHT SINGLE QUOTATION MARK -->
+<!ENTITY ldquo	"&#38;#x201C;"> <!--  -->
+<!ENTITY rdquo	"&#38;#x201D;"> <!-- RIGHT DOUBLE QUOTATION MARK -->
+<!ENTITY nbsp	"&#38;#x00A0;"> <!-- NO-BREAK SPACE -->
+<!ENTITY shy	"&#38;#x00AD;"> <!-- SOFT HYPHEN -->

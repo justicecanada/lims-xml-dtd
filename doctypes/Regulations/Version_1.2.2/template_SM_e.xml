@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!--Arbortext, Inc., 1988-2004, v.4002-->
+<!DOCTYPE Regulation PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulation.dtd">
+<?Pub Inc?>
+<Regulation gazette-part="I" regulation-type="SM" xml:lang="en">
+<Identification stage="draft">
+<EnablingAuthority><XRefExternal reference-type="act"></XRefExternal></EnablingAuthority>
+<LongTitle></LongTitle>
+<Header>
+	<Provision format-ref="centered" pointsize="10">
+		<Text>Transport Canada / Transports Canada</Text>
+	</Provision>
+	<Provision format-ref="centered" pointsize="10" topmarginspacing="1">
+		<Text>Security and Emergency Preparedness / Sûreté et préparatifs d’urgence</Text>
+	</Provision>
+</Header>
+<Footer>
+	<Provision format-ref="indent-0-0" language-align="yes" pointsize="9">
+		<Text>Section 4.79 of the <XRefExternal reference-type="act">Aeronautics Act</XRefExternal> prohibits the disclosure of the substance of this Security Measure. </Text>
+	</Provision>
+</Footer>
+</Identification>
+<Order>
+	<Provision format-ref="indent-0-0" language-align="yes">
+		<Text></Text>
+	</Provision>
+	<Provision format-ref="indent-0-0" language-align="yes">
+		<Text></Text>
+	</Provision>
+	<Provision format-ref="indent-0-0" language-align="yes">
+		<Text></Text>
+	</Provision>
+	<Provision format-ref="indent-0-0" language-align="yes">
+		<Text></Text>
+	</Provision>
+	<Provision format-ref="indent-0-0" language-align="yes">
+		<Text>Ottawa, <Leader length="10pc"/></Text>
+	</Provision>
+	<Provision format-ref="indent-0-0">
+		<TableGroup bilingual="yes" spanlanguages="yes" topmarginspacing="40"><table frame="none"><tgroup cols="1"><colspec colname="col1"/><tbody><row><entry><Provision><SignatureBlock justification="center" width="25pc"><SignatureLine justification="center"><Leader leader="solid" length="25pc"/></SignatureLine><SignatureName justification="center" topmarginspacing="2pt">Lawrence Cannon</SignatureName><SignatureTitle justification="center">Minister of Transport, Infrastructure and Communities / Ministre des Transports, de l’Infrastructure et des Collectivités</SignatureTitle></SignatureBlock></Provision></entry></row></tbody></tgroup></table>
+		</TableGroup>
+	</Provision>
+</Order>
+<Body><?Pub Caret?></Body>
+</Regulation><?Pub *0000002262?>

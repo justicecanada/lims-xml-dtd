@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Message PUBLIC "-//Justice Canada//DTD Bill Messages v2.4.2//EN"
+ "Messages.dtd">
+<?Pub UDT template _font?>
+<?Pub UDT instructions _comment FontColor="red"?>
+<?Pub Inc?>
+<Message xml:lang="en">
+<BillNumber></BillNumber>
+<MessageItem>
+<Instruction></Instruction><?Pub Caret1?>
+<MessageText></MessageText>
+</MessageItem>
+</Message>
+<?Pub *0000000444 0?>

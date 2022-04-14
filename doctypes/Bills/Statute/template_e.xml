@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Statute PUBLIC "-//Justice Canada//DTD Statute v2.4.1//EN" "Statute.dtd">
+<?Pub Inc?>
+<Statute bill-origin="commons" bill-type="govt-public" xml:lang="en">
+<Identification>
+<LongTitle><?Pub Caret?></LongTitle>
+<ShortTitle status="official"></ShortTitle>
+<BillHistory><Stages stage="assented-to"><Date><YYYY></YYYY><MM></MM><DD></DD></Date></Stages></BillHistory>
+<StatuteYear></StatuteYear>
+<Chapter><ConsolidatedNumber></ConsolidatedNumber><AnnualStatuteId><AnnualStatuteNumber></AnnualStatuteNumber><YYYY></YYYY></AnnualStatuteId></Chapter>
+</Identification>
+<Introduction>
+<Enacts>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>Her Majesty, by and with the advice and consent of the Senate and House of Commons of Canada, enacts as follows:</Text></Provision>
+</Enacts>
+</Introduction>
+<Body>
+<Heading level="1"><TitleText>SHORT TITLE</TitleText></Heading><Section><MarginalNote>Short title</MarginalNote><Label>1.</Label><Text>This Act may be cited as the <XRefExternal reference-type="act"></XRefExternal>.</Text></Section>
+</Body></Statute>
+<?Pub *0000001054 0?>

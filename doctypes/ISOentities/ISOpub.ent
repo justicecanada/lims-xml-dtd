@@ -1,0 +1,90 @@
+<!-- iso-pub.ent produced by Norman Walsh for the XML version of DocBook -->
+
+<!-- Derived from the corresponding ISO 8879 standard entity set
+     and the Unicode character mappings provided by Sebastian Rahtz -->
+
+<!ENTITY emsp	"&#38;#x2003;"> <!-- EM SPACE -->
+<!ENTITY ensp	"&#38;#x2002;"> <!-- EN SPACE -->
+<!ENTITY emsp13	"&#38;#x2004;"> <!-- THREE-PER-EM SPACE -->
+<!ENTITY emsp14	"&#38;#x2005;"> <!-- FOUR-PER-EM SPACE -->
+<!ENTITY numsp	"&#38;#x2007;"> <!-- FIGURE SPACE -->
+<!ENTITY puncsp	"&#38;#x2008;"> <!-- PUNCTUATION SPACE -->
+<!ENTITY thinsp	"&#38;#x2009;"> <!-- THIN SPACE -->
+<!ENTITY hairsp	"&#38;#x200A;"> <!-- HAIR SPACE -->
+<!ENTITY mdash	"&#38;#x2014;"> <!-- EM DASH -->
+<!ENTITY ndash	"&#38;#x2013;"> <!-- EN DASH -->
+<!ENTITY dash	"&#38;#x2010;"> <!-- HYPHEN -->
+<!ENTITY blank	"&#38;#x2423;"> <!-- OPEN BOX -->
+<!ENTITY hellip	"&#38;#x2026;"> <!-- HORIZONTAL ELLIPSIS -->
+<!ENTITY nldr	"&#38;#x2025;"> <!-- TWO DOT LEADER -->
+<!ENTITY frac13	"&#38;#x2153;"> <!-- VULGAR FRACTION ONE THIRD -->
+<!ENTITY frac23	"&#38;#x2154;"> <!-- VULGAR FRACTION TWO THIRDS -->
+<!ENTITY frac15	"&#38;#x2155;"> <!-- VULGAR FRACTION ONE FIFTH -->
+<!ENTITY frac25	"&#38;#x2156;"> <!-- VULGAR FRACTION TWO FIFTHS -->
+<!ENTITY frac35	"&#38;#x2157;"> <!-- VULGAR FRACTION THREE FIFTHS -->
+<!ENTITY frac45	"&#38;#x2158;"> <!-- VULGAR FRACTION FOUR FIFTHS -->
+<!ENTITY frac16	"&#38;#x2159;"> <!-- VULGAR FRACTION ONE SIXTH -->
+<!ENTITY frac56	"&#38;#x215A;"> <!-- VULGAR FRACTION FIVE SIXTHS -->
+<!ENTITY incare	"&#38;#x2105;"> <!-- CARE OF -->
+<!ENTITY block	"&#38;#x2588;"> <!-- FULL BLOCK -->
+<!ENTITY uhblk	"&#38;#x2580;"> <!-- UPPER HALF BLOCK -->
+<!ENTITY lhblk	"&#38;#x2584;"> <!-- LOWER HALF BLOCK -->
+<!ENTITY blk14	"&#38;#x2591;"> <!-- LIGHT SHADE -->
+<!ENTITY blk12	"&#38;#x2592;"> <!-- MEDIUM SHADE -->
+<!ENTITY blk34	"&#38;#x2593;"> <!-- DARK SHADE -->
+<!ENTITY marker	"&#38;#x25AE;"> <!-- BLACK VERTICAL RECTANGLE -->
+<!ENTITY cir	"&#38;#x25CB;"> <!-- WHITE CIRCLE -->
+<!ENTITY squ	"&#38;#x25A1;"> <!-- WHITE SQUARE -->
+<!ENTITY rect	"&#38;#x25AD;"> <!-- WHITE RECTANGLE -->
+<!ENTITY utri	"&#38;#x25B5;"> <!-- WHITE UP-POINTING TRIANGLE -->
+<!ENTITY dtri	"&#38;#x25BF;"> <!-- WHITE DOWN-POINTING TRIANGLE -->
+<!ENTITY star	"&#38;#x22C6;"> <!-- STAR OPERATOR -->
+<!ENTITY bull	"&#38;#x2022;"> <!-- BULLET -->
+<!ENTITY squf	"&#38;#x25AA;"> <!--  -->
+<!ENTITY utrif	"&#38;#x25B4;"> <!-- BLACK UP-POINTING TRIANGLE -->
+<!ENTITY dtrif	"&#38;#x25BE;"> <!-- BLACK DOWN-POINTING TRIANGLE -->
+<!ENTITY ltrif	"&#38;#x25C2;"> <!-- BLACK LEFT-POINTING TRIANGLE -->
+<!ENTITY rtrif	"&#38;#x25B8;"> <!-- BLACK RIGHT-POINTING TRIANGLE -->
+<!ENTITY clubs	"&#38;#x2663;"> <!-- BLACK CLUB SUIT -->
+<!ENTITY diams	"&#38;#x2666;"> <!-- BLACK DIAMOND SUIT -->
+<!ENTITY hearts	"&#38;#x2665;"> <!-- BLACK HEART SUIT -->
+<!ENTITY spades	"&#38;#x2660;"> <!-- BLACK SPADE SUIT -->
+<!ENTITY malt	"&#38;#x2720;"> <!-- MALTESE CROSS -->
+<!ENTITY dagger	"&#38;#x2020;"> <!-- DAGGER -->
+<!ENTITY Dagger	"&#38;#x2021;"> <!-- DOUBLE DAGGER -->
+<!ENTITY check	"&#38;#x2713;"> <!-- CHECK MARK -->
+<!ENTITY cross	"&#38;#x2717;"> <!-- BALLOT X -->
+<!ENTITY sharp	"&#38;#x266F;"> <!-- MUSIC SHARP SIGN -->
+<!ENTITY flat	"&#38;#x266D;"> <!-- MUSIC FLAT SIGN -->
+<!ENTITY male	"&#38;#x2642;"> <!-- MALE SIGN -->
+<!ENTITY female	"&#38;#x2640;"> <!--  -->
+<!ENTITY phone	"&#38;#x260E;"> <!-- TELEPHONE SIGN -->
+<!ENTITY telrec	"&#38;#x2315;"> <!-- TELEPHONE RECORDER -->
+<!ENTITY copysr	"&#38;#x2117;"> <!-- SOUND RECORDING COPYRIGHT -->
+<!ENTITY caret	"&#38;#x2041;"> <!-- CARET -->
+<!ENTITY lsquor	"&#38;#x201A;"> <!-- SINGLE LOW-9 QUOTATION MARK -->
+<!ENTITY ldquor	"&#38;#x201E;"> <!-- DOUBLE LOW-9 QUOTATION MARK -->
+<!ENTITY fflig	"&#38;#xFB00;"> <!--  -->
+<!ENTITY filig	"&#38;#xFB01;"> <!--  -->
+<!--     fjlig	Unknown unicode character -->
+<!ENTITY ffilig	"&#38;#xFB03;"> <!--  -->
+<!ENTITY ffllig	"&#38;#xFB04;"> <!--  -->
+<!ENTITY fllig	"&#38;#xFB02;"> <!--  -->
+<!ENTITY mldr	"&#38;#x2026;"> <!-- HORIZONTAL ELLIPSIS -->
+<!ENTITY rdquor	"&#38;#x201C;"> <!--  -->
+<!ENTITY rsquor	"&#38;#x2018;"> <!--  -->
+<!ENTITY vellip	"&#38;#x22EE;"> <!--  -->
+<!ENTITY hybull	"&#38;#x2043;"> <!-- HYPHEN BULLET -->
+<!ENTITY loz	"&#38;#x25CA;"> <!-- LOZENGE -->
+<!ENTITY lozf	"&#38;#x2726;"> <!--  -->
+<!ENTITY ltri	"&#38;#x25C3;"> <!-- WHITE LEFT-POINTING TRIANGLE -->
+<!ENTITY rtri	"&#38;#x25B9;"> <!-- WHITE RIGHT-POINTING TRIANGLE -->
+<!ENTITY starf	"&#38;#x2605;"> <!-- BLACK STAR -->
+<!ENTITY natur	"&#38;#x266E;"> <!-- MUSIC NATURAL SIGN -->
+<!ENTITY rx	"&#38;#x211E;"> <!-- PRESCRIPTION TAKE -->
+<!ENTITY sext	"&#38;#x2736;"> <!-- SIX POINTED BLACK STAR -->
+<!ENTITY target	"&#38;#x2316;"> <!-- POSITION INDICATOR -->
+<!ENTITY dlcrop	"&#38;#x230D;"> <!-- BOTTOM LEFT CROP -->
+<!ENTITY drcrop	"&#38;#x230C;"> <!-- BOTTOM RIGHT CROP -->
+<!ENTITY ulcrop	"&#38;#x230F;"> <!-- TOP LEFT CROP -->
+<!ENTITY urcrop	"&#38;#x230E;"> <!-- TOP RIGHT CROP -->

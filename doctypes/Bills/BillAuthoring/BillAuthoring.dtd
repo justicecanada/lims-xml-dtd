@@ -1,42 +1,9 @@
 <?xml encoding="utf-8"?>
-<!-- Bill Authoring DTD v2.4.2 == 20160629 -->
-
-<!-- Bill Authoring DTD v2.4.0 == 20050311 -->
-
-<!-- Bill Authoring DTD v2.3.1 == 20050311 -->
-
-<!-- Bill Authoring DTD v2.3.0 == 20050124 -->
-
-<!-- Bill Authoring DTD v2.2.0 == 20040916 -->
-
-<!-- Bill Authoring DTD v2.1.0 == 20040716 -->
-
-<!-- Bill Authoring DTD v2.0.0 == 20040528 -->
-
-<!-- Sep. 2002 - removed the "inline" attribute from Provision since
-	it was redundant.  -->
-
-<!-- Feb. 2002 - removed common elements to a separate file called
-     billCommonElements.ent...Julie Julian  -->
-             
-<!-- Jan. 2002 -  Removed most comments to a separate dtd documentation file.
-     Reorganized dtd to put attributes after their associated elements, and to
-     group associated elements together. Added comment banners to distinguish
-     sections for readability.
-     Made several changes - documented in DTDChanges2002.doc file...Julie Julian-->
+<!-- Bill Authoring DTD v2.5 == 2022 -->
 
 <!-- The BillAuthoring DTD includes the change attribute with its modified content model. -->
 <!ENTITY % ignorechange 'INCLUDE'>
 
-<!-- The BillAuthoring DTD includes the authoring entity which allows the CommentBlock 
-element while excluding the HistoricalNote element. -->
-<!ENTITY % authoring 'INCLUDE'>
-<!ENTITY % exchange 'IGNORE'>
-<!ENTITY % statute 'IGNORE'>
-
-<!-- The BillAuthoring DTD excludes both the flat entity and the nested entity as its Body and Heading elements are defined in the authoring entity. -->
-<!ENTITY % flat 'IGNORE' >
-<!ENTITY % nested 'IGNORE' >
 
 <!ENTITY % changeatt  "
              change  (ins | del | off | alt)   #IMPLIED " >
@@ -44,6 +11,7 @@ element while excluding the HistoricalNote element. -->
 <!-- The following line identifies the billCommonElements.ent to be included 
      in BillAuthoring.dtd -->
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
+<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "../CommonFiles/billCommonEntities.ent">
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -74,11 +42,249 @@ element while excluding the HistoricalNote element. -->
                | PageBreak | Keep)* " >
 
 
+
+%commonentities;
+
+
+<!--  These elements' model include the CommentBlock element.-->
+
+	<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
+		| %blocktext; | Schedule)*" >
+
+	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | (Section, CommentBlock*))+ 
+                     | (Subsection, CommentBlock*)+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+
 <!-- The following line imports the contents of billCommonElements.dtd so that
      elements from the common elements pool can be included in BillAuthoring.dtd 
      This reference must be positioned after the entity references. -->
- 
 %commonelements;
+					 
+	<!ELEMENT Body  (Heading | Section | CommentBlock)+ >
+
+
+	<!ELEMENT Clause  (CommentBlock*, Label, Text, ((Subclause | CommentBlock | %blocktext;)+, 
+                   ContinuedClause?)*) >                   
+	<!ATTLIST Clause
+               id  ID    #IMPLIED 
+               type (normal | amending | transitional)   #IMPLIED 
+               %changeatt;  >
+
+	<!ELEMENT ContinuedClause  (CommentBlock*,Text, CommentBlock*) >
+	<!ATTLIST ContinuedClause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+	<!ELEMENT ContinuedDefinition  (CommentBlock*, Text, CommentBlock*) >
+	<![%ignorechange;[
+	<!ATTLIST ContinuedDefinition %changeatt;  >
+        ]]>
+
+
+	<!ELEMENT ContinuedParagraph  (CommentBlock*,Text, CommentBlock*) >
+	<!ATTLIST ContinuedParagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubclause  (CommentBlock*,Text, CommentBlock*) >
+	<!ATTLIST ContinuedSubclause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubparagraph  (CommentBlock*,Text, CommentBlock*) >
+	<!ATTLIST ContinuedSubparagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text, (AmendedText | ReadAsText)?, CommentBlock*) >
+	<!ATTLIST ContinuedSectionSubsection
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT Definition  (CommentBlock*, MarginalNote*,
+                        (Text*,((Paragraph | CommentBlock | %blocktext;)+,ContinuedDefinition?, CommentBlock*)*)
+                              )>
+	<!ATTLIST Definition
+                generate-in-text (yes | no)  "no" >
+
+
+	<!ELEMENT Heading  (CommentBlock*, Label?, MarginalNote?, TitleText?) >
+	<!ATTLIST Heading
+ 	   level (1 | 2 | 3 | 4 | 5) #REQUIRED
+    	style CDATA  #IMPLIED 
+    	type (normal | transitional | amending) #IMPLIED
+    	%changeatt;  >
+
+	<!ELEMENT List (Item+) >
+	<!ATTLIST List
+		style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
+		subsequent-line-indent CDATA #IMPLIED 
+		label-start-indent CDATA #IMPLIED 
+		text-start-indent  CDATA #IMPLIED 
+		first-line-indent CDATA #IMPLIED 
+		justification (justify | left | right | center) #IMPLIED
+		hyphenation (yes | no) #IMPLIED
+		pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+		keep-with-next (yes | no) #IMPLIED
+		keep-with-previous (yes | no) #IMPLIED
+		topmarginspacing CDATA #IMPLIED
+		xml:lang (en | fr)   #IMPLIED 
+		language-align (yes | no) "no"
+		%changeatt;  >
+
+	<!ELEMENT Item (Label?, Text, List?) >
+	
+	
+	<!ELEMENT Paragraph  (CommentBlock*, MarginalNote?, Label, Text,
+                     (((Subparagraph | CommentBlock | %blocktext;)+, ContinuedParagraph?)* 
+                        | AmendedText?)) >                        
+	<!ATTLIST Paragraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Preamble  (CommentBlock*, Provision+, CommentBlock*) >
+
+
+	<!ELEMENT Provision (
+                      CommentBlock?,
+                      MarginalNote?,
+                      Label?,
+                      ProvisionHeading?,
+                      (
+                        (
+                          Text,
+                          (
+                            (
+                              (Provision | %provisionblock;)+,
+                              Text?
+                            )*
+                           |
+                            AmendedContent?
+                           |
+                            ReadAsContent?
+                          )
+                        )
+                       |
+                        Provision+
+                       |
+                        %provisionblock;
+                      ), CommentBlock*
+                    ) >
+	<!ATTLIST Provision	
+                format-ref  CDATA    #IMPLIED
+                first-line-indent CDATA #IMPLIED
+                subsequent-line-indent CDATA #IMPLIED
+                justification (justify | left | right | center) #IMPLIED
+                hyphenation (yes | no) #IMPLIED
+                pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+                keep-with-next (yes | no) #IMPLIED
+                keep-with-previous (yes | no) #IMPLIED
+                topmarginspacing CDATA #IMPLIED
+		list-item (yes | no) "no"
+                xml:lang (en | fr)   #IMPLIED 
+                id  ID    #IMPLIED
+                language-align (yes | no) "no"
+                %changeatt; >    		
+  
+                  
+	<!ELEMENT Section  (CommentBlock*, MarginalNote?, Label, 
+                    ((Text, (Definition* | (((Paragraph | CommentBlock*| %blocktext;)+, 
+                    ContinuedSectionSubsection?)* 
+                    | (AmendedText, ContinuedSectionSubsection?)?))) 
+                    | (Subsection, CommentBlock*)+),
+                    ExplanatoryNote?) >
+	<!ATTLIST Section 
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT SectionPiece  (
+                           CommentBlock
+			 | Definition
+                         | Paragraph 
+                         | Subparagraph 
+                         | Clause 
+                         | Subclause 
+                         | Subsubclause 
+                         | ContinuedSectionSubsection 
+                         | ContinuedParagraph 
+                         | ContinuedSubparagraph 
+                         | ContinuedClause 
+                         | ContinuedSubclause 
+                         | ContinuedDefinition
+                         | %blocktext; 
+                        )+ >
+
+
+	<!ELEMENT Subclause  (CommentBlock*, Label, Text,  ((Subsubclause | CommentBlock 
+                      | %blocktext;)+, ContinuedSubclause?)*) >                     
+	<!ATTLIST Subclause
+               id  ID    #IMPLIED 
+               type (normal | amending | transitional)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Subparagraph  (CommentBlock*, Label, Text, (((Clause | CommentBlock 
+                         | %blocktext;)+, ContinuedSubparagraph?)* 
+                         | AmendedText?)) >                         
+	<!ATTLIST Subparagraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Subsection (CommentBlock*, MarginalNote?, Label, Text,
+                       (Definition* | (((Paragraph | CommentBlock*| %blocktext;)+,
+                       ContinuedSectionSubsection?)* 
+                     | (AmendedText, ContinuedSectionSubsection?)?)),
+                       ExplanatoryNote?) >                    
+	<!ATTLIST Subsection
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending) #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Subsubclause  (CommentBlock*, Label, Text,CommentBlock*, 
+                         (%blocktext;)*) >                         
+	<!ATTLIST Subsubclause
+               id  ID    #IMPLIED 
+               type (normal | amending | transitional)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Summary  (CommentBlock*, TitleText, Provision+, CommentBlock*) >
+
+
+<!--  These elements' model is part of the entity as their model 
+includes the HistoricalNote element in Statute DTDs.-->
+
+
+	<!ELEMENT Enacts  (Provision) >
+
+
+	<!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+) >
+
+
+	<!ELEMENT DocumentInternal
+                ( (Group | Provision | GroupHeading)+, Schedule* ) >
+
+   		
+	<!ELEMENT Group
+                ( GroupHeading, (Group? | Provision?)* )> 
+	<!ATTLIST Group
+    	id  ID    #IMPLIED >
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->

@@ -1,36 +1,7 @@
 <?xml encoding="utf-8"?>
-<!-- Statute DTD v2.3.1 == 20050311 -->
+<!-- Statute DTD v2.5 == 2022 -->
 
-<!-- Statute DTD v2.3.0 == 20050104 -->
-
-<!-- Statute DTD v2.2.0 == 20040916: No modifications -->
-
-<!-- Statute DTD v2.1.0 == 20040715 -->
-
-<!-- Statute DTD v2.0.0 == 20040528 -->
-
-<!-- Sep. 2002 - removed the "inline" attribute from Provision since
-	it was redundant.  -->
-
-<!-- Feb. 2002 - removed common elements to a separate file called
-     billCommonElements.ent...Julie Julian  -->
-             
-<!-- The Statute DTD ignores the change attribute if it is the only attribute 
-     for an element.  If the element has other attributes (besides change) 
-     then we can include the ATTLIST in  the DTD, but we map the %changeatt; 
-     entity to the null string so that the changeatt is not included.  -->
 <!ENTITY % ignorechange 'IGNORE'>
-
-<!-- The Statute DTD includes the statute entity which allows the HistoricalNote
-element while excluding the CommentBlock element. -->
-<!ENTITY % statute 'INCLUDE'>
-<!ENTITY % exchange 'IGNORE'>
-<!ENTITY % authoring 'IGNORE'>
-
-<!-- The Statute DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
-<!ENTITY % flat 'INCLUDE' >
-<!ENTITY % nested 'IGNORE' >
-
 
 <!ENTITY % changeatt "">
 
@@ -38,6 +9,7 @@ element while excluding the CommentBlock element. -->
      in Statute.dtd -->
   
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
+<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "../CommonFiles/billCommonEntities.ent">
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -63,13 +35,229 @@ element while excluding the CommentBlock element. -->
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
 
+%commonentities;
 
+<!--  These elements' model include the HistoricalNote element.-->
+<!ENTITY % schedulecontent  "(AmendedText | Repealed | BillPiece | DocumentInternal | BillInternal
+                            | %blocktext; | Schedule | HistoricalNote | Repealed)*" >
+							
 
+<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
+                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+							
 <!-- The following line imports the contents of billCommonElements.dtd so that
      elements from the common elements pool can be included in Statute.dtd 
      This reference must be positioned after the entity references. -->
  
 %commonelements;
+
+
+	<!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+, HistoricalNote?) >
+
+
+	<!ELEMENT Clause  (Label, Text, ((Subclause | %blocktext;)+, 
+                   ContinuedClause?)*, HistoricalNote?) >                 
+	<!ATTLIST Clause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT DocumentInternal
+    		( (Group | Provision | GroupHeading)+, Schedule*, HistoricalNote? ) >
+   
+
+	<!ELEMENT Enacts  (Provision, HistoricalNote?) >
+
+
+	<!ELEMENT Group 
+  	 	(GroupHeading,
+        	(Group? | Provision?)*,
+	         HistoricalNote?
+    		)>   
+	<!ATTLIST Group
+    	id  ID    #IMPLIED >
+
+
+	<!ELEMENT List (Item+) >
+	<!ATTLIST List
+		style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
+		subsequent-line-indent CDATA #IMPLIED 
+		label-start-indent CDATA #IMPLIED 
+		text-start-indent  CDATA #IMPLIED 
+		first-line-indent CDATA #IMPLIED 
+		justification (justify | left | right | center) #IMPLIED
+		hyphenation (yes | no) #IMPLIED
+		pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+		keep-with-next (yes | no) #IMPLIED
+		keep-with-previous (yes | no) #IMPLIED
+		topmarginspacing CDATA #IMPLIED
+		xml:lang (en | fr)   #IMPLIED 
+		language-align (yes | no) "no"
+		%changeatt;  >
+		
+	<!ELEMENT Paragraph  (MarginalNote?, Label, Text, 
+                     (((Subparagraph | %blocktext;)+, ContinuedParagraph?)* 
+                     | AmendedText?), HistoricalNote?) >                
+	<!ATTLIST Paragraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending | CIF)   #IMPLIED  >
+
+
+	<!ELEMENT Preamble  (Provision+, HistoricalNote?) >
+	<!ATTLIST Preamble
+               salutation   (yes | no ) "no"   >
+
+
+	<!ELEMENT Provision (
+                      MarginalNote?,
+                      Label?,
+                      ProvisionHeading?,
+                      (
+                        (
+                          Text,
+                          (
+                            (
+                              (Provision | %provisionblock;)+,
+                              Text?
+                            )*
+                           |
+                            AmendedContent?
+                           |
+                            ReadAsContent?
+                          ),
+                          HistoricalNote?
+                        )
+                       |
+                        (Provision+, HistoricalNote?)
+                       |
+                        (%provisionblock;, HistoricalNote?)
+                      )
+                    ) >
+	<!ATTLIST Provision	
+                format-ref  CDATA    #IMPLIED
+                first-line-indent CDATA #IMPLIED
+                subsequent-line-indent CDATA #IMPLIED
+                justification (justify | left | right | center) #IMPLIED
+                hyphenation (yes | no) #IMPLIED
+                pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+                keep-with-next (yes | no) #IMPLIED
+                keep-with-previous (yes | no) #IMPLIED
+                topmarginspacing CDATA #IMPLIED
+		list-item (yes | no) "no"
+                xml:lang (en | fr)   #IMPLIED 
+                id  ID    #IMPLIED
+                language-align (yes | no) "no"
+                %changeatt; >
+
+
+	<!ELEMENT Section  (MarginalNote?, Label, 
+                    ((Text, (Definition* | (((Paragraph | %blocktext;)+, 
+                    ContinuedSectionSubsection?)* | (AmendedText, ContinuedSectionSubsection?)?))) | Subsection+),
+                    HistoricalNote?) >        
+	<!ATTLIST Section
+               id  ID    #IMPLIED 
+               target  CDATA    #IMPLIED 
+               type (normal | transitional | amending | CIF)   #IMPLIED  >
+
+
+	<!ELEMENT Subclause  (Label, Text, ((Subsubclause | %blocktext;)+,
+                      ContinuedSubclause?)*, HistoricalNote?) >                    
+	<!ATTLIST Subclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT Subparagraph  (Label, Text, (((Clause 
+                         | %blocktext;)+, ContinuedSubparagraph?)* 
+                         | AmendedText?), HistoricalNote?) >                       
+	<!ATTLIST Subparagraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED  >
+
+
+	<!ELEMENT Subsection  (MarginalNote?, Label, Text, 
+                       (Definition* | (((Paragraph | %blocktext;)+,
+                       ContinuedSectionSubsection?)* | (AmendedText, ContinuedSectionSubsection?)?)),
+                       HistoricalNote?) >                      
+	<!ATTLIST Subsection
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending | CIF)   #IMPLIED  >
+
+
+	<!ELEMENT Subsubclause  (Label, Text, 
+                         (%blocktext;)*, HistoricalNote?) >
+	<!ATTLIST Subsubclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+
+	<!ELEMENT ContinuedClause  (Text) >
+	<!ATTLIST ContinuedClause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedDefinition  (Text) >
+	<![%ignorechange;[
+	<!ATTLIST ContinuedDefinition %changeatt;  >
+        ]]>
+
+
+	<!ELEMENT ContinuedParagraph  (Text) >
+	<!ATTLIST ContinuedParagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+
+	<!ELEMENT ContinuedSectionSubsection  (Text, (AmendedText | ReadAsText)?) >
+	<!ATTLIST ContinuedSectionSubsection
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubclause  (Text) >
+	<!ATTLIST ContinuedSubclause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubparagraph  (Text) >
+	<!ATTLIST ContinuedSubparagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT Definition  ( 
+                        MarginalNote*,
+                        (Text*,((Paragraph | %blocktext;)+,ContinuedDefinition?)*)
+                      )>
+
+
+	<!ELEMENT SectionPiece  (
+                           Definition
+                         | Paragraph 
+                         | Subparagraph 
+                         | Clause 
+                         | Subclause 
+                         | Subsubclause 
+                         | ContinuedSectionSubsection 
+                         | ContinuedParagraph 
+                         | ContinuedSubparagraph 
+                         | ContinuedClause 
+                         | ContinuedSubclause 
+                         | ContinuedDefinition
+                         | %blocktext; 
+                        )+ >
+
+	<!ELEMENT Summary  (TitleText, Provision+) >
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -139,7 +327,16 @@ element while excluding the CommentBlock element. -->
 <!--                       BLOCK TEXT ELEMENTS                           -->
 <!--                                                                     -->
 <!-- ____________________________________________________________________-->
-                                                                                      
+                                                                            
+<!ELEMENT Body  (Heading | Section )+ >
+
+<!ELEMENT Heading  (Label?, MarginalNote?, TitleText?, Note?) >
+<!ATTLIST Heading
+	level (1 | 2 | 3 | 4 | 5) #REQUIRED
+	style CDATA  #IMPLIED 
+	type (normal | transitional | amending) #IMPLIED
+	%changeatt;  >
+	
 <!ELEMENT AmendedText  (%docpart; | BillInternal | OriginatingRef | Schedule) >
 <!ATTLIST AmendedText
 	xml:lang (en | fr )   #IMPLIED 

@@ -1,0 +1,59 @@
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                             ENTITIES                                -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!-- The parameter entity %blockfragment; defined below is used to create
+  a more restrictive content model than %blocktext; for use in the
+  %docpart; parameter entity.  In particular, %blockfragment; does
+  not contain the Provision element.  This omission is required to
+  permit required flexibility in the content of AmendedText when
+  schedules are being amended. -->
+
+
+<!ENTITY % blockfragment  "BilingualGroup
+                         | FormulaGroup
+                         | FormulaDefinition 
+                         | FormulaParagraph
+                         | FormGroup 
+                         | TableGroup
+                         | SignatureBlock
+                         | Footnote 
+                         | List
+                         | Note
+                         | Oath
+                         | ImageGroup
+                         | ReadAsText" >
+
+                           
+<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
+    
+
+<!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
+
+
+<!ENTITY % provisionblock "(
+                               BilingualGroup
+                             | FormulaGroup
+                             | FormGroup
+                             | TableGroup
+                             | SignatureBlock
+                             | Footnote
+                             | Note
+							 | List
+                             | Oath
+                             | ImageGroup
+                           )" >
+       
+
+<!--  This dtd uses conditional sections to handle the "changeatt" entity.-->
+
+<!--  The entity "changeatt" is used to define the "change" attribute and
+      is defined in BillAuthoring.dtd, BillExchange.dtd, and Statute.dtd.
+	  - ins - element is new (or mostly new) text
+	  - del - element is deleted
+	  - off - element is not entirely new (for child of element marked with ins)
+	  - alt - element is an alternative version of another element (for drafting)
+	          (e.g. drafters keep different version of a given provision before 
+	          selecting one)  -->

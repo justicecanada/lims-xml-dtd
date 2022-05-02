@@ -1,44 +1,7 @@
 <?xml encoding="utf-8"?>
-<!-- Statute DTD v2.3.1 == 20050311 -->
-
-<!-- Statute DTD v2.3.0 == 20050104 -->
-
-<!-- Statute DTD v2.2.0 == 20040916: No modifications -->
-
-<!-- Statute DTD v2.1.0 == 20040715 -->
-
-<!-- Statute DTD v2.0.0 == 20040528 -->
-
-<!-- Sep. 2002 - removed the "inline" attribute from Provision since
-	it was redundant.  -->
-
-<!-- Feb. 2002 - removed common elements to a separate file called
-     billCommonElements.ent...Julie Julian  -->
-             
-<!-- The Statute DTD ignores the change attribute if it is the only attribute 
-     for an element.  If the element has other attributes (besides change) 
-     then we can include the ATTLIST in  the DTD, but we map the %changeatt; 
-     entity to the null string so that the changeatt is not included. 
-<!ENTITY % ignorechange 'IGNORE'>
- -->
-<!-- The Statute DTD includes the statute entity which allows the HistoricalNote
-element while excluding the CommentBlock element.
-<!ENTITY % statute 'INCLUDE'>
-<!ENTITY % exchange 'IGNORE'>
-<!ENTITY % authoring 'IGNORE'>
- -->
-<!-- The Statute DTD includes the flat entity which defines the flattened model for the Body and Heading elements.
-<!ENTITY % flat 'INCLUDE' >
-<!ENTITY % nested 'IGNORE' >
- -->
+<!-- Statute DTD v2.5 == 2022 -->
 
 <!ENTITY % changeatt "">
-
-<!-- The following line identifies the billCommonElements.dtd to be included 
-     in Statute.dtd -->
-<!--
-<!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
--->
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -101,6 +64,11 @@ element while excluding the CommentBlock element.
 
 <!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
                             | %blocktext; | Schedule | HistoricalNote | Repealed)*" >
+							
+
+<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
+                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
 
 
 
@@ -280,15 +248,6 @@ element while excluding the CommentBlock element.
 	<!ATTLIST Subsubclause
                id  ID    #IMPLIED 
                type  (normal | transitional | amending)  #IMPLIED  >
-
-
-
-<!--  These elements' model is part of the entity as their model 
-includes the CommonBlock element in the Authoring DTD.-->
-
-	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
-                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
 
 
 	<!ELEMENT ContinuedClause  (Text) >

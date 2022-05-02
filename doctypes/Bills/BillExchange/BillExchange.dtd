@@ -1,171 +1,13 @@
 <?xml encoding="utf-8"?>
-<!-- Bill Exchange DTD v2.4.2b == 20171002 -->
+<!-- Bill Exchange DTD v2.5 == 2022 -->
 
-<!-- Bill Exchange DTD v2.4.2a == 20170418 -->
-
-<!-- Bill Exchange DTD v2.4.2 == 20160714 -->
-
-<!-- Bill Exchange DTD v2.4.1b == 20150828 -->
-
-<!-- Bill Exchange DTD v2.4.1 == 20150811 -->
-
-<!-- Bill Exchange DTD v2.4.0 == 20150324 This is the new version of Exchange DTD created by DOJ -->
-
-<!-- Bill Exchange DTD v2.3.1b == 20150227 The version (label) was created by HOC -->
-
-<!-- Bill Exchange DTD v2.3.1 == 20050311 -->
-
-<!-- Bill Exchange DTD v2.3.0 == 20050104 -->
-
-<!-- Bill Exchange DTD v2.2.0 == 20040916 -->
-
-<!-- Bill Exchange DTD v2.1.0 == 20040716 -->
-
-<!-- Bill Exchange DTD v2.0.0 == 20040528 -->
-
-<!-- September 2017 - From HoC - adding <Keep> to <Ins> and creating a new version of the Exchange.DTD v2.4.2b 
-	before: <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
-                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision)*" >
-
-	now: <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
-                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision | Keep)*" >
-
-						  -->
-
-
-<!-- December 2016 - From HoC. We need to be able to differentiate keeps inserted by the hyphenation service from those inserted by the user. 
-	before: <!ELEMENT Keep  (%lowleveltext;)* >
-	now: <!ATTLIST Keep   
-               svc CDATA #IMPLIED >
--->
-
-<!-- November 2016 - Allow new element DefinitionRef in <MarginalNote> 
-	before: <!ELEMENT MarginalNote  (%lowleveltext;
-                      | DefinedTermEn | DefinedTermFr
-                      | DefinitionEnOnly | DefinitionFrOnly | HistoricalNote 
-                     )*" >
-
-	now: <!ELEMENT MarginalNote  (%lowleveltext;
-                      | DefinedTermEn | DefinedTermFr
-                      | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | HistoricalNote 
-                     )*" >
-
--->
-
-<!-- November 2016 - Allow new element DefinitionRef, DefinitionEnOnly and DefinitionFrOnly to <Ins> 
-	before: <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
-                          | DefinedTermFr | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision)*" >
-
-	now: <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
-                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision)*" >
-
-						  -->
-
-<!-- July 2016 - Added the new element DefinitionRef  in inline entity
-	<!ELEMENT DefinitionRef  (%lowleveltext;)* >
-
-	before: <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
-                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
-	now: <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
-                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly  | DefinitionRef| FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
--->
-
-<!-- June 2016 - Allow Fraction in FormulaText 
-	before: <!ELEMENT FormulaText  (%lowleveltext;)* >
-	now: <!ELEMENT FormulaText  (%lowleveltext; | Fraction)* >
--->
-
-<!-- June 2016 - Allow for OriginatingRef in the AmendedText 
-	before: <!ELEMENT AmendedText  (CommentBlock*, (%docpart; | BillInternal | Schedule)) >
-	now: <!ELEMENT AmendedText  (CommentBlock*, (%docpart; | BillInternal | OriginatingRef | Schedule)) >
--->
-
-<!-- June 2016 - Allow for lowleveltext in the StageText tag in BillHistory 
-	before: <!ELEMENT StageText  (#PCDATA) >
-	now: <!ELEMENT StageText  (%lowleveltext;)* >
--->
-
-<!-- May 2016 - Add DefinitionEnOnly and DefinitionFrOnly to the Text element  
-	before: <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
-                     | DefinedTermEn | DefinedTermFr | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
-	now: <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
-                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
--->
-
-<!-- May 2016 - Caption in ImageGroup element 
-	before: <!ELEMENT ImageGroup  (AlternateText?, Caption?, Image) >
-	now: <!ELEMENT ImageGroup  (title*, AlternateText?, Caption*, Image) >
--->
-
-<!-- May 2016 - Adding the Provision element to Note element 
-	before: <!ELEMENT Note  (%lowleveltext;)* >
-	now: <!ELEMENT Note  (%lowleveltext; | Provision)* >
--->
-
-<!-- May 2016 - Add attribute for LongTitle as the specs for each are not the same in Bills and Regs 
-	before: <!ELEMENT LongTitle  (%lowleveltext;)* >
-	now: <!ELEMENT LongTitle  (%lowleveltext;)* >
-			<!ATTLIST LongTitle
-               type CDATA   #IMPLIED  >
--->
-
-<!-- May 2016 - Add attribute on DefinedTermEn and DefinedTermFr to remove bold characteristic within a Definition 
-	before: <!ELEMENT DefinedTermEn/Fr  (%lowleveltext;)* >
-	now: <!ELEMENT DefinedTermEn  (%lowleveltext;)* >
-			<!ATTLIST DefinedTermEn
-               style  (bold | italic | normal)    #IMPLIED  >
--->
-
-<!-- August 2015 - Two changes: 
-     1. Added the Leader element to SignatureLine (<!ELEMENT SignatureLine  (%lowleveltext; | Leader)* >)
-     2. Added the Leader element to Oath element (<!ELEMENT Oath  (%lowleveltext; | Leader)* >)
- -->
-
-<!-- August 2015 - removed List element from the blocktext entity 
-	before: <!ENTITY % blocktext  "( %blockfragment; | Provision | List)" >
-	now: <!ENTITY % blocktext  "( %blockfragment; | Provision)" >
--->
-
-<!-- August 2015 - added the new attribute "label-column-width" in the TableOfProvisions element -->
-	 
-<!-- Mart 2015 - Two changes: 
-     1. Added Heading element in the Section and 
-     2. Added the Leader element inside entities % changedtext, % inline and % tbl.entry.mdl -->
-
-<!-- Sep. 2002 - removed the "inline" attribute from Provision since
-	it was redundant.  -->
-
-<!-- Feb. 2002 - removed common elements to a separate file called
-     billCommonElements.ent...Julie Julian  -->
-             
 <!-- The BillExchange DTD, includes the change attribute with its modified content model. -->
 <!ENTITY % ignorechange 'INCLUDE'>
 
 <!-- The BillExchange DTD includes the exchange entity which excludes the CommentBlock 
 element as well as the HistoricalNote element. -->
-<!ENTITY % authoring 'IGNORE' >
-<!ENTITY % exchange 'INCLUDE' >
-<!ENTITY % statute 'IGNORE' >
 
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
-<!ENTITY % flat 'INCLUDE' >
-<!ENTITY % nested 'IGNORE' >
 
 <!ENTITY % changeatt "
               change  (ins | off )   #IMPLIED " >           
@@ -174,6 +16,7 @@ element as well as the HistoricalNote element. -->
      in BillExchange.dtd -->
  
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
+<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "../CommonFiles/billCommonEntities.ent">
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -204,12 +47,230 @@ element as well as the HistoricalNote element. -->
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
 
+%commonentities;
+
+<!--  These elements' model exclude the CommentBlock and HistoricalNote elements.-->
+
+<!ENTITY % schedulecontent  "(BillPiece | DocumentInternal | BillInternal
+	| %blocktext; | Schedule)*" >
+
+
+<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
+                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+
 
 <!-- The following line imports the contents of billCommonElements.dtd so that
      elements from the common elements pool can be included in BillExchange.dtd 
      This reference must be positioned after the entity references. -->
  
-%commonelements;
+ %commonelements;
+ 
+	<!ELEMENT List (Item+) >
+	<!ATTLIST List
+		style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
+		subsequent-line-indent CDATA #IMPLIED 
+		label-start-indent CDATA #IMPLIED 
+		text-start-indent  CDATA #IMPLIED 
+		first-line-indent CDATA #IMPLIED 
+		justification (justify | left | right | center) #IMPLIED
+		hyphenation (yes | no) #IMPLIED
+		pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+		keep-with-next (yes | no) #IMPLIED
+		keep-with-previous (yes | no) #IMPLIED
+		topmarginspacing CDATA #IMPLIED
+		xml:lang (en | fr)   #IMPLIED 
+		language-align (yes | no) "no"
+		%changeatt;  >
+
+	<!ELEMENT Item (Label?, Text, List?) >
+	
+	<!ELEMENT Clause  (Label, Text, ((Subclause | %blocktext;)+, 
+                   ContinuedClause?)*) >          
+	<!ATTLIST Clause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+
+	<!ELEMENT ContinuedClause  (Text) >
+	<!ATTLIST ContinuedClause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedDefinition  (Text) >
+	<![%ignorechange;[
+	<!ATTLIST ContinuedDefinition %changeatt;  >
+        ]]>
+
+
+	<!ELEMENT ContinuedParagraph  (Text) >
+	<!ATTLIST ContinuedParagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSectionSubsection  (Text, (AmendedText | ReadAsText)?) >
+	<!ATTLIST ContinuedSectionSubsection
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubclause  (Text) >
+	<!ATTLIST ContinuedSubclause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT ContinuedSubparagraph  (Text) >
+	<!ATTLIST ContinuedSubparagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+	<!ELEMENT Definition  ( 
+                        MarginalNote*,
+                        (Text*,((Paragraph | %blocktext;)+,ContinuedDefinition?)*)
+                      )>
+
+
+	<!ELEMENT DocumentInternal
+    		( (Group | Provision | GroupHeading)+, Schedule* ) >
+
+
+	<!ELEMENT Enacts  (Provision) >
+
+
+	<!ELEMENT Group 
+    	( GroupHeading, (Group? | Provision?)* )>  
+	<!ATTLIST Group
+    	id  ID    #IMPLIED >
+
+
+	<!ELEMENT Paragraph  (MarginalNote?, Label, Text,
+                     (((Subparagraph | %blocktext;)+, ContinuedParagraph?)* 
+                        | AmendedText?)) >                     
+	<!ATTLIST Paragraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Preamble  (Provision+) >
+	<!ATTLIST Preamble
+               salutation   (yes | no ) "no"   >
+
+	<!ELEMENT Provision (
+                      MarginalNote?,
+                      Label?,
+                      ProvisionHeading?,
+                      (
+                        (
+                          Text,
+                          (
+                            (
+                              (Provision | %provisionblock;)+,
+                              Text?
+                            )*
+                           |
+                            AmendedContent?
+                           |
+                            ReadAsContent?
+                          )
+                        )
+                       |
+                        (Provision+)
+                       |
+                        (%provisionblock;)
+                      )
+                    ) >
+	<!ATTLIST Provision	
+                format-ref  CDATA    #IMPLIED
+                first-line-indent CDATA #IMPLIED
+                subsequent-line-indent CDATA #IMPLIED
+                justification (justify | left | right | center) #IMPLIED
+                hyphenation (yes | no) #IMPLIED
+                pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+                keep-with-next (yes | no) #IMPLIED
+		list-item (yes | no) "no"
+                keep-with-previous (yes | no) #IMPLIED
+                topmarginspacing CDATA #IMPLIED
+                xml:lang (en | fr)   #IMPLIED 
+                id  ID    #IMPLIED
+                language-align (yes | no) "no"
+                %changeatt; >
+ 
+                   
+	<!ELEMENT Section  (MarginalNote?, Label, 
+                    ((Text, (Definition* | (((Paragraph |  %blocktext;)+, 
+                    ContinuedSectionSubsection?)* 
+                    | (AmendedText, ContinuedSectionSubsection?)?))) 
+                    | (Subsection | Heading)+),
+                    ExplanatoryNote?) >
+	<!ATTLIST Section 
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT SectionPiece  (
+                           Definition
+                         | Paragraph 
+                         | Subparagraph 
+                         | Clause 
+                         | Subclause 
+                         | Subsubclause 
+                         | ContinuedSectionSubsection 
+                         | ContinuedParagraph 
+                         | ContinuedSubparagraph 
+                         | ContinuedClause 
+                         | ContinuedSubclause 
+                         | ContinuedDefinition 
+                         | %blocktext; 
+                        )+ >
+
+
+	<!ELEMENT Subclause  (Label, Text,  ((Subsubclause 
+                      | %blocktext;)+, ContinuedSubclause?)*) >              
+	<!ATTLIST Subclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+	<!ELEMENT Subsubclause  (Label, Text, 
+                         (%blocktext;)*) >                 
+	<!ATTLIST Subsubclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+
+	<!ELEMENT Subparagraph  (Label, Text, (((Clause 
+                         | %blocktext;)+, ContinuedSubparagraph?)* 
+                         | AmendedText?)) >                         
+	<!ATTLIST Subparagraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)  #IMPLIED 
+               %changeatt;  >
+
+
+	<!ELEMENT Subsection (MarginalNote?, Label, Text, 
+                       (Definition* | (((Paragraph | %blocktext;)+,
+                       ContinuedSectionSubsection?)* 
+                     | (AmendedText, ContinuedSectionSubsection?)?)),
+                       ExplanatoryNote?) >                       
+	<!ATTLIST Subsection
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending) #IMPLIED 
+               %changeatt;  >
+
+	<!ELEMENT Summary  (TitleText, Provision+) >
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -272,7 +333,16 @@ element as well as the HistoricalNote element. -->
 <!--                       BLOCK TEXT ELEMENTS                           -->
 <!--                                                                     -->
 <!-- ____________________________________________________________________-->
-                                                                                      
+                                                                                     
+<!ELEMENT Body  (Heading | Section )+ >
+
+<!ELEMENT Heading  (Label?, MarginalNote?, TitleText?, Note?) >
+<!ATTLIST Heading
+	level (1 | 2 | 3 | 4 | 5) #REQUIRED
+	style CDATA  #IMPLIED 
+	type (normal | transitional | amending) #IMPLIED
+	%changeatt;  >
+	
 <!ELEMENT ExplanatoryNote  (TitleText*, Label, ExplanatoryText+, ExistingText?) >
 <!ATTLIST ExplanatoryNote
                id  ID    #IMPLIED  >

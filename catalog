@@ -3,8 +3,8 @@ PUBLIC "-//Justice Canada//DTD Constitution//EN" "Constitution/Constitution.dtd"
 PUBLIC "-//Justice Canada//DTD RevisionMacro//EN" "RevisionMacro/RevisionMacro.dtd"
 PUBLIC "-//Justice Canada//DTD RSS//EN"  "RSS/rss.dtd"
 
-PUBLIC "-//Justice Canada//Regulation content v1.2.2//EN" "Regulations/Version_1.2.2/regulationcontent.dtd"
-PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulations/Version_1.2.2/Regulation.dtd"
+
+PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulations/Authoring/Regulation.dtd"
 PUBLIC "-//Justice Canada//DTD Regulation RCM RCM//EN" "Regulations/RCM/Regulation_rcm.dtd"
 
 

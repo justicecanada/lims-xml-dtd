@@ -40,6 +40,13 @@
 </charsubset>
 </att>
 <att>
+<specval attname="security" attval="public-juril">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown"  bckclr="yellow">
+</charsubset>
+</att>
+<att>
 <specval attname="security" attval="private">
 <charsubset>
 <font weight="bold">

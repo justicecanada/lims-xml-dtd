@@ -786,7 +786,7 @@
 <specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
 <specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
 <charsubset>
-<font famname="sanserif" weight="bold" posture="italic">
+<font famname="sanserif" posture="italic">
 </charsubset>
 </att>
 <att>
@@ -3356,7 +3356,7 @@ scorespc="1"></charlist>
 <specval attname="reference-type" attval="number">
 <charsubset>
 <font posture="upright">
-<highlt fontclr="#FF1493">
+<highlt bckclr="#FF98CE">
 </charsubset>
 </att>
 </e-i-c>

@@ -4,15 +4,8 @@
 <!--                                                                     -->
 <!-- ____________________________________________________________________-->
 
-<!-- The parameter entity %blockfragment; defined below is used to create
-  a more restrictive content model than %blocktext; for use in the
-  %docpart; parameter entity.  In particular, %blockfragment; does
-  not contain the Provision element.  This omission is required to
-  permit required flexibility in the content of AmendedText when
-  schedules are being amended. -->
 
-
-<!ENTITY % blockfragment  "BilingualGroup
+<!ENTITY % blocktext  "BilingualGroup
                          | FormulaGroup
                          | FormulaDefinition 
                          | FormulaParagraph
@@ -24,10 +17,8 @@
                          | Note
                          | Oath
                          | ImageGroup
-                         | ReadAsText" >
-
-                           
-<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
+						 | Provision
+                         | ReadAsText" >                         
     
 
 <!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >

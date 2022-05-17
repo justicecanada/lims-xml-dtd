@@ -163,7 +163,8 @@
 
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
 
-<!ENTITY % blockfragment  "BilingualGroup
+
+<!ENTITY % blocktext  "BilingualGroup
                          | FormulaGroup
                          | FormulaDefinition 
                          | FormulaParagraph
@@ -175,10 +176,9 @@
                          | Note
                          | Oath
                          | ImageGroup
-                         | ReadAsText" >
+						 | Provision
+                         | ReadAsText" > 
 
-
-<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
 
 
 <!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
@@ -239,8 +239,8 @@
 
 
 <!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
-                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+                     | (Heading | Subsection)+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blocktext;)+ | Formula | (Group | GroupHeading | Provision)+)" >
 
 
 <!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+) >

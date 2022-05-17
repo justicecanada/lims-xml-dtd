@@ -776,7 +776,9 @@ in useability, presentation, and possible structure information degradation.
 <!ELEMENT entry %tbl.entry.mdl;>
 
 <!ATTLIST entry
-		  rowheader (yes | no) #IMPLIED		  
+		th-headers      CDATA                             		#IMPLIED
+		th-id        	CDATA                 					#IMPLIED
+		rowheader (yes | no) 									#IMPLIED
         colname         NMTOKEN                                 #IMPLIED
         namest          NMTOKEN                                 #IMPLIED
         nameend         NMTOKEN                                 #IMPLIED

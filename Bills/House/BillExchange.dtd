@@ -86,7 +86,7 @@
 
 <!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
                      | (Heading | Subsection)+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blocktext;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+                     | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 
 
 <!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+) >

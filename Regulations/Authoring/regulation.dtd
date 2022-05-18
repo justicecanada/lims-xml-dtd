@@ -65,6 +65,7 @@
 -->
 <!ELEMENT AmendedText 
 	(LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group)+
+	| (Caption?, title?)
 >
 
 <!ATTLIST AmendedText

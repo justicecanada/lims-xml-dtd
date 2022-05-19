@@ -52,7 +52,7 @@ element as well as the HistoricalNote element. -->
 
 <!--  These elements' model exclude the CommentBlock and HistoricalNote elements.-->
 
-<!ENTITY % schedulecontent  "(BillPiece | DocumentInternal | BillInternal
+<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
 	| %blocktext; | Schedule)*" >
 
 

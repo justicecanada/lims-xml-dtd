@@ -81,7 +81,7 @@
 
 
 
-<!ENTITY % schedulecontent  "(BillPiece | DocumentInternal | BillInternal
+<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
 	| %blocktext; | Schedule)*" >
 
 

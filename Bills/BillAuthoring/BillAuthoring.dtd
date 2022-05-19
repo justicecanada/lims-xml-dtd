@@ -20,7 +20,7 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Del | Sub | Sup | Emphasis | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Del | Sub | Sup | Emphasis | Font| Language 
                            | FootnoteRef | XRefInternal | XRefExternal
                            | PageBreak | Keep | LineBreak" >
 
@@ -29,13 +29,13 @@
                           | LeaderRightJustified | Sub | Sup | XRefInternal 
                           | XRefExternal | Provision)*" >
 
-<!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | CommentInline 
+<!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | Font| CommentInline 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal 
                      | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | Font
                | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
 			   | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | ImageGroup | Provision

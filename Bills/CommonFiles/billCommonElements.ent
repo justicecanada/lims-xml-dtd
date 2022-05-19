@@ -409,6 +409,11 @@
 <!ELEMENT FootnoteRef  (%lowleveltext;)* >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #REQUIRED >
+			   
+<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST Font  font-family CDATA #REQUIRED 
+				font-size CDATA #IMPLIED >
+
 
 
 <!ELEMENT Language  (%lowleveltext;)* >

@@ -44,7 +44,7 @@
                            )" >
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | Font | Language 
                            | FootnoteRef | XRefInternal | XRefExternal
                            | PageBreak | Keep | LineBreak" >
 
@@ -54,13 +54,13 @@
                           | XRefExternal | Provision | Keep)*" >
 
 
-<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | Font
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal 
                      | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | Font
 				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | ImageGroup | Provision
@@ -706,6 +706,10 @@
 <!ELEMENT FootnoteRef  (%lowleveltext;)* >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #REQUIRED >
+			   
+<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST Font  font-family CDATA #REQUIRED 
+				font-size CDATA #IMPLIED >
 
 
 <!ELEMENT Language  (%lowleveltext;)* >

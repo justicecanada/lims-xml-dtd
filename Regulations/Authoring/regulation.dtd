@@ -42,14 +42,14 @@
                            )" >
 
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal 
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
 		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank)*" >
 
-<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis 
+<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | Font
                      | Language | Leader | LeaderRightJustified | XRefInternal 
                      | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
 					 | Del | CommentInline | Fraction | Date | MathML)*" >
@@ -64,8 +64,8 @@
   be a "RegulationInternal".
 -->
 <!ELEMENT AmendedText 
-	(LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group)+
-	| (Caption?, title?)
+	(LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group
+	| (Caption?, title?))+
 >
 
 <!ATTLIST AmendedText
@@ -238,6 +238,11 @@
 <!ELEMENT FootnoteRef  %inline; >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #IMPLIED  >
+			   
+<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST Font  font-family CDATA #REQUIRED 
+				font-size CDATA #IMPLIED >
+				
 
 <!ELEMENT FormGroup  (
                        AlternateText?,
@@ -753,6 +758,7 @@
 							| Ins
 							| Del
                             | Emphasis
+							| Font
                             | BilingualGroup
                             | FootnoteRef
                             | Formula 

@@ -239,6 +239,18 @@
 <textbrk startpg="next">
 </charlist>
 <att>
+<fillval attname="FOSIutils::generateOrder" attloc="SYSTEM-FUNC" fillcat="usetext" fillchar="source">
+<charsubset>
+<usetext placemnt="before">
+<subchars>
+<font inherit="1" famname="sanserif" size="18pt" weight="Bold">
+<postsp minimum="12pt" nominal="12pt" maximum="20pt" priority="high">
+<textbrk startln="1" endln="1">
+</subchars>
+</usetext>
+</charsubset>
+</att>
+<att>
 <specval attname="FOSIutils::documentLanguage" attloc="system-func" attval="fr">
 <charsubset>
 <usetext source="\Décret\">

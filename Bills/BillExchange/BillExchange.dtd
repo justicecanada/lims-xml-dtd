@@ -42,6 +42,7 @@ element as well as the HistoricalNote element. -->
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis 
+				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 

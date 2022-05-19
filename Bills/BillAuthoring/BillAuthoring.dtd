@@ -36,7 +36,8 @@
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis 
-               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | BilingualGroup | FootnoteRef | Formula 
+               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
+			   | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >

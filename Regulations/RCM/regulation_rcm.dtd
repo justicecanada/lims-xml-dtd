@@ -1,10 +1,6 @@
 <?xml encoding="utf-8"?>
 
 <!-- This is version 1.2.2 of the Regulations DTD -->
-<!-- This is the regulationcontent portion for version 1.2.2 of the Regulations DTD -->
-
-<!-- ********************************************************** -->
-<!-- 2016-01-28 - AP - Add attrs to List to match Bills -->
 
 <!ENTITY % blocktext  "(
                            BilingualGroup
@@ -40,43 +36,6 @@
                             | Provision
                            )" >
 
-<!-- Old: <!ENTITY % grouppiece  "(
-                           Group1-Part+
-                         | (Group2-Division+, Group1-Part*) 
-                         | (Group3-Subdivision+, Group2-Division*,Group1-Part*)
-                         | (Group4+, Group3-Subdivision*,Group2-Division*, Group1-Part*)
-                         | (Group5+, Group4*, Group3-Subdivision*,Group2-Division*,
-                             Group1-Part*)
-                        )" >
-
-<!ENTITY % grouppiece  "(Heading | Section)" >
--->
-
-<!-- Old: <!ENTITY % docpart  "(
-                        Title 
-                      | Body 
-                      | (Section*,(%grouppiece;)?) 
-                      | Subsection+ 
-                      | SectionPiece 
-                      | Heading
-                      | (ScheduleFormHeading, ScheduleContent?)
-                      | %blocktext;+ 
-                      | %formulapiece; 
-                      | AmendedText)" >
--->
-
-<!--ENTITY % docpart  "(
-                         LongTitle
-                       | (Section | Heading | RelatedProvision | CommentBlock)+
-                       | (Subsection, (Subsection | CommentBlock)*)
-		       | SectionPiece 
-                       | (ScheduleFormHeading, ScheduleContent?)
-                       | %blocktext;+ 
-                       | Formula+ 
-                       | Group
-		       | Schedule+
-                     )"
--->
 
 <!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
@@ -92,7 +51,6 @@
 			 
 <!ELEMENT AlternateText (#PCDATA)>
 
-<!-- Old: <!ELEMENT AmendedContent ((Group | Provision)+) > -->
 <!ELEMENT AmendedContent ((Group | Provision | Heading)+, HistoricalNote?) >
 
 <!--FIX: AmendedText
@@ -190,7 +148,6 @@
                type  (normal | transitional )  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
-<!-- Old: <!ELEMENT ContinuedSectionSubsection  (Text) > -->
 <!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text) >
 
 <!ATTLIST ContinuedSectionSubsection
@@ -212,9 +169,6 @@
 <!ATTLIST Date
                date-format (en | fr | gb | international)   #IMPLIED  >
 
-<!-- Old: <!ELEMENT DD  (#PCDATA) > -->
-
-<!-- DD besoin de Sup -->
 <!ELEMENT DD  %inline; >
 
 <!ELEMENT DefinedTermEn  %inlineDefinedTerm; >
@@ -233,16 +187,6 @@
 
 <!ELEMENT DefinitionRef  %inlineDefinedTerm; >
                
-
-<!-- Old: <!ELEMENT Definition  (
-                        MarginalNote?,
-                        Text?,
-                        (
-                          (Paragraph |%blocktext;)+,
-                          ContinuedDefinition?
-                        )*
-                      )  >
--->
 <!ELEMENT Definition
   (
 	CommentBlock*,
@@ -322,10 +266,7 @@
   instead of having them itself.
 -->
 <!ELEMENT FormulaConnector  %inline; >
-<!-- Old: <!ATTLIST FormulaConnector
-               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
-               type  (normal | transitional )  #IMPLIED  >
--->
+
 <!ATTLIST FormulaConnector
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
@@ -341,10 +282,7 @@
                                  ContinuedFormulaParagraph?
                                )*
                              ) >
-<!-- Old: <!ATTLIST FormulaDefinition
-               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
-               type  (normal | transitional )  #IMPLIED  >
--->
+
 <!ATTLIST FormulaDefinition
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
@@ -359,10 +297,7 @@
                                 ContinuedFormulaParagraph?
                               )*
                             ) >
-<!-- Old: <!ATTLIST FormulaParagraph
-               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
-               type  (normal | transitional )  #IMPLIED >
--->
+
 <!ATTLIST FormulaParagraph
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED

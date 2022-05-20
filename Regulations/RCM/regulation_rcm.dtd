@@ -725,7 +725,14 @@
 <!ELEMENT XRefExternal  %inline; >
 <!ATTLIST XRefExternal
 	link CDATA #IMPLIED
-	reference-type (regulation | act | standard | other | citation)   #IMPLIED  >
+	reference-type (regulation | act | standard | other | citation)   #IMPLIED  
+	reference-level (municipal| provincial | federal | otherNation | international) #IMPLIED
+			   source	CDATA	#IMPLIED
+			   url		CDATA	#IMPLIED
+			   bilingual	(yes | no)	#IMPLIED
+			   isFree		(yes | no)	#IMPLIED
+			   incorporatedByRef	(yes | no) #IMPLIED			   			   
+			   >
 
 <!ELEMENT YYYY  (#PCDATA) >
 

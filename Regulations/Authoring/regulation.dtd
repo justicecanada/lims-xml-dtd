@@ -44,13 +44,13 @@
 
 <!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
+                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
 		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank)*" >
 
 <!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | Font
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
+                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
 					 | Del | CommentInline | Fraction | Date | MathML)*" >
 			 
@@ -714,6 +714,12 @@
 			   isFree		(yes | no)	#IMPLIED
 			   incorporatedByRef	(yes | no) #IMPLIED			   			   
 			   >
+			   
+<!ELEMENT XRefSection  (#PCDATA) >
+<!ATTLIST XRefSection
+			   lawid	CDATA	#IMPLIED
+			   sectionid		CDATA	#IMPLIED		   			   
+			   >
 
 <!ELEMENT YYYY  (#PCDATA) >
 
@@ -771,6 +777,7 @@
                             | Formula 
                             | XRefInternal
                             | XRefExternal
+							| XRefSection
                             | ImageGroup
                             | Provision
                             | Language 

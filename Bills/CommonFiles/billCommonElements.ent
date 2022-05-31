@@ -453,6 +453,12 @@
 			   isFree		(yes | no)	#IMPLIED
 			   incorporatedByRef	(yes | no) #IMPLIED			   			   
 			   >
+			   
+<!ELEMENT XRefSection  (#PCDATA) >
+<!ATTLIST XRefSection
+			   lawid	CDATA	#IMPLIED
+			   sectionid		CDATA	#IMPLIED		   			   
+			   >
 
 
 <!-- ____________________________________________________________________-->

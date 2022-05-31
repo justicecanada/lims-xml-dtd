@@ -45,25 +45,25 @@
 
 
 <!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | Font | Language 
-                           | FootnoteRef | XRefInternal | XRefExternal
+                           | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
                           | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
+                          | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection 
                           | XRefExternal | Provision | Keep)*" >
 
 
 <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | Font
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
+                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
                      | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | Font
 				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
-               | XRefInternal | XRefExternal | ImageGroup | Provision
+               | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
 
@@ -767,7 +767,12 @@
 			   incorporatedByRef	(yes | no) #IMPLIED			   			   
 			   >
 
-
+<!ELEMENT XRefSection  (#PCDATA) >
+<!ATTLIST XRefSection
+			   lawid	CDATA	#IMPLIED
+			   sectionid		CDATA	#IMPLIED		   			   
+			   >
+			   
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
 <!--            REDEFINITION OF CALS XML EXCHANGE ENTITIES               -->

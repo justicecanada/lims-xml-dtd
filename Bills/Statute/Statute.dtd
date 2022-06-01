@@ -18,19 +18,20 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | Language 
-                           | FootnoteRef | XRefInternal | XRefExternal
+<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | Font | Language 
+                           | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
-                     | Language | LeaderRightJustified | Leader | XRefInternal 
+                     | Language | LeaderRightJustified | Leader | XRefInternal | XRefSection 
                      | XRefExternal | HistoricalNote | Repealed 
 					 | PageBreak | Keep | ImageGroup | Fraction )*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | BilingualGroup 
-               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Formula | XRefInternal 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | Font | BilingualGroup 
+               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Formula 
+			   | XRefInternal | XRefSection 
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
@@ -41,10 +42,10 @@
 <!ENTITY % schedulecontent  "(AmendedText | Repealed | BillPiece | DocumentInternal | BillInternal
                             | %blocktext; | Schedule | HistoricalNote | Repealed)*" >
 							
-
+					 
 <!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
-                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+                     | (Heading | Subsection)+  | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 							
 <!-- The following line imports the contents of billCommonElements.dtd so that
      elements from the common elements pool can be included in Statute.dtd 

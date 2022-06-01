@@ -10,24 +10,24 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | Language 
-                           | FootnoteRef | XRefInternal | XRefExternal
+<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | Font | Language 
+                           | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak | HistoricalNoteSubItem" >
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
-                     | Language | LeaderRightJustified | Leader | XRefInternal 
+                     | Language | LeaderRightJustified | Leader | XRefInternal  | XRefSection
                      | XRefExternal | HistoricalNote | Repealed 
 					 | PageBreak | Keep | ImageGroup | Fraction | FormBlank)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | BilingualGroup 
-               | FootnoteRef | Formula | XRefInternal 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | Font | BilingualGroup 
+               | FootnoteRef | Formula | XRefInternal | XRefSection
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
 
-<!ENTITY % blockfragment  "BilingualGroup
+<!ENTITY % blocktext  "BilingualGroup
                          | FormulaGroup
                          | FormulaDefinition 
                          | FormulaParagraph
@@ -39,10 +39,9 @@
                          | Note
                          | Oath
                          | ImageGroup
+						 | Provision
                          | ReadAsText" >
-
                            
-<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
     
 
 <!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
@@ -67,8 +66,8 @@
 							
 
 <!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
-                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+                     | (Heading | Subsection)+  | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 
 
 
@@ -700,6 +699,10 @@
 <!ELEMENT FootnoteRef  (%lowleveltext;)* >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #REQUIRED >
+			   
+<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST Font  font-family CDATA #REQUIRED 
+				font-size CDATA #IMPLIED >
 
 
 <!ELEMENT Language  (%lowleveltext;)* >
@@ -732,7 +735,20 @@
 <!ELEMENT XRefExternal  (%lowleveltext;)* >
 <!ATTLIST XRefExternal
 		link CDATA #IMPLIED
-		reference-type (regulation | act | standard | other )   #REQUIRED >
+		reference-type (regulation | act | standard | other )   #REQUIRED 
+		reference-level (municipal | provincial | federal | otherNation | international) #IMPLIED
+		source	CDATA	#IMPLIED
+		url		CDATA	#IMPLIED
+		bilingual	(yes | no)	#IMPLIED
+		isFree		(yes | no)	#IMPLIED
+		incorporatedByRef	(yes | no) #IMPLIED			   			   
+		>
+		
+<!ELEMENT XRefSection  (#PCDATA) >
+<!ATTLIST XRefSection
+			   lawid	CDATA	#IMPLIED
+			   sectionid		CDATA	#IMPLIED		   			   
+			   >
 
 
 
@@ -1148,7 +1164,9 @@ in useability, presentation, and possible structure information degradation.
 <!ELEMENT entry %tbl.entry.mdl;>
 
 <!ATTLIST entry
-		  rowheader (yes | no) #IMPLIED		  
+		th-headers      CDATA                             		#IMPLIED
+		th-id        	CDATA                 					#IMPLIED
+		rowheader (yes | no) #IMPLIED		  
         colname         NMTOKEN                                 #IMPLIED
         namest          NMTOKEN                                 #IMPLIED
         nameend         NMTOKEN                                 #IMPLIED

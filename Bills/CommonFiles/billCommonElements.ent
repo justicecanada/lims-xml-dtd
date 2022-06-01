@@ -10,7 +10,7 @@
 <!ELEMENT Parliament  (Session, Number, RegnalYear, Year-s) >
 
 
-<!ELEMENT LongTitle  (%lowleveltext;)* >
+<!ELEMENT LongTitle  (%lowleveltext; | CommentInLine)* >
 
 <!ATTLIST LongTitle
                type CDATA   #IMPLIED  >
@@ -96,7 +96,7 @@
                label-column-width (2.5 | 3 | 3.5 | 4 | 4.5)   "2.5"  >
 
 
-<!ELEMENT TitleText  (%lowleveltext;)* >
+<!ELEMENT TitleText  (%lowleveltext; | CommentInline)* >
 <![%ignorechange;[
 	<!ATTLIST TitleText %changeatt;  >
 ]]>

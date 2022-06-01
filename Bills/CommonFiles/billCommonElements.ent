@@ -337,7 +337,7 @@
 ]]>
 
 
-<!ELEMENT ReadAsText (Section* | Subsection* | SectionPiece | FormulaGroup) >
+<!ELEMENT ReadAsText %docpart; >
 
 
 <!ELEMENT SignatureBlock  (SignatureLine | SignatureTitle | SignatureName)+ >

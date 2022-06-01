@@ -508,7 +508,8 @@
 <!ATTLIST ProvisionHeading
     		format-ref CDATA #REQUIRED >
 
-<!ELEMENT ReadAsText (Section* | Subsection* | SectionPiece | RelatedProvision | FormulaGroup) >
+<!ELEMENT ReadAsText (LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group
+	| (Caption?, title?))+ >
 <!ATTLIST ReadAsText
     LeftOver CDATA #IMPLIED
 >

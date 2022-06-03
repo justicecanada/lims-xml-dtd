@@ -222,6 +222,7 @@ element as well as the HistoricalNote element. -->
 
 	<!ELEMENT SectionPiece  (
                            Definition
+						 | Heading
                          | Paragraph 
                          | Subparagraph 
                          | Clause 

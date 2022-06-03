@@ -213,7 +213,8 @@
 
 	<!ELEMENT SectionPiece  (
                            CommentBlock
-			 | Definition
+						 | Definition
+						 | Heading
                          | Paragraph 
                          | Subparagraph 
                          | Clause 

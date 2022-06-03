@@ -582,6 +582,7 @@
 
 <!ELEMENT SectionPiece  (
                            Definition
+						 | Heading
                          | Paragraph
                          | Subparagraph
                          | Clause 

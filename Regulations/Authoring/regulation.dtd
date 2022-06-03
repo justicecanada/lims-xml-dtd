@@ -713,6 +713,7 @@
 			   url		CDATA	#IMPLIED
 			   bilingual	(yes | no)	#IMPLIED
 			   isFree		(yes | no)	#IMPLIED
+			   accessible			(yes | no)	#IMPLIED
 			   incorporatedByRef	(yes | no) #IMPLIED			   			   
 			   >
 			   

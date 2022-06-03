@@ -37,14 +37,14 @@
                            )" >
 
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
 					 | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | HistoricalNoteSubItem)*" >
 
-<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | Font
+<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
 					 | Del | CommentInline | Fraction | Date | MathML)*" >
@@ -235,8 +235,8 @@
 <!ATTLIST FootnoteRef
                idref  IDREFS    #IMPLIED  >
 			   
-<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
-<!ATTLIST Font  font-family CDATA #REQUIRED 
+<!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
 
 <!ELEMENT FormGroup  (
@@ -786,7 +786,7 @@
 			    | Ins
 			    | Del
                             | Emphasis
-							| Font
+							| InlineFont
                             | BilingualGroup
                             | FootnoteRef
                             | Formula 

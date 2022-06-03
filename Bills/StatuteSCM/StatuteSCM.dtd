@@ -10,18 +10,18 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | Font | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak | HistoricalNoteSubItem" >
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | Font 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | LeaderRightJustified | Leader | XRefInternal  | XRefSection
                      | XRefExternal | HistoricalNote | Repealed 
 					 | PageBreak | Keep | ImageGroup | Fraction | FormBlank)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | Font | BilingualGroup 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | BilingualGroup 
                | FootnoteRef | Formula | XRefInternal | XRefSection
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
@@ -700,8 +700,8 @@
 <!ATTLIST FootnoteRef
                idref  IDREFS    #REQUIRED >
 			   
-<!ELEMENT Font (#PCDATA | Sub | Sup | Emphasis)* > 
-<!ATTLIST Font  font-family CDATA #REQUIRED 
+<!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
 
 

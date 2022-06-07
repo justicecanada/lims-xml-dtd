@@ -3352,13 +3352,6 @@ scorespc="1"></charlist>
 <highlt fontclr="#ff6666">
 </charsubset>
 </att>
-<att>
-<specval attname="reference-type" attval="number">
-<charsubset>
-<font posture="upright">
-<highlt bckclr="#FF98CE">
-</charsubset>
-</att>
 </e-i-c>
 <e-i-c gi="XRefInternal">
 <charlist inherit="1" charsubsetref="Inline">
@@ -3374,6 +3367,12 @@ scorespc="1"></charlist>
 <highlt fontclr="red">
 </charsubset>
 </att>
+</e-i-c>
+<e-i-c gi="XRefSection">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1" posture="upright">
+<highlt bckclr="#FF98CE">
+</charlist>
 </e-i-c>
 <e-i-c gi="Year-s">
 <charlist inherit="1" charsubsetref="Inline">

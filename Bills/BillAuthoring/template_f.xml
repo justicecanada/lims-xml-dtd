@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Arbortext, Inc., 1988-2004, v.4002-->
-<!DOCTYPE Bill PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "BillAuthoring.dtd">
+<!DOCTYPE Bill PUBLIC "-//Justice Canada//DTD Bill Authoring v2.5.0//EN" "BillAuthoring.dtd">
 <?Pub UDT instructions _comment FontColor="red"?><?Pub UDT template _font?><?Pub Inc?>
 <Bill bill-origin="commons" bill-type="govt-public" xml:lang="fr">
 <Identification>

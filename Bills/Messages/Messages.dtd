@@ -2,7 +2,7 @@
 
 <!-- Bills Messages DTD -->
 
-<!ENTITY % billauthoring  PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "../BillAuthoring/billAuthoring.dtd">
+<!ENTITY % billauthoring  PUBLIC "-//Justice Canada//DTD Bill Authoring v2.5.0//EN" "../BillAuthoring/billAuthoring.dtd">
 
 %billauthoring;
 

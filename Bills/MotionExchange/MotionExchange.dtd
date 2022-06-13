@@ -1,7 +1,7 @@
 <?xml encoding="utf-8"?>
 
 <!-- The following line identifies the BillExchange.dtd to be included -->
-<!ENTITY % billDTD PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2//EN" "../BillExchange/BillExchange.dtd">
+<!ENTITY % billDTD PUBLIC "-//Justice Canada//DTD Bill Exchange v2.5.0//EN" "../BillExchange/BillExchange.dtd">
 
 <!-- The following line imports the contents of BillAuthoring.dtd so that
      elements from the Authoring elements pool can be included here.

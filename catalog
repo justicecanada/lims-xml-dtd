@@ -3,10 +3,10 @@ PUBLIC "-//Justice Canada//DTD Constitution//EN" "Constitution/Constitution.dtd"
 PUBLIC "-//Justice Canada//DTD RevisionMacro//EN" "RevisionMacro/RevisionMacro.dtd"
 PUBLIC "-//Justice Canada//DTD RSS//EN"  "RSS/rss.dtd"
 
-
 PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulations/Authoring/Regulation.dtd"
-PUBLIC "-//Justice Canada//DTD Regulation RCM RCM//EN" "Regulations/RCM/Regulation_rcm.dtd"
 
+PUBLIC "-//Justice Canada//DTD Regulation v1.3.0//EN" "Regulations/Authoring/Regulation.dtd"
+PUBLIC "-//Justice Canada//DTD Regulation RCM RCM//EN" "Regulations/RCM/Regulation_rcm.dtd"
 
 PUBLIC "-//Justice Canada//FOSI Empty Stages Attributes//EN" "EmptyStagesAtts.fos"
 PUBLIC "-//Justice Canada//FOSI Stages Attributes//EN" "StagesAtts.fos"
@@ -20,7 +20,6 @@ PUBLIC "-//Justice Canada//FOSI Statute Elements//EN" "StatuteEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Gazette Elements//EN" "GazetteEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Constitution Elements//EN" "ConstitutionEICs.fos"
 
-
 PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "Bills/BillAuthoring/BillAuthoring.dtd"
 PUBLIC "-//Justice Canada//DTD Statute v2.4.2//EN" "Bills/Statute/Statute.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2a//EN" "Bills/House/BillExchange.dtd"
@@ -28,14 +27,23 @@ PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2b//EN" "Bills/BillExchange/Bi
 PUBLIC "-//Justice Canada//DTD Bill Exchange v2.4.2//EN" "Bills/BillExchange/BillExchange.dtd"
 PUBLIC "-//Justice Canada//DTD Bill ExchangeHouse v2.4.2//EN" "Bills/House/BillExchange.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "Bills/CommonFiles/BillCommonElements.ent"
-PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "Bills/CommonFiles/BillCommonEntities.ent"
 PUBLIC "-//Justice Canada//DTD Bill Motion Authoring v2.4.2//EN" "Bills/MotionAuthoring/MotionAuthoring.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Motion Exchange v2.4.2//EN" "Bills/MotionExchange/MotionExchange.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Strips v2.4.2//EN" "Bills/Strips/Strips.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Messages v2.4.2//EN" "Bills/Messages/Messages.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Gazette v2.4.2//EN" "Bills/Gazette/Gazette.dtd"
-
 PUBLIC "-//Justice Canada//DTD Statute SCM v2.4.2//EN" "Bills/StatuteSCM/StatuteSCM.dtd"
+
+PUBLIC "-//Justice Canada//DTD Bill Authoring v2.5.0//EN" "Bills/BillAuthoring/BillAuthoring.dtd"
+PUBLIC "-//Justice Canada//DTD Statute v2.5.0//EN" "Bills/Statute/Statute.dtd"
+PUBLIC "-//Justice Canada//DTD Bill Exchange v2.5.0//EN" "Bills/House/BillExchange.dtd"
+PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "Bills/CommonFiles/BillCommonElements.ent"
+PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "Bills/CommonFiles/BillCommonEntities.ent"
+PUBLIC "-//Justice Canada//DTD Bill Motion Authoring v2.5.0//EN" "Bills/MotionAuthoring/MotionAuthoring.dtd"
+PUBLIC "-//Justice Canada//DTD Bill Motion Exchange v2.5.0//EN" "Bills/MotionExchange/MotionExchange.dtd"
+PUBLIC "-//Justice Canada//DTD Bill Messages v2.5.0//EN" "Bills/Messages/Messages.dtd"
+PUBLIC "-//Justice Canada//DTD Bill Gazette v2.5.0//EN" "Bills/Gazette/Gazette.dtd"
+PUBLIC "-//Justice Canada//DTD Statute SCM v2.5.0//EN" "Bills/StatuteSCM/StatuteSCM.dtd"
 
 
 PUBLIC "-//W3C//DTD MathML 2.0//EN" "mathml2/mathml2.dtd"

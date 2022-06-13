@@ -8,8 +8,8 @@
 <!-- The following line identifies the billCommonElements.dtd to be included 
      in Statute.dtd -->
   
-<!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
-<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "../CommonFiles/billCommonEntities.ent">
+<!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "../CommonFiles/billCommonElements.ent">
+<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "../CommonFiles/billCommonEntities.ent">
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->

@@ -368,7 +368,7 @@
 
 <!ELEMENT HistoricalNote  %inline; >
 
-<!ELEMENT ImageGroup  (title*, AlternateText?, Caption*, Image?) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image?) >
 <!ATTLIST ImageGroup
                bilingual (yes | no) "no"
                spanlanguages	 (yes | no) "no"

@@ -480,7 +480,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (title*, AlternateText?, Caption*, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;

@@ -10,7 +10,7 @@
 <!ELEMENT Parliament  (Session, Number, RegnalYear, Year-s) >
 
 
-<!ELEMENT LongTitle  (%lowleveltext; | CommentInLine)* >
+<!ELEMENT LongTitle  (%lowleveltext; | CommentInline)* >
 
 <!ATTLIST LongTitle
                type CDATA   #IMPLIED  >

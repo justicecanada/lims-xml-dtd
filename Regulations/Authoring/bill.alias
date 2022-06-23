@@ -1,9 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--ArborText, Inc., 1988-2002, v.4002-->
-<!DOCTYPE alias-map PUBLIC "-//Arbortext//DTD Alias Map::20000307//EN"
- "aliasmap.dtd">
-<?Pub Inc?>
+<!DOCTYPE alias-map PUBLIC "-//Arbortext//DTD Alias Map::20000307//EN" "aliasmap.dtd">
 <alias-map><element-list>
+<element>
+<name>InlineFont</name><alias>Police_enligne</alias>
+<attribute-list>
+<attribute>
+<name>font-family</name><alias>famille-de-polices</alias>
+</attribute>
+<attribute>
+<name>font-size</name><alias>taille-de-police</alias>
+</attribute>
+</attribute-list>
+</element>
+<element>
+<name>PageBreak</name><alias>Saut_de_page</alias></element>
+<element>
+<name>QuotedText</name><alias>Texte_cité</alias></element>
 <element>
 <name>Notice</name><alias>Avis</alias></element>
 <element>
@@ -161,7 +174,7 @@
 <name>BillSponsor</name><alias>Pl-parrain</alias>
 <attribute-list>
 <attribute>
-<name>billsponsorid</name><alias>pl-parrain,id</alias></attribute>
+<name>billsponsorid</name><alias>pl-parrain-id</alias></attribute>
 </attribute-list>
 </element>
 <element>
@@ -483,6 +496,8 @@
 </element>
 <element>
 <name>DD</name><alias>JJ</alias></element>
+<element>
+<name>HistoricalNote</name><alias>Note-historique</alias></element>
 <element>
 <name>ImageGroup</name><alias>Groupe-image</alias>
 <attribute-list>
@@ -1102,6 +1117,8 @@
 <element>
 <name>Introduction</name><alias></alias></element>
 <element>
+<name>Keep</name><alias>Conserver</alias></element>
+<element>
 <name>Label</name><alias>Étiquette</alias>
 <attribute-list>
 <attribute>
@@ -1184,7 +1201,7 @@
 <name>LeaderRightJustified</name><alias>Point_de_conduite-justif,_droite</alias>
 <attribute-list>
 <attribute>
-<name>leader</name><alias>pc</alias>
+<name>leader</name><alias>point_de_conduite</alias>
 <value-list>
 <value>
 <name>dash</name><alias>tiret</alias></value>
@@ -1192,6 +1209,24 @@
 <name>dot</name><alias>point</alias></value>
 <value>
 <name>none</name><alias></alias></value>
+<value>
+<name>solid</name><alias>ligne</alias></value>
+</value-list>
+</attribute>
+</attribute-list>
+</element>
+<element>
+<name>Leader</name><alias>Point_de_conduite</alias>
+<attribute-list>
+<attribute>
+<name>leader</name><alias>point_de_conduite</alias>
+<value-list>
+<value>
+<name>dash</name><alias>tiret</alias></value>
+<value>
+<name>dot</name><alias>point</alias></value>
+<value>
+<name>none</name><alias>vide</alias></value>
 <value>
 <name>solid</name><alias>ligne</alias></value>
 </value-list>
@@ -1407,6 +1442,8 @@
 </element>
 <element>
 <name>SectionPiece</name><alias>Extrait-art</alias></element>
+<element>
+<name>RegulationPiece</name><alias>Extrait-reg</alias></element>
 <element>
 <name>Session</name><alias>Session</alias></element>
 <element>
@@ -1699,17 +1736,33 @@
 <name>reference-type</name><alias>renvoi-genre</alias>
 <value-list>
 <value>
-<name>act</name><alias></alias></value>
+<name>act</name><alias>loi</alias></value>
 <value>
 <name>citation</name><alias></alias></value>
 <value>
-<name>other</name><alias></alias></value>
+<name>other</name><alias>autre</alias></value>
 <value>
 <name>regulation</name><alias>règlement</alias></value>
 <value>
 <name>standard</name><alias>norme</alias></value>
 </value-list>
 </attribute>
+<attribute><name>bilingual</name><alias>bilingue</alias></attribute>
+<attribute><name>isFree</name><alias>gratuitement</alias></attribute>
+<attribute><name>reference-level</name><alias>renvoi-niveau</alias>
+<value-list>
+<value>
+<name>municipal</name><alias>municipale</alias></value>
+<value>
+<name>provincial</name><alias>provincial</alias></value>
+<value>
+<name>federal</name><alias>fédéral</alias></value>
+<value>
+<name>otherNation </name><alias>autre_Nation</alias></value>
+<value>
+<name>international</name><alias>international</alias></value>
+</value-list></attribute>
+<attribute><name>incorporatedByRef</name><alias>incorporation_par_renvoi</alias></attribute>
 </attribute-list>
 </element>
 <element>
@@ -1718,6 +1771,9 @@
 <attribute>
 <name>idref</name><alias></alias></attribute>
 </attribute-list>
+</element>
+<element>
+<name>XRefSection</name><alias>Renvoi_article</alias>
 </element>
 <element>
 <name>YYYY</name><alias>AAAA</alias></element>
@@ -2024,6 +2080,10 @@
 <global-attribute>
 <name>document-id</name><alias></alias></global-attribute>
 <global-attribute>
+<name>first-line-indent</name><alias>Indentation-première_ligne</alias></global-attribute>
+<global-attribute>
+<name>subsequent-line-indent</name><alias>Indentation-ligne_suivante</alias></global-attribute>
+<global-attribute>
 <name>font-style</name><alias>police-genre</alias></global-attribute>
 <global-attribute>
 <name>font-size</name><alias></alias></global-attribute>
@@ -2046,8 +2106,6 @@
 <global-attribute>
 <name>indent-distance-subsequent</name><alias></alias></global-attribute>
 <global-attribute>
-<name>first-line-indent</name><alias>Indentation-première_ligne</alias></global-attribute>
-<global-attribute>
 <name>indent-level</name><alias>retrait-niveau</alias></global-attribute>
 <global-attribute>
 <name>indent-type</name><alias>retrait-genre</alias></global-attribute>
@@ -2059,6 +2117,10 @@
 <name>keep-with-next</name><alias>garder-avec-prochain</alias></global-attribute>
 <global-attribute>
 <name>keep-with-previous</name><alias>garder-avec-précédent</alias></global-attribute>
+<global-attribute>
+<name>topmarginspacing</name><alias>espacemarginesupérieure</alias></global-attribute>
+<global-attribute>
+<name>justification</name><alias>alignement</alias></global-attribute>
 <global-attribute>
 <name>language-align</name><alias>aligner_langues</alias></global-attribute>
 <global-attribute>
@@ -2080,7 +2142,7 @@
 <global-attribute>
 <name>nameend</name><alias>nom-fin</alias></global-attribute>
 <global-attribute>
-<name>namest</name><alias></alias></global-attribute>
+<name>namest</name><alias>nom-début</alias></global-attribute>
 <global-attribute>
 <name>number</name><alias></alias></global-attribute>
 <global-attribute>
@@ -2113,8 +2175,6 @@
 <name>special-provision</name><alias>disposition_spéciale</alias></global-attribute>
 <global-attribute>
 <name>stage</name><alias>étape</alias></global-attribute>
-<global-attribute>
-<name>subsequent-line-indent</name><alias>Indentation-ligne_suivante</alias></global-attribute>
 <global-attribute>
 <name>status</name><alias></alias></global-attribute>
 <global-attribute>
@@ -2262,7 +2322,7 @@
 <global-value>
 <name>normal</name><alias>ordinaire</alias></global-value>
 <global-value>
-<name>number</name><alias></alias><?Pub Caret1?></global-value>
+<name>number</name><alias></alias></global-value>
 <global-value>
 <name>off</name><alias>désact</alias></global-value>
 <global-value>

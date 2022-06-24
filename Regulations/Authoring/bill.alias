@@ -1771,7 +1771,7 @@
 </attribute-list>
 </element>
 <element>
-<name>XRefSection</name><alias>Renvoi_article</alias>
+<name>XRefSection</name><alias>Renvoi_externe_article</alias>
 </element>
 <element>
 <name>YYYY</name><alias>AAAA</alias></element>

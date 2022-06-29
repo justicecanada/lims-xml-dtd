@@ -150,7 +150,7 @@
                         | AmendedText?)) >                        
 	<!ATTLIST Paragraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
@@ -207,7 +207,7 @@
                     ExplanatoryNote?) >
 	<!ATTLIST Section 
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
@@ -254,7 +254,7 @@
                        ExplanatoryNote?) >                    
 	<!ATTLIST Subsection
                id  ID    #IMPLIED 
-               type (normal | transitional | amending) #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold) #IMPLIED 
                %changeatt;  >
 
 

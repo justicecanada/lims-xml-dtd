@@ -53,7 +53,7 @@
 
 <!ELEMENT MotionAmendment (Group | GroupHeading | Provision | LongTitle | Preamble | Heading | Section 
                      | Subsection | SectionPiece | ScheduleFormHeading | Schedule 
-                     | Formula | BillInternal | (%blockfragment;) )+ >
+                     | Formula | BillInternal | (%blocktext;) )+ >
 
 <!ATTLIST MotionAmendment
     xml:lang (en | fr)   #REQUIRED 

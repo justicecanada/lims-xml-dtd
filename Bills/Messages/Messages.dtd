@@ -45,4 +45,4 @@
 
 <!ELEMENT MessageText (LongTitle | Preamble | Enacts | Summary | Heading | Section 
 | Subsection | SectionPiece | Schedule | ScheduleFormHeading  
-| (%blockfragment;) | Formula | Group | GroupHeading | Provision | ExplanatoryNote | ExistingText)+ >
+| (%blocktext;) | Formula | Group | GroupHeading | Provision | ExplanatoryNote | ExistingText)+ >

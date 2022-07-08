@@ -456,7 +456,7 @@
   ) 
 >
 <!ATTLIST Paragraph
-          type (normal | amending | transitional)   #IMPLIED 
+          type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
           change  (ins | del | off | alt)   #IMPLIED >
                
 <!ELEMENT Provision
@@ -577,7 +577,7 @@
 >
 
 <!ATTLIST Section
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
 			change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT SectionPiece  (
@@ -668,7 +668,7 @@
 >
 
 <!ATTLIST Subsection
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
        	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsubclause (

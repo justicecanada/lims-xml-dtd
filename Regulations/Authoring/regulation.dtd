@@ -394,7 +394,7 @@
 
 <!ELEMENT Language  %inline; >
 <!ATTLIST Language
-               xml:lang (en | fr | la )   #REQUIRED  >
+               xml:lang (en | fr | la | cr| oj | ik | iu )   #REQUIRED  >
 
 <!ELEMENT Leader  EMPTY >
 <!ATTLIST Leader

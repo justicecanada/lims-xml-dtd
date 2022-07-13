@@ -707,7 +707,7 @@
 
 <!ELEMENT Language  (%lowleveltext;)* >
 <!ATTLIST Language
-               xml:lang (en | fr | la )   #REQUIRED  >
+               xml:lang (en | fr | la | cr| oj | ik | iu )   #REQUIRED  >
 
 
 <!ELEMENT LeaderRightJustified  EMPTY >

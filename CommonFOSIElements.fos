@@ -1811,6 +1811,30 @@ scorespc="1"></charlist>
 </charsubset>
 </att>
 <att>
+<specval attname="xml:lang" attloc="Language" attval="cr">
+<charsubset>
+<highlt fontclr="olive">
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Language" attval="oj">
+<charsubset>
+<highlt fontclr="olive">
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Language" attval="ik">
+<charsubset>
+<highlt fontclr="olive">
+</charsubset>
+</att>
+<att>
+<specval attname="xml:lang" attloc="Language" attval="iu">
+<charsubset>
+<highlt fontclr="olive">
+</charsubset>
+</att>
+<att>
 <specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
 <specval attname="xml:lang" attloc="Language" attval="fr">
 <charsubset>

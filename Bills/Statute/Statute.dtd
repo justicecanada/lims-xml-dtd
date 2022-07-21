@@ -80,6 +80,7 @@
     	id  ID    #IMPLIED >
 
 
+
 	<!ELEMENT List (Item+) >
 	<!ATTLIST List
 		style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
@@ -96,6 +97,8 @@
 		xml:lang (en | fr)   #IMPLIED 
 		language-align (yes | no) "no"
 		%changeatt;  >
+		
+	<!ELEMENT Item (Label?, Text, List?) >
 		
 	<!ELEMENT Paragraph  (MarginalNote?, Label, Text, 
                      (((Subparagraph | %blocktext;)+, ContinuedParagraph?)* 

@@ -1960,6 +1960,10 @@
 <name>char</name><alias></alias></global-attribute>
 <global-attribute>
 <name>charoff</name><alias></alias></global-attribute>
+<global-value>
+<name>CIF</name><alias>EEV</alias></global-value>
+<global-value>
+<name>CIFnobold</name><alias>EEVnongras</alias></global-value>
 <global-attribute>
 <name>colname</name><alias>col-nom</alias></global-attribute>
 <global-attribute>

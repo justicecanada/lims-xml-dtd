@@ -2125,6 +2125,10 @@
 <global-value>
 <name>citation</name><alias></alias></global-value>
 <global-value>
+<name>CIF</name><alias>EEV</alias></global-value>
+<global-value>
+<name>CIFnobold</name><alias>EEVnongras</alias></global-value>
+<global-value>
 <name>committee</name><alias>comité</alias></global-value>
 <global-value>
 <name>committee-house</name><alias>comité-commune</alias></global-value>

@@ -6,7 +6,7 @@
 <Identification>
 <BillNumber>C-</BillNumber>
 <Parliament><Session>1</Session><Number>44</Number>
-<RegnalYear><Year-s>70-71</Year-s><Monarch>Elizabeth II</Monarch></RegnalYear>
+<RegnalYear><Year-s>70-71</Year-s><Monarch>Elizabeth II – 1 Charles III</Monarch></RegnalYear>
 <Year-s>2021-2022</Year-s></Parliament>
 <LongTitle></LongTitle>
 <RunningHead></RunningHead>
@@ -22,7 +22,7 @@
 <Provision format-ref="indent-0-0" language-align="yes"><Text>This enactment </Text></Provision>
 </Summary>
 <Enacts>
-<Provision format-ref="indent-0-0" language-align="yes"><Text>Her Majesty, by and with the advice and consent of the Senate and House of Commons of Canada, enacts as follows:</Text></Provision>
+<Provision format-ref="indent-0-0" language-align="yes"><Text>His Majesty, by and with the advice and consent of the Senate and House of Commons of Canada, enacts as follows:</Text></Provision>
 </Enacts>
 </Introduction>
 <Body><?Pub Caret?></Body></Bill>

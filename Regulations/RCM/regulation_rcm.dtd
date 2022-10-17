@@ -785,6 +785,11 @@
                              #PCDATA
                             | Sub
                             | Sup
+							| DefinedTermEn 
+							| DefinedTermFr 
+							| DefinitionEnOnly 
+							| DefinitionFrOnly 
+							| DefinitionRef 
 			    | Ins
 			    | Del
                             | Emphasis

@@ -73,6 +73,13 @@ scorespc="1"></charsubset>
 <font weight="bold">
 <highlt fontclr="white" bckclr="brown">
 </charsubset>
+</att>
+<att>
+<specval attname="security" attval="public-juril">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown"  bckclr="yellow">
+</charsubset>
 </att>'>
 
 <!ENTITY UniqueEICs PUBLIC "-//Justice Canada//FOSI Regulation Elements//EN" "../../RegulationEICs.fos">

@@ -4,10 +4,10 @@
 <DocumentTypeConfiguration>
 <Options allowApplicationToolbar="no" allowComposeStylesheetList="no"/>
 <NewDialog>
-<New description="Regulation" templateFile="template_e.xml" sampleFile="demo_e.xml"/>
-<New description="Règlement" templateFile="template_f.xml" sampleFile="demo_f.xml"/>
-<New description="Transport (Security Measure)" templateFile="template_SM_e.xml" sampleFile="demo_SM_e.xml"/>
-<New description="Transports (Mesure de sûreté)" templateFile="template_SM_f.xml" sampleFile="demo_SM_f.xml"/>
+<New description="Regulation" templateFile="template_e.xml"/>
+<New description="Règlement" templateFile="template_f.xml"/>
+<New description="Transport (Security Measure)" templateFile="template_SM_e.xml"/>
+<New description="Transports (Mesure de sûreté)" templateFile="template_SM_f.xml"/>
 
 </NewDialog>
 <ElementOptions>

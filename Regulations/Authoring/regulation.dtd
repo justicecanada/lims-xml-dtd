@@ -728,7 +728,7 @@
 
 <!ELEMENT CommentInline %inline; >
 <!ATTLIST CommentInline 
-               security (public | private)  "public" >
+               security (public | public-juril | private)  "public" >
 
 <!ELEMENT Ins %inline; >
 
@@ -736,7 +736,7 @@
 
 <!ELEMENT CommentBlock %inline; >
 <!ATTLIST CommentBlock  
-		security   (public | private )  'public' >
+		security (public | public-juril | private)  "public" >
 
 <!ELEMENT RelatedProvision
 		(Label, (Source, (Section | Subsection | SectionPiece | Provision)+)+)

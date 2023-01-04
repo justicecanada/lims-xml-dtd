@@ -1083,6 +1083,9 @@
 <name>file-number</name><alias>numéro-du-fichier</alias>
 </attribute>
 <attribute>
+<name>lex-number</name><alias>numéro-de-lex</alias>
+</attribute>
+<attribute>
 <name>stage</name><alias></alias>
 </attribute>
 </attribute-list>

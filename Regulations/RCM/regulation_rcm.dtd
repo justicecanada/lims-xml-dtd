@@ -1222,6 +1222,7 @@ in useability, presentation, and possible structure information degradation.
 >
 <!ATTLIST Identification 
 	file-number CDATA #IMPLIED
+	lex-number CDATA #IMPLIED
 	stage CDATA #IMPLIED
 	drafter-en CDATA #IMPLIED
 	drafter-fr CDATA #IMPLIED

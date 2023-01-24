@@ -17,7 +17,7 @@
 <charsubset>
 <font inherit="1" posture="upright">
 <highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-"
-scorespc="1"></charsubset>
+scorespc="1" bckclr="#ffe1e1"></charsubset>
 </att>
 <att>
 <specval attname="change" attval="alt">
@@ -40,7 +40,7 @@ scorespc="1"></charsubset>
 <charsubset>
 <font inherit="1" posture="upright">
 <highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-"
-scorespc="1"></charsubset>
+scorespc="1" bckclr="#ffe1e1"></charsubset>
 </att>
 <att>
 <specval attname="change" attval="alt">

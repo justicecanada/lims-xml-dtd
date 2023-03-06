@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Strips PUBLIC "-//Justice Canada//DTD Bill Strips v2.4.2//EN"
+ "strips.dtd">
+<?Pub UDT template _font?>
+<?Pub UDT instructions _comment FontColor="red"?>
+<?Pub Inc?>
+<Strips xml:lang="en">
+<BillRefNumber>179985</BillRefNumber>
+<Drafter>David Penton</Drafter><Path>s:\legis\temp\DPE\179985.xml</Path>
+<Instruction><?Pub Tag template?>Type general instructions here<?Pub Caret?><?Pub /template?></Instruction>
+<Strip>
+<Instruction>The following strips are blah blah blah</Instruction>
+<StripText><Section><Label>12.</Label><Text>Here is the text of a section
+that</Text><Paragraph><Label>(a)</Label><Text>does something or other</Text>
+</Paragraph>
+<Paragraph><Label>(b)</Label><Text>that I have not thought out</Text></Paragraph>
+<ContinuedSectionSubsection><Text>entirely as carefully as one might wish.</Text>
+</ContinuedSectionSubsection>
+</Section>
+</StripText>
+</Strip>
+<Strip>
+<Instruction>Paste this is at line blah blah:</Instruction>
+<StripText>
+<SectionPiece><Definition>
+<MarginalNote><DefinedTermEn>carving stone</DefinedTermEn></MarginalNote>
+<MarginalNote><DefinedTermFr>pierre à sculpter</DefinedTermFr></MarginalNote>
+<Text><DefinedTermEn>carving stone</DefinedTermEn> means serpentinite, argillite
+or soapstone that is suitable for carving.</Text></Definition>
+</SectionPiece>
+</StripText>
+</Strip>
+</Strips>
+<?Pub *0000001434 0?>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE Strips PUBLIC "-//Justice Canada//DTD Bill Strips v2.4.2//EN"
+ "strips.dtd">
+<?Pub UDT template _font?>
+<?Pub UDT instructions _comment FontColor="red"?>
+<?Pub Inc?>
+<Strips xml:lang="fr">
+<BillRefNumber>179985</BillRefNumber>
+<Drafter>David Penton</Drafter>
+<Path>s:\legis\temp\DPE\179985.xml</Path>
+<Instruction><?Pub Tag template?>Entrer des instructions ici<?Pub Caret?><?Pub /template?></Instruction>
+<Strip>
+<Instruction>Ajouter après l’article 12 à la page 18 :</Instruction>
+<StripText><Section>
+<MarginalNote>Rejet de déchets</MarginalNote>
+<Label>12.</Label><Subsection><Label>(1)</Label><Text>Sous réserve du paragraphe
+(2) et sauf en conformité avec les conditions d'un permis, il est interdit
+de rejeter des déchets — ou d'en permettre le rejet — dans les eaux du Nunavut
+ou en quelque autre endroit au Nunavut dans des conditions permettant à ces
+déchets ou à ceux résultant de leur rejet d'atteindre ces eaux.</Text></Subsection>
+<Subsection>
+<MarginalNote>Exceptions</MarginalNote>
+<Label>(2)</Label><Text>Le paragraphe (1) ne s'applique pas :</Text><Paragraph>
+<Label><Emphasis style="italic">a</Emphasis>)</Label><Text>aux rejets de déchets
+sans permis qu'autorisent les règlements;</Text></Paragraph>
+<Paragraph><Label><Emphasis style="italic">b</Emphasis>)</Label><Text>dans
+les limites d'un parc national;</Text></Paragraph>
+<Paragraph><Label><Emphasis style="italic">c</Emphasis>)</Label></Paragraph>
+</Subsection>
+<Subsection>
+<MarginalNote>Déclaration obligatoire</MarginalNote>
+<Label>(3)</Label><Text>En cas de rejet de déchets en contravention du présent
+article, quiconque avait la propriété ou la maïtrise des déchets, ou a contribué
+au rejet ou l'a causé, doit, sous réserve des règlements, signaler le fait
+sans délai à un inspecteur.</Text></Subsection>
+</Section>
+</StripText>
+</Strip>
+<Strip>
+<Instruction>Ajouter après le paragraphe 15(2) à la page 25 :</Instruction>
+<StripText>
+<SectionPiece><Definition>
+<MarginalNote><DefinedTermFr>organisation inuit désignée</DefinedTermFr></MarginalNote>
+<MarginalNote><DefinedTermEn>designated Inuit organization</DefinedTermEn></MarginalNote>
+<Text><DefinedTermFr>organisation inuit désignée</DefinedTermFr> </Text><Paragraph>
+<Label>(<Emphasis style="italic">a</Emphasis>)</Label><Text>Sous réserve de
+l'alinéa <Emphasis style="italic">b</Emphasis>), soit Tunngavik, soit, pour
+l'application de telle disposition de la présente loi figurant à l'annexe
+1, l'organisation désignée, pour l'exercice de la fonction prévue par la disposition
+correspondante de l'Accord, dans le registre public que tient Tunngavik conformément
+à l'Accord;</Text></Paragraph>
+<Paragraph><Label>(<Emphasis style="italic">b</Emphasis>)</Label><Text>en
+ce qui concerne les terres détenues en propriété conjointe aux termes de l'article
+40.2.8 de l'Accord, Makivik, agissant conjointement avec l'organisation compétente
+aux termes de l'alinéa <Emphasis style="italic">a</Emphasis>).</Text></Paragraph>
+</Definition>
+<Definition>
+<MarginalNote><DefinedTermFr>pierre à sculpter</DefinedTermFr></MarginalNote>
+<MarginalNote><DefinedTermEn>carving stone</DefinedTermEn></MarginalNote>
+<Text><DefinedTermFr>pierre à sculpter</DefinedTermFr>La serpentine, l'argilite
+et la stéatite qui conviennent à la sculpture.</Text></Definition>
+</SectionPiece>
+</StripText>
+</Strip>
+</Strips>
+<?Pub *0000003394 0?>

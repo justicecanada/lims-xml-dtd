@@ -1,0 +1,1216 @@
+<?xml encoding="utf-8"?>
+
+
+<!ENTITY % changeatt "
+              change  (ins | off )   #IMPLIED " >
+
+
+<!ENTITY % blockfragment  "BilingualGroup
+                         | FormulaGroup
+                         | FormulaDefinition 
+                         | FormulaParagraph
+                         | FormGroup 
+                         | TableGroup
+                         | SignatureBlock
+                         | Footnote 
+                         | List
+                         | Note
+                         | Oath
+                         | ImageGroup
+                         | ReadAsText" >
+
+
+<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
+
+
+<!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
+
+
+<!ENTITY % provisionblock "(
+                               BilingualGroup
+                             | FormulaGroup
+                             | FormGroup
+                             | TableGroup
+                             | SignatureBlock
+                             | Footnote
+                             | Note
+							 | List
+                             | Oath
+                             | ImageGroup
+                           )" >
+
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | Language 
+                           | FootnoteRef | XRefInternal | XRefExternal
+                           | PageBreak | Keep | LineBreak" >
+
+<!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
+                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
+                          | LeaderRightJustified | Sub | Sup | XRefInternal 
+                          | XRefExternal | Provision)*" >
+
+
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
+                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
+                     | Language | Leader | LeaderRightJustified | XRefInternal 
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+
+
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis 
+               | BilingualGroup | FootnoteRef | Formula 
+               | XRefInternal | XRefExternal | ImageGroup | Provision
+               | Language | Leader | SignatureBlock | LeaderRightJustified 
+               | PageBreak | Keep)* " >
+
+
+<!--  This dtd uses conditional sections to handle the "changeatt" entity.-->
+
+<!--  The entity "changeatt" is used to define the "change" attribute and
+      is defined in BillAuthoring.dtd, BillExchange.dtd, and Statute.dtd.
+	  - ins - element is new (or mostly new) text
+	  - del - element is deleted
+	  - off - element is not entirely new (for child of element marked with ins)
+	  - alt - element is an alternative version of another element (for drafting)
+	          (e.g. drafters keep different version of a given provision before 
+	          selecting one)  -->
+
+
+
+<!ENTITY % schedulecontent  "(BillPiece | DocumentInternal | BillInternal
+	| %blocktext; | Schedule)*" >
+
+
+<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
+                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+
+
+<!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+) >
+
+
+<!ELEMENT Clause  (Label, Text, ((Subclause | %blocktext;)+, 
+                   ContinuedClause?)*) >
+<!ATTLIST Clause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+
+<!ELEMENT ContinuedClause  (Text) >
+<!ATTLIST ContinuedClause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+<!ELEMENT ContinuedDefinition  (Text) >
+  <!ATTLIST ContinuedDefinition %changeatt;  >
+
+
+<!ELEMENT ContinuedParagraph  (Text) >
+<!ATTLIST ContinuedParagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+<!ELEMENT ContinuedSectionSubsection  (Text, (AmendedText | ReadAsText)?) >
+<!ATTLIST ContinuedSectionSubsection
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+<!ELEMENT ContinuedSubclause  (Text) >
+<!ATTLIST ContinuedSubclause
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+<!ELEMENT ContinuedSubparagraph  (Text) >
+<!ATTLIST ContinuedSubparagraph
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional | amending)  #IMPLIED  >
+
+
+<!ELEMENT Definition  ( 
+                        MarginalNote*,
+                        (Text*,((Paragraph | %blocktext;)+,ContinuedDefinition?)*)
+                      )>
+
+
+<!ELEMENT DocumentInternal
+    		( (Group | Provision | GroupHeading)+, Schedule* ) >
+
+
+<!ELEMENT Enacts  (Provision) >
+
+
+<!ELEMENT Group 
+    	( GroupHeading, (Group? | Provision?)* )>
+<!ATTLIST Group
+    	id  ID    #IMPLIED >
+
+
+<!ELEMENT Paragraph  (MarginalNote?, Label, Text,
+                     (((Subparagraph | %blocktext;)+, ContinuedParagraph?)* 
+                        | AmendedText?)) >
+<!ATTLIST Paragraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+<!ELEMENT Preamble  (Provision+) >
+<!ATTLIST Preamble
+               salutation   (yes | no ) "no"   >
+
+<!ELEMENT Provision (
+                      MarginalNote?,
+                      Label?,
+                      ProvisionHeading?,
+                      (
+                        (
+                          Text,
+                          (
+                            (
+                              (Provision | %provisionblock;)+,
+                              Text?
+                            )*
+                           |
+                            AmendedContent?
+                           |
+                            ReadAsContent?
+                          )
+                        )
+                       |
+                        (Provision+)
+                       |
+                        (%provisionblock;)
+                      )
+                    ) >
+<!ATTLIST Provision	
+                format-ref  CDATA    #IMPLIED
+                first-line-indent CDATA #IMPLIED
+                subsequent-line-indent CDATA #IMPLIED
+                justification (justify | left | right | center) #IMPLIED
+                hyphenation (yes | no) #IMPLIED
+                pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+                keep-with-next (yes | no) #IMPLIED
+                keep-with-previous (yes | no) #IMPLIED
+                topmarginspacing CDATA #IMPLIED
+				list-item (yes | no) "no"
+                xml:lang (en | fr)   #IMPLIED 
+                id  ID    #IMPLIED
+                language-align (yes | no) "no"
+                %changeatt; >
+
+
+<!ELEMENT Section  (MarginalNote?, Label, 
+                    ((Text, (Definition* | (((Paragraph |  %blocktext;)+, 
+                    ContinuedSectionSubsection?)* 
+                    | (AmendedText, ContinuedSectionSubsection?)?))) 
+                    | (Subsection | Heading )+),
+                    ExplanatoryNote?) >
+<!ATTLIST Section 
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)   #IMPLIED 
+               %changeatt;  >
+
+
+<!ELEMENT SectionPiece  (
+                           Definition
+                         | Paragraph 
+                         | Subparagraph 
+                         | Clause 
+                         | Subclause 
+                         | Subsubclause 
+                         | ContinuedSectionSubsection 
+                         | ContinuedParagraph 
+                         | ContinuedSubparagraph 
+                         | ContinuedClause 
+                         | ContinuedSubclause 
+                         | ContinuedDefinition 
+                         | %blocktext; 
+                        )+ >
+
+
+<!ELEMENT Subclause  (Label, Text,  ((Subsubclause 
+                      | %blocktext;)+, ContinuedSubclause?)*) >
+<!ATTLIST Subclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+<!ELEMENT Subsubclause  (Label, Text, 
+                         (%blocktext;)*) >
+<!ATTLIST Subsubclause
+               id  ID    #IMPLIED 
+               type  (normal | transitional | amending)  #IMPLIED
+               %changeatt;  >
+
+
+<!ELEMENT Subparagraph  (Label, Text, (((Clause 
+                         | %blocktext;)+, ContinuedSubparagraph?)* 
+                         | AmendedText?)) >
+<!ATTLIST Subparagraph
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending)  #IMPLIED 
+               %changeatt;  >
+
+
+<!ELEMENT Subsection (MarginalNote?, Label, Text, 
+                       (Definition* | (((Paragraph | %blocktext;)+,
+                       ContinuedSectionSubsection?)* 
+                     | (AmendedText, ContinuedSectionSubsection?)?)),
+                       ExplanatoryNote?) >
+<!ATTLIST Subsection
+               id  ID    #IMPLIED 
+               type (normal | transitional | amending) #IMPLIED 
+               %changeatt;  >
+
+<!ELEMENT Summary  (TitleText, Provision+) >
+
+<!ELEMENT Body  (Heading | Section )+ >
+
+
+
+<!ELEMENT Heading  (Label?, MarginalNote?, TitleText?, Note?) >
+<!ATTLIST Heading
+	    level (1 | 2 | 3 | 4 | 5) #REQUIRED
+	    style CDATA  #IMPLIED 
+	    type (normal | transitional | amending) #IMPLIED
+	    %changeatt;  >
+
+<!ENTITY % grouppiece  "(Group1-Part+ | (Group2-Division+, Group1-Part*) 
+                         | (Group3-Subdivision+, Group2-Division*,
+                         Group1-Part*) | (Group4+, Group3-Subdivision*,
+                         Group2-Division*, Group1-Part*) | (Group5+,
+                         Group4*, Group3-Subdivision*, Group2-Division*,
+                         Group1-Part*))" >
+
+<!ENTITY % docpart-nested  "(LongTitle | Preamble | (Section*,(%grouppiece;)?) 
+                     | Subsection+ | SectionPiece | Heading+ | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       IDENTIFICATION ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Parliament  (Session, Number, RegnalYear, Year-s) >
+
+
+<!ELEMENT LongTitle  (%lowleveltext;)* >
+
+			<!ATTLIST LongTitle
+               type CDATA   #IMPLIED  >
+
+<!ELEMENT ShortTitle  (%lowleveltext;)* >
+
+<!ATTLIST ShortTitle
+               status (official | unofficial)   #REQUIRED  >
+
+
+<!ELEMENT RunningHead (%lowleveltext;)* >
+
+
+<!ELEMENT AnnualStatuteNumber   (%lowleveltext;)* >
+
+
+<!ELEMENT BillSponsor  (%lowleveltext;)* >
+<!ATTLIST BillSponsor
+               billsponsorid  CDATA    #IMPLIED  >
+
+
+<!ELEMENT BillRefNumber  (#PCDATA) >
+<!ATTLIST BillRefNumber
+               date-time  CDATA    #IMPLIED  >
+
+
+<!ELEMENT BillHistory  (Stages+, RelatedInformation*) >
+
+
+<!ELEMENT Session  (#PCDATA) >
+
+
+<!ELEMENT Number  (#PCDATA) >
+
+
+<!ELEMENT RegnalYear  (Year-s, Monarch) >
+
+
+<!ELEMENT Year-s  (#PCDATA) >
+
+
+<!ELEMENT Monarch  (#PCDATA) >
+
+
+<!ELEMENT Stages  (Date, StageText?) >
+<!ATTLIST Stages
+               stage (tabled | first-reading-house | second-reading-house 
+               | committee-house | report-house | third-reading-house 
+               | first-reading-senate | second-reading-senate | committee-senate 
+               | report-senate | third-reading-senate | assented-to
+               | gazette | consolidation)   #REQUIRED  >
+
+
+<!ELEMENT StageText  (%lowleveltext;)* >
+
+
+<!ELEMENT RelatedInformation  (%lowleveltext;)* >
+
+
+<!ELEMENT Date  (YYYY, MM, DD) >
+
+
+<!ELEMENT YYYY  (#PCDATA) >
+
+
+<!ELEMENT MM  (#PCDATA) >
+
+
+<!ELEMENT DD  (#PCDATA) >
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       INTRODUCTION ELEMENT                          -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Recommendation  (TitleText, Provision) >
+
+
+<!ELEMENT TableOfProvisions (Heading | (Label?, Text))+  >
+<!ATTLIST TableOfProvisions
+               label-column-width (2.5 | 3 | 3.5 | 4 | 4.5)   "2.5"  >
+
+<!ELEMENT TitleText  (%lowleveltext;)* >
+  <!ATTLIST TitleText %changeatt;  >
+
+<!ELEMENT Label  (%lowleveltext;)* >
+
+
+<!ELEMENT HistoricalNote  (%lowleveltext;)* >
+
+<!ELEMENT MarginalNote  (%lowleveltext;
+                          | DefinedTermEn | DefinedTermFr
+                          | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef
+								  | HistoricalNote
+                         )* >
+<!ATTLIST MarginalNote
+               id  ID    #IMPLIED  >
+
+
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       SCHEDULE ELEMENT                             -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Schedule  (RunningHead?, ScheduleFormHeading, %schedulecontent;) >
+<!ATTLIST Schedule
+               id  ID    #IMPLIED
+	       type (normal | amending) #IMPLIED
+               spanlanguages (yes | no) "no"
+               bilingual   (yes | no) "no"
+               %changeatt;  >
+
+
+<!ELEMENT ScheduleFormHeading  ((Label,OriginatingRef?,TitleText*) | TitleText+) >
+<!ATTLIST ScheduleFormHeading
+	   type (normal | amending) #IMPLIED
+	   label-id CDATA #IMPLIED	   
+               %changeatt;  >
+
+
+<!ELEMENT OriginatingRef  (%lowleveltext;)* >
+<!ATTLIST OriginatingRef
+               schedule-id  CDATA    #IMPLIED  >
+
+
+<!ELEMENT GroupHeading (Label?, TitleText*)>
+<!ATTLIST GroupHeading
+    	format-ref CDATA #REQUIRED >
+
+
+<!ELEMENT ProvisionHeading (%lowleveltext;)*  >
+<!ATTLIST ProvisionHeading
+    		format-ref CDATA #REQUIRED >
+
+
+<!ELEMENT ReadAsContent ((Group | Provision | GroupHeading)+) >
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       BLOCK TEXT ELEMENTS                           -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT BillNumber  (#PCDATA) >
+
+
+<!ELEMENT BillPiece  (Preamble | Body | (Heading | Section)+ ) >
+
+
+<!ELEMENT BillInternal  (LongTitle, Preamble?, Enacts?, Body, Schedule*) >
+
+
+<!ELEMENT BilingualGroup  (TitleText?, ((BilingualItemEn, BilingualItemFr)+ | 
+					(BilingualItemFr, BilingualItemEn)+)) >
+
+  <!ATTLIST BilingualGroup %changeatt;  >
+
+<!ELEMENT BilingualItemEn  (%lowleveltext;)* >
+<!ATTLIST BilingualItemEn  font-style (regular | italic) #IMPLIED >
+
+
+<!ELEMENT BilingualItemFr  (%lowleveltext;)* >
+<!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
+
+
+<!ELEMENT ImageGroup  (title*, AlternateText?, Caption*, Image) >
+<!ATTLIST ImageGroup
+               id  ID    #IMPLIED 
+               %changeatt;
+               bilingual (yes | no) "no"
+               spanlanguages	 (yes | no) "no"
+               spanmarginalnotecol	(yes | no) "no"
+		position (left | right | center | inline)  "center"
+		width  CDATA    #IMPLIED 
+		float (right | left | top | bottom) #IMPLIED  
+     >
+
+
+<!ELEMENT Fraction (Numerator, Denominator) >
+<!ATTLIST Fraction 
+		style (oblique | horizontal) #IMPLIED >
+<!ELEMENT Numerator (#PCDATA | MSup | MSub)* >
+<!ELEMENT Denominator (#PCDATA | MSup | MSub)* >
+<!ELEMENT MSup (Base, Superscript) >
+<!ELEMENT MSub (Base, Subscript) >
+<!ELEMENT Base (#PCDATA) >
+<!ELEMENT Superscript (#PCDATA) >
+<!ELEMENT Subscript (#PCDATA) >
+
+
+<!ELEMENT AlternateText (#PCDATA)>
+
+
+<!ELEMENT Image   EMPTY  >
+<!ATTLIST Image
+               source  CDATA    #IMPLIED  >
+
+
+<!ELEMENT Caption  (%lowleveltext;)* >
+<!ATTLIST Caption
+               position (over | under )  "under"
+					justification (justify | left | right | center) #IMPLIED
+					change  (ins | del | off | alt)   #IMPLIED 
+					pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED 
+               >
+
+
+<!ATTLIST Definition
+               id  ID    #IMPLIED 
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED  >
+
+<!ELEMENT DefinedTermEn  (%lowleveltext;)* >
+			<!ATTLIST DefinedTermEn
+               style  (bold | italic | normal)    #IMPLIED  >
+
+<!ELEMENT DefinedTermFr  (%lowleveltext;)* >
+			<!ATTLIST DefinedTermFr
+               style  (bold | italic | normal)    #IMPLIED  >
+
+
+<!ELEMENT DefinitionEnOnly  (%lowleveltext;)* >
+
+
+<!ELEMENT DefinitionFrOnly  (%lowleveltext;)* >
+
+<!ELEMENT DefinitionRef  (%lowleveltext;)* >
+
+
+<!ELEMENT Footnote  (Label, Text) >
+<!ATTLIST Footnote
+               id  ID    #IMPLIED 
+               placement (table | section)   #IMPLIED 
+		status (official | unofficial | editorial) "official"
+		xml:space (default | preserve) "default"
+               %changeatt;  >
+
+<!ELEMENT Formula  (FormulaText | ImageGroup)+ >
+<!ATTLIST Formula
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED  >
+
+
+<!ELEMENT FormulaText  (%lowleveltext; | Fraction)* >
+
+
+<!ELEMENT FormulaTerm  %inline; >
+
+
+<!ELEMENT FormulaConnector  (#PCDATA) >
+<!ATTLIST FormulaConnector
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED  >
+
+
+<!ELEMENT FormulaDefinition  (FormulaTerm, (Text, ((FormulaParagraph | %formula-block;)+, 
+                       ContinuedFormulaParagraph?)*), ContinuedFormulaDefinition?) >
+<!ATTLIST FormulaDefinition
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;
+               type  (normal | transitional ) #IMPLIED
+					hanging-indent NMTOKEN #IMPLIED 
+					  >
+
+
+<!ELEMENT FormulaParagraph  (Label, Text, ((FormulaParagraph | %formula-block;)+, 
+                        ContinuedFormulaParagraph?)*) >
+<!ATTLIST FormulaParagraph
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED >
+
+
+<!ELEMENT FormulaGroup  (AlternateText?, Formula, FormulaConnector?, (FormulaDefinition* 
+                         | FormulaParagraph*)) >
+<!ATTLIST FormulaGroup
+               id  ID    #IMPLIED 
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;  >
+
+
+<!ELEMENT FormGroup  (AlternateText?, ScheduleFormHeading?, (SignatureBlock
+                      | Provision | TableGroup | List)+) >
+<!ATTLIST FormGroup
+               id  ID    #IMPLIED 
+               %changeatt;  >
+
+
+<!ELEMENT ContinuedFormulaParagraph  (Text) >
+<!ATTLIST ContinuedFormulaParagraph
+               indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED  >
+
+
+<!ELEMENT ContinuedFormulaDefinition  (Text) >
+<!ATTLIST ContinuedFormulaDefinition
+               %changeatt;
+               type  (normal | transitional )  #IMPLIED  >
+
+
+
+<!ELEMENT Note  (%lowleveltext; | Provision)* >
+<!ATTLIST Note
+               id  ID    #IMPLIED 
+		status (official | unofficial | editorial) "official"
+		xml:space (default | preserve) "default"
+	        %changeatt;  >
+
+
+<!ELEMENT Oath  (%lowleveltext; | Leader)* >
+  <!ATTLIST Oath %changeatt;  >
+
+
+<!ELEMENT ReadAsText (Section* | Subsection* | SectionPiece | FormulaGroup) >
+
+
+<!ELEMENT SignatureBlock  (SignatureLine | SignatureTitle | SignatureName)+ >
+  <!ATTLIST SignatureBlock %changeatt;  
+				justification (justify | left | right | center) #IMPLIED 
+				width CDATA #IMPLIED 
+					>
+
+
+<!ELEMENT SignatureLine  (%lowleveltext; | Leader)* >
+  <!ATTLIST SignatureLine %changeatt; 
+							justification (justify | left | right | center) #IMPLIED 
+							topmarginspacing CDATA #IMPLIED 
+							bottommarginspacing CDATA #IMPLIED  
+								 >
+
+
+<!ELEMENT SignatureTitle  (%lowleveltext;)* >
+  <!ATTLIST SignatureTitle %changeatt;  
+							justification (justify | left | right | center) #IMPLIED 
+							topmarginspacing CDATA #IMPLIED 
+							bottommarginspacing CDATA #IMPLIED  
+								 >
+
+<!ELEMENT SignatureName  (%lowleveltext;)* >
+  <!ATTLIST SignatureName %changeatt;  
+							justification (justify | left | right | center) #IMPLIED 
+							topmarginspacing CDATA #IMPLIED 
+							bottommarginspacing CDATA #IMPLIED  
+								 >
+								 
+<!ELEMENT TableGroup  (AlternateText?, Caption?, table, Footnote* ) >
+<!ATTLIST TableGroup
+               id  ID    #IMPLIED 
+               %changeatt;  
+			pointsize NMTOKEN #IMPLIED
+               rowbreak  (yes | no) "no"
+               bilingual (yes | no) "no"
+               spanlanguages	 (yes | no) "no"
+			spanmarginalnotecol (yes | no) "no"  
+			orientation (landscape | portrait) #IMPLIED 
+			topmarginspacing CDATA #IMPLIED
+			bottommarginspacing CDATA #IMPLIED  
+                 >
+
+
+<!ELEMENT Text  %inline; >
+<!ATTLIST Text
+               id  ID    #IMPLIED  >
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       INLINE TEXT ELEMENTS                          -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+<!ELEMENT Emphasis  (%lowleveltext;)* >
+<!ATTLIST Emphasis
+               style (bold | italic | underline | smallcaps | overbar | regular) #REQUIRED  >
+
+
+<!ELEMENT FootnoteRef  (%lowleveltext;)* >
+<!ATTLIST FootnoteRef
+               idref  IDREFS    #REQUIRED >
+
+
+<!ELEMENT Language  (%lowleveltext;)* >
+<!ATTLIST Language
+               xml:lang (en | fr | la )   #REQUIRED  >
+
+
+<!ELEMENT LeaderRightJustified  EMPTY >
+<!ATTLIST LeaderRightJustified
+               leader (solid | dot | dash | none)  #REQUIRED >
+
+<!ELEMENT Leader  EMPTY >
+<!ATTLIST Leader
+		leader (solid | dot | dash | none)  #REQUIRED 
+		length CDATA #REQUIRED
+			>
+
+<!ELEMENT List (Item+) >
+<!ATTLIST List
+			style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
+			subsequent-line-indent CDATA #IMPLIED 
+			first-line-indent CDATA #IMPLIED 
+			change  (ins | off )   #IMPLIED 
+			justification (justify | left | right | center) #IMPLIED
+			hyphenation (yes | no) #IMPLIED
+			pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
+			keep-with-next (yes | no) #IMPLIED
+			keep-with-previous (yes | no) #IMPLIED
+			topmarginspacing CDATA #IMPLIED
+			xml:lang (en | fr)   #IMPLIED 
+			language-align (yes | no) "no"  >
+<!ELEMENT Item (Label?, Text, List?) >
+
+
+<!ELEMENT Sub  (#PCDATA | Emphasis)* >
+
+
+<!ELEMENT Sup  (#PCDATA | Emphasis)* >
+
+
+<!ELEMENT XRefInternal  (%lowleveltext;)* >
+<!ATTLIST XRefInternal
+               idref  IDREFS    #IMPLIED  
+               reference-style CDATA #IMPLIED >
+
+
+<!ELEMENT XRefExternal  (%lowleveltext;)* >
+<!ATTLIST XRefExternal
+               reference-type (regulation | act | standard | other )   #REQUIRED >
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--            REDEFINITION OF CALS XML EXCHANGE ENTITIES               -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!-- The following entity declaration was move to here. It needs to be
+     declared before it is called. -->
+
+<!ENTITY % yesorno 'NMTOKEN'>
+<!-- no if zero(s), yes if any other value -->
+
+<!-- The following entity was copied from the CALS Exchange DTD.
+     The definition for "tabstyle" was translated from the full CALS SGML 
+     Exchange table model found here: http://oasis-open.org/specs/tm9502.html -->
+
+<!ENTITY % tbl.table.att        "
+    		tabstyle         NMTOKEN               #IMPLIED " >
+
+<!-- NOTE: The title element isn't defined in the CALS Exchange table model,
+     but it is referenced. -->
+
+<!ELEMENT title  (%lowleveltext;)* >
+
+<!ATTLIST title
+    	format-ref CDATA #IMPLIED >
+
+<!-- tbl.entry.mdl is redefined in each individual dtd: BillAuthoring.dtd,
+           BillExchange.dtd, and Statute.dtd -->
+
+<!-- The following code for the XML Exchange Table Model was copied directly
+     from http://oasis-open.org/specs/tm9901.html  -->
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--       START OF XML EXCHANGE TABLE MODEL DECLARATION MODULE          -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!-- This set of declarations defines the XML version of the Exchange
+     Table Model as of the date shown in the Formal Public Identifier
+     (FPI) for this entity.
+
+     This set of declarations may be referred to using a public external
+     entity declaration and reference as shown in the following three
+     lines:
+
+     <!ENTITY % calstblx
+       PUBLIC "-//OASIS//DTD XML Exchange Table Model 19990315//EN">
+       %calstblx;
+
+     If various parameter entities used within this set of declarations
+     are to be given non-default values, the appropriate declarations
+     should be given before calling in this package (i.e., before the
+     "%calstblx;" reference).
+-->
+
+<!-- The motivation for this XML version of the Exchange Table Model
+     is simply to create an XML version of the SGML Exchange Table
+     Model. By design, no effort has been made to "improve" the model.
+
+     This XML version incorporates the logical bare minimum changes
+     necessary to make the Exchange Table Model a valid XML DTD.
+-->
+
+<!-- The XML version of the Exchange Table Model differs from
+     the SGML version in the following ways:
+
+     The following parameter entities have been removed:
+
+       - tbl.table.excep, tbl.hdft.excep, tbl.row.excep, tbl.entry.excep
+         There are no exceptions in XML. The following normative statement
+         is made in lieu of exceptions: the exchange table model explicitly
+         forbids a table from occurring within another table. If the
+         content model of an entry includes a table element, then this
+         cannot be enforced by the DTD, but it is a deviation from the
+         exchange table model to include a table within a table.
+
+       - tbl.hdft.name, tbl.hdft.mdl, tbl.hdft.excep, tbl.hdft.att
+         The motivation for these elements was to change the table
+         header/footer elements. Since XML does not allow element declarations
+         to contain name groups, and the exchange table model does not
+         allow a table to contain footers, the continued presence of these
+         attributes seems unnecessary.
+
+     The following parameter entity has been added:
+
+       - tbl.thead.att
+         This entity parameterizes the attributes on thead. It replaces
+         the tbl.hdft.att parameter entity.
+
+     Other miscellaneous changes:
+
+       - Tag ommission indicators have been removed
+       - Comments have been removed from declarations
+       - NUMBER attributes have been changed to NMTOKEN
+       - NUTOKEN attributes have been to changed to NMTOKEN
+       - Removed the grouping characters around the content model
+         parameter entry for the 'entry' element. This is necessary
+         so that an entry can contain #PCDATA and be defined as an
+         optional, repeatable OR group beginning with #PCDATA.
+-->
+
+<!-- This entity includes a set of element and attribute declarations
+     that partially defines the Exchange table model.  However, the model
+     is not well-defined without the accompanying natural language
+     description of the semantics (meanings) of these various elements,
+     attributes, and attribute values.  The semantic writeup, also available
+     from SGML Open, should be used in conjunction with this entity.
+-->
+
+<!-- In order to use the Exchange table model, various parameter entity
+     declarations are required.  A brief description is as follows:
+
+     ENTITY NAME      WHERE USED              WHAT IT IS
+
+     %yesorno         In ATTLIST of:          An attribute declared value
+                      almost all elements     for a "boolean" attribute
+
+     %paracon         In content model of:    The "text" (logical content)
+                      <entry> 		      of the model group for <entry>
+
+     %titles          In content model of:    The "title" part of the model
+                      table element           group for the table element
+
+     %tbl.table.name  In declaration of:      The name of the "table"
+                      table element           element
+
+     %tbl.table-titles.mdl In content model of: The model group for the title
+                      table elements          part of the content model for
+                                              table element
+
+     %tbl.table.mdl   In content model of:    The model group for the content
+                      table elements          model for table element,
+                                              often (and by default) defined
+                                              in terms of %tbl.table-titles.mdl
+                                              and tgroup
+
+     %tbl.table.att   In ATTLIST of:          Additional attributes on the
+                      table element           table element
+
+     %bodyatt         In ATTLIST of:          Additional attributes on the
+                      table element           table element (for backward
+                                              compatibility with the SGML
+                                              model)
+
+     %tbl.tgroup.mdl  In content model of:    The model group for the content
+                      <tgroup> 			model for <tgroup>
+
+     %tbl.tgroup.att  In ATTLIST of:          Additional attributes on the
+                      <tgroup>			<tgroup> element
+
+     %tbl.thead.att   In ATTLIST of:          Additional attributes on the
+                      <thead>			<thead> element
+
+     %tbl.tbody.att   In ATTLIST of:          Additional attributes on the
+                      <tbody>			<tbody> element
+
+     %tbl.colspec.att In ATTLIST of:          Additional attributes on the
+                      <colspec>			<colspec> element
+
+     %tbl.row.mdl     In content model of:    The model group for the content
+                      <row>			model for <row>
+
+     %tbl.row.att     In ATTLIST of:          Additional attributes on the
+                      <row> 			<row> element
+
+     %tbl.entry.mdl   In content model of:    The model group for the content
+                      <entry> 			model for <entry>
+
+     %tbl.entry.att   In ATTLIST of:          Additional attributes on the
+                      <entry> 			<entry> element
+
+     This set of declarations will use the default definitions shown below
+     for any of these parameter entities that are not declared before this
+     set of declarations is referenced.
+-->
+
+<!-- These definitions are not directly related to the table model, but are
+     used in the default CALS table model and may be defined elsewhere (and
+     prior to the inclusion of this table module) in the referencing DTD. -->
+
+<!ENTITY % yesorno 'NMTOKEN'>
+<!-- no if zero(s), yes if any other value -->
+<!ENTITY % titles  'title?'>
+<!ENTITY % paracon '#PCDATA'>
+<!-- default for use in entry content -->
+
+<!--
+The parameter entities as defined below change and simplify the CALS table
+model as published (as part of the Example DTD) in MIL-HDBK-28001.  The
+resulting simplified DTD has support from the SGML Open vendors and is
+therefore more interoperable among different systems.
+
+These following declarations provide the Exchange default definitions
+for these entities.  However, these entities can be redefined (by giving
+the appropriate parameter entity declaration(s) prior to the reference
+to this Table Model declaration set entity) to fit the needs of the
+current application.
+
+Note, however, that changes may have significant effect on the ability to
+interchange table information.  These changes may manifest themselves
+in useability, presentation, and possible structure information degradation.
+-->
+
+<!ENTITY % tbl.table.name       "table">
+<!ENTITY % tbl.table-titles.mdl "%titles;,">
+<!ENTITY % tbl.table-main.mdl   "tgroup+">
+<!ENTITY % tbl.table.mdl        "%tbl.table-titles.mdl; %tbl.table-main.mdl;">
+<!ENTITY % tbl.table.att        "
+    pgwide      %yesorno;       #IMPLIED ">
+<!ENTITY % bodyatt              "">
+<!ENTITY % tbl.tgroup.mdl       "colspec*,thead?,tbody">
+<!ENTITY % tbl.tgroup.att       "keep-together (yes|no) #IMPLIED">
+<!ENTITY % tbl.thead.att        "">
+<!ENTITY % tbl.tbody.att        "">
+<!ENTITY % tbl.colspec.att      "">
+<!ENTITY % tbl.row.mdl          "entry+">
+<!ENTITY % tbl.row.att          "">
+<!ENTITY % tbl.entry.mdl        "(%paracon;)*">
+<!ENTITY % tbl.entry.att        "">
+
+<!-- =====  Element and attribute declarations follow. =====  -->
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.table.name       "table"
+     ENTITY % tbl.table-titles.mdl "%titles;,"
+     ENTITY % tbl.table.mdl        "%tbl.table-titles; tgroup+"
+     ENTITY % tbl.table.att        "
+                        pgwide          %yesorno;       #IMPLIED "
+-->
+
+<!ELEMENT %tbl.table.name; (%tbl.table.mdl;)>
+
+<!ATTLIST %tbl.table.name;
+        frame           (top|bottom|topbot|all|sides|none)      #IMPLIED
+        colsep          %yesorno;                               #IMPLIED
+        rowsep          %yesorno;                               #IMPLIED
+        %tbl.table.att;
+        %bodyatt;
+>
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.tgroup.mdl    "colspec*,thead?,tbody"
+     ENTITY % tbl.tgroup.att    ""
+-->
+
+<!ELEMENT tgroup (%tbl.tgroup.mdl;) >
+
+<!ATTLIST tgroup
+        cols            NMTOKEN                                 #REQUIRED
+        colsep          %yesorno;                               #IMPLIED
+        rowsep          %yesorno;                               #IMPLIED
+        align           (left|right|center|justify|char)        #IMPLIED
+        %tbl.tgroup.att;
+>
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.colspec.att   ""
+-->
+
+<!ELEMENT colspec EMPTY >
+
+<!ATTLIST colspec
+        colnum          NMTOKEN                                 #IMPLIED
+        colname         NMTOKEN                                 #IMPLIED
+        colwidth        CDATA                                   #IMPLIED
+        colsep          %yesorno;                               #IMPLIED
+        rowsep          %yesorno;                               #IMPLIED
+        align           (left|right|center|justify|char)        #IMPLIED
+        char            CDATA                                   #IMPLIED
+        charoff         NMTOKEN                                 #IMPLIED
+        %tbl.colspec.att;
+>
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.thead.att      ""
+-->
+
+<!ELEMENT thead (row+)>
+
+<!ATTLIST thead
+        valign          (top|middle|bottom)                     #IMPLIED
+        %tbl.thead.att;
+>
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.tbody.att     ""
+-->
+
+<!ELEMENT tbody (row+)>
+
+<!ATTLIST tbody
+        valign          (top|middle|bottom)                     #IMPLIED
+        %tbl.tbody.att;
+>
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % tbl.row.mdl       "entry+"
+     ENTITY % tbl.row.att       ""
+-->
+
+<!ELEMENT row (%tbl.row.mdl;)>
+
+<!ATTLIST row
+        rowsep          %yesorno;                               #IMPLIED
+        valign          (top|middle|bottom)                     #IMPLIED
+        topdouble         (yes|no)                                #IMPLIED
+        topmarginspacing  (8|6|4|2|0)                               "2"
+        %tbl.row.att;
+>
+
+
+<!--
+     Default declarations previously defined in this entity and
+     referenced below include:
+     ENTITY % paracon           "#PCDATA"
+     ENTITY % tbl.entry.mdl     "(%paracon;)*"
+     ENTITY % tbl.entry.att     ""
+-->
+
+<!ELEMENT entry %tbl.entry.mdl;>
+
+<!ATTLIST entry
+		th-headers            CDATA                                #IMPLIED
+		th-id        CDATA                 #IMPLIED
+		  rowheader (yes | no) #IMPLIED		  
+        colname         NMTOKEN                                 #IMPLIED
+        namest          NMTOKEN                                 #IMPLIED
+        nameend         NMTOKEN                                 #IMPLIED
+        morerows        NMTOKEN                                 #IMPLIED
+        colsep          %yesorno;                               #IMPLIED
+        rowsep          %yesorno;                               #IMPLIED
+        align           (left|right|center|justify|char)        #IMPLIED
+        char            CDATA                                   #IMPLIED
+        charoff         NMTOKEN                                 #IMPLIED
+        valign          (top|middle|bottom)                     #IMPLIED
+        %tbl.entry.att;
+>
+
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                        HIGHEST LEVEL ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Bill  (Introduction?, Body, Schedule*) >
+
+
+<!ATTLIST Bill
+               bill-origin (commons | senate | other)   #REQUIRED
+               bill-type (private-public | private-private | govt-public) 
+               						"govt-public"
+               document-id  CDATA    #IMPLIED 
+               date-time  CDATA    #IMPLIED 
+               xml:lang (en | fr)   #REQUIRED  >
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       IDENTIFICATION ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                         INTRODUCTION ELEMENT                        -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Introduction  (Recommendation?, Summary?, TableOfProvisions?, 
+((Preamble, Enacts?) | Enacts)?) >
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+
+<!--                                                                     -->
+<!--                       BLOCK TEXT ELEMENTS                           -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT ExplanatoryNote  (TitleText*, Label, ExplanatoryText+, ExistingText?) >
+<!ATTLIST ExplanatoryNote
+               id  ID    #IMPLIED  >
+
+
+<!ELEMENT ExplanatoryText  %inline; >
+
+
+<!ELEMENT ExistingText  %docpart; >
+<!ATTLIST ExistingText
+               xml:lang (en | fr)   #IMPLIED  >
+
+<!ELEMENT AmendedText  (%docpart; | BillInternal | OriginatingRef | Schedule) >
+<!ATTLIST AmendedText
+               xml:lang (en | fr )   #IMPLIED 
+               change  (ins | off) #IMPLIED
+               include-in-TableOfProvisions (yes | no)  "no" >
+
+
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       INLINE TEXT ELEMENTS                          -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Ins  %changedtext; >
+<!ELEMENT Keep  (%lowleveltext;)* >
+<!ATTLIST Keep        
+               svc CDATA #IMPLIED >
+
+<!ELEMENT PageBreak  EMPTY >
+
+
+<!ELEMENT LineBreak  EMPTY >
+
+	       
+<!-- ____________________________________________________________________-->
+<!--                                                                     -->
+<!--                       GAZETTE ELEMENTS                              -->
+<!--                                                                     -->
+<!-- ____________________________________________________________________-->
+
+<!ELEMENT Gazette (Identification, GazetteNotice+)>
+
+<!ATTLIST Gazette
+    gazette-part (I | II) #IMPLIED 
+    xml:lang (en | fr) #REQUIRED
+>
+
+<!ELEMENT Identification (GazetteHeader, GazetteTitle, GazetteDate)>
+
+<!ELEMENT GazetteHeader (Volume, GazetteNumber, Page)>
+
+<!ELEMENT Volume (#PCDATA)>
+
+<!ELEMENT GazetteNumber (#PCDATA)>
+
+<!ELEMENT GazetteTitle (#PCDATA)>
+
+<!ELEMENT Page (#PCDATA)>
+
+<!ELEMENT GazetteDate (Date)>
+
+<!ELEMENT Authority %inline; >
+
+<!ELEMENT Source %inline; >
+
+<!ATTLIST Source
+    target CDATA #IMPLIED
+>
+
+<!ELEMENT NoticeTitle %inline; >
+
+<!ELEMENT GazetteNotice (Authority*, Source*, NoticeText)>
+
+<!ELEMENT NoticeText (NoticeTitle | LongTitle | Preamble | Enacts | Summary | Heading | Section 
+| Subsection | SectionPiece | Schedule | ScheduleFormHeading  
+| (%blockfragment;) | Formula | Group | GroupHeading | Provision | ExplanatoryNote | ExistingText)+ >
+

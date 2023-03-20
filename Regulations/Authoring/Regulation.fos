@@ -22,7 +22,7 @@ scorespc="1" bckclr="#ffe1e1"></charsubset>
 <att>
 <specval attname="change" attval="alt">
 <charsubset>
-<highlt inherit="1" fontclr="orange"></charsubset>
+<highlt inherit="1" fontclr="#a4007b"></charsubset>
 </att>'>
 <!ENTITY ChangeAtt '<att>
 <specval attname="change" attval="off">
@@ -45,7 +45,7 @@ scorespc="1" bckclr="#ffe1e1"></charsubset>
 <att>
 <specval attname="change" attval="alt">
 <charsubset>
-<highlt inherit="1" fontclr="orange"></charsubset>
+<highlt inherit="1" fontclr="#a4007b"></charsubset>
 </att>
 <att>
 <specval attname="in-force" attval="#ANY">

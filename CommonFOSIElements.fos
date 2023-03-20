@@ -2005,6 +2005,8 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <highlt fontclr="maroon">
 </charsubset>
 </att>
+<att>
+<specval attname="type" attval="CIF">
 <charsubset>
 <font weight="bold">
 </charsubset>

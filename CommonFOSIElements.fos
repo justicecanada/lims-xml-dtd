@@ -603,6 +603,19 @@
 <highlt fontclr="maroon">
 </charsubset>
 </att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
+</charsubset>
+</att>
 </e-i-c>
 <e-i-c gi="ContinuedSectionSubsection">
 <?Pub Lcl _id="f470">
@@ -1992,6 +2005,10 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <highlt fontclr="maroon">
 </charsubset>
 </att>
+<charsubset>
+<font weight="bold">
+</charsubset>
+</att>
 &ChangeAtt;
 </e-i-c>
 <e-i-c gi="Paragraph" context="* AmendedText">
@@ -2013,7 +2030,20 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <specval attname="type" attloc="Paragraph" attval="transitional">
 <charsubset>
 <font weight="bold">
-<highlt fontclr="#8403fc">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
 </charsubset>
 </att>
 &ChangeAtt;
@@ -2859,7 +2889,7 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <specval attname="type" attloc="Section" attval="transitional">
 <charsubset>
 <font weight="bold">
-<highlt fontclr="#8403fc">
+<highlt fontclr="maroon">
 </charsubset>
 </att>
 <att>
@@ -3040,6 +3070,19 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <highlt inherit="1">
 </charsubset>
 </att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
+</charsubset>
+</att>
 &ChangeAtt;
 </e-i-c>
 <e-i-c gi="Subsection" context="Section" occur="notfirst">
@@ -3059,6 +3102,19 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <charsubset>
 <font weight="bold">
 <highlt inherit="1">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
 </charsubset>
 </att>
 &ChangeAtt;
@@ -3082,6 +3138,19 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <highlt fontclr="maroon">
 </charsubset>
 </att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
+</charsubset>
+</att>
 &ChangeAtt;
 </e-i-c>
 <e-i-c gi="Subsection" context="* AmendedText">
@@ -3100,7 +3169,20 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <specval attname="type" attloc="Subsection" attval="transitional">
 <charsubset>
 <font weight="bold">
-<highlt fontclr="#8403fc">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
 </charsubset>
 </att>
 &ChangeAtt;
@@ -3121,7 +3203,20 @@ scorespc="1" bckclr="#ffe1e1"></charlist>
 <specval attname="type" attloc="Subsection" attval="transitional">
 <charsubset>
 <font weight="bold">
-<highlt fontclr="#8403fc">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
 </charsubset>
 </att>
 &ChangeAtt;

@@ -972,8 +972,20 @@
 </e-i-c>
 <e-i-c gi="Del"><?Pub Lcl _id="f409">
 <charlist inherit="1" charsubsetref="Inline">
-<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="="
-scorespc="1" bckclr="#ffe1e1"></charlist>
+<font inherit="1" posture="upright">
+</charlist>
+<att>
+<specval attname="FOSIutils::showDelSading" attloc="system-func" attval="1">
+<charsubset>
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-" scorespc="1" bckclr="#ffe1e1">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::showDelSading" attloc="system-func" attval="0">
+<charsubset>
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-" scorespc="1">
+</charsubset>
+</att>
 </e-i-c>
 <e-i-c gi="DocumentInternal">
 <?Pub Lcl _id="f531">

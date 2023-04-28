@@ -47,7 +47,7 @@
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
-		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank)*" >
+		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | IBR )*" >
 
 <!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
@@ -718,6 +718,16 @@
 			   incorporatedByRef	(yes | no) #IMPLIED			   			   
 			   >
 			   
+<!ELEMENT IBR  %inline; >
+<!ATTLIST XRefExternal
+	bilingual	(yes | no)	#IMPLIED
+	origin		(internal | external)	#IMPLIED
+	publishedBy	CDATA #IMPLIED
+	incorporationType (ambulatory | static) #IMPLIED
+	cost		CDATA #IMPLIED
+	url			CDATA	#IMPLIED
+>
+
 <!ELEMENT XRefSection  (#PCDATA) >
 <!ATTLIST XRefSection
 			   lawid	CDATA	#IMPLIED

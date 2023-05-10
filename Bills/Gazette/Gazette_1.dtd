@@ -1,0 +1,66 @@
+<?xml encoding="utf-8"?>
+
+<!-- Bills Strips DTD -->
+
+<!ENTITY % billauthoring  PUBLIC "-//Justice Canada//DTD Bill Authoring v2.4.2//EN" "../BillAuthoring/billAuthoring.dtd">
+
+%billauthoring;
+
+<!-- Note:
+
+    The main structure below uses BillRefNumber as the main identifier
+    of the bill to which the strip pertains.  I had been under the
+    impression that BillRefNumber represents the internal LSB number
+    assigned to a bill once it goes to first page proof.  This may
+    be wrong, in which case some other element(s) should be used to
+    indicate the bill to which the strip(s) pertain.
+
+    The first optional CommentBlock is intended to for the drafter
+    to say something about the entire strip file.  Thereafter, the
+    CommentBlock child of each Strip element is intended to be used
+    for specific instructions regarding the location of the strip
+    by line number in the page proof, and whatever else the drafter
+    wants to tell the technician handling the strip.
+
+    The Strip element is, of course that which contains the content
+    of the strip, i.e., replacement text to be copied and pasted
+    into the page proof instance of the bill.
+
+-->
+
+<!ELEMENT Gazette (GazettePartI, GazetteNotice+)>
+
+<!ATTLIST Gazette
+    xml:lang (en | fr) #REQUIRED
+>
+
+<!ELEMENT GazettePartI (GazetteHeader, GazetteTitle, GazetteDate)>
+
+<!ELEMENT GazetteHeader (Volume, GazetteNumber)>
+
+<!ELEMENT Volume (#PCDATA)>
+
+<!ELEMENT GazetteNumber (#PCDATA)>
+
+<!ELEMENT GazetteTitle (#PCDATA)>
+
+<!ELEMENT Page (#PCDATA)>
+
+<!ELEMENT GazetteDate (Date)>
+
+<!ELEMENT Authority %inline; >
+
+<!ELEMENT Source %inline; >
+
+<!ATTLIST Source
+    target CDATA #IMPLIED
+>
+
+<!ELEMENT Title %inline; >
+
+<!ELEMENT GazetteNotice (Page, Authority*, Source*, NoticeText)>
+
+<!ELEMENT NoticeText (Title | LongTitle | Preamble | Enacts | Summary | Heading | Section 
+| Subsection | SectionPiece | Schedule | ScheduleFormHeading  
+| (%blockfragment;) | Formula | Group | GroupHeading | Provision | ExplanatoryNote | ExistingText)+ >
+

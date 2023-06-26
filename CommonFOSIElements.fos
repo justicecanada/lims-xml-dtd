@@ -420,6 +420,7 @@
 <highlt inherit="1">
 <postsp nominal="6pt" priority="high">
 </charlist>
+&ChangeAtt;
 </e-i-c>
 
 <e-i-c gi="Item">
@@ -430,6 +431,7 @@
 <presp nominal="6pt" priority="med">
 <postsp nominal="4pt" priority="high">
 </charlist>
+&ChangeAtt;
 </e-i-c>
 
 <e-i-c gi="Text" context="Item">
@@ -2021,6 +2023,7 @@
 <specval attname="type" attval="CIF">
 <charsubset>
 <font weight="bold">
+<highlt fontclr="teal">
 </charsubset>
 </att>
 &ChangeAtt;

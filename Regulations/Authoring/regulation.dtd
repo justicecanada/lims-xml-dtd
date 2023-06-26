@@ -382,7 +382,9 @@
                source  CDATA    #IMPLIED  >
 
 <!ELEMENT Item (Label?, Text, List?) >
-<!ATTLIST Item space-after CDATA #IMPLIED >
+<!ATTLIST Item
+		change  (ins | del | off | alt)   #IMPLIED
+		space-after CDATA #IMPLIED >
 
 
 <!ELEMENT Label  %inline; >
@@ -724,6 +726,8 @@
 	publishedBy	CDATA #IMPLIED
 	incorporationType (ambulatory | static) #IMPLIED
 	cost		CDATA #IMPLIED
+	lastVerified	CDATA #IMPLIED
+	currency	(CAD | USD | EURO | GBP) "CAD"
 	url			CDATA	#IMPLIED
 >
 

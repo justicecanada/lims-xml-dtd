@@ -348,7 +348,7 @@
 <e-i-c gi="IBR"><?Pub Lcl _id="f401">
 <charlist inherit="1" charsubsetref="Inline">
 <font weight="normal" posture="upright" smallcap="0">
-<highlt fontclr="#346767"></charlist>
+<highlt bckclr="gray" fontclr="blue"></charlist>
 &securityAtt;
 </e-i-c>
 <e-i-c gi="InstrumentNumber">

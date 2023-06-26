@@ -23,6 +23,12 @@
 <name>cost</name><alias>coût</alias>
 </attribute>
 <attribute>
+<name>lastVerified</name><alias>dernièreVérification</alias>
+</attribute>
+<attribute>
+<name>currency</name><alias>monnaie</alias>
+</attribute>
+<attribute>
 <name>origin</name><alias>source</alias>
 <value-list>
 <value>

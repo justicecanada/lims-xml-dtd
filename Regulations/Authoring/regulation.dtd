@@ -727,7 +727,7 @@
 	incorporationType (ambulatory | static) #IMPLIED
 	cost		CDATA #IMPLIED
 	lastVerified	CDATA #IMPLIED
-	currency	(CAD | USD | EURO | GBP) "CAD"
+	currency	CDATA	#IMPLIED
 	url			CDATA	#IMPLIED
 >
 

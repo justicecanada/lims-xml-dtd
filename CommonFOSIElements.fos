@@ -3467,7 +3467,7 @@
 <att>
 <specval attname="reference-type" attval="other">
 <charsubset>
-<highlt fontclr="#FF00AA">
+<highlt fontclr="#808080">
 </charsubset>
 </att>
 <att>
@@ -3480,6 +3480,18 @@
 <specval attname="reference-type" attval="standard">
 <charsubset>
 <highlt fontclr="#ff6666">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="agreement">
+<charsubset>
+<highlt fontclr="#ff8000">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="canada_gazette">
+<charsubset>
+<highlt fontclr="#FF00AA">
 </charsubset>
 </att>
 </e-i-c>

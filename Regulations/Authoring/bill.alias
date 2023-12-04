@@ -621,11 +621,11 @@
 <element>
 <name>DefinitionSeparator</name><alias>Définition-séparateur</alias></element>
 <element>
-<name>DefinedTermEn</name><alias>Terme_défini-angl</alias></element>
+<name>DefinedTermEn</name><alias>Définition-Terme_défini_angl</alias></element>
 <element>
-<name>DefinedTermFr</name><alias>Terme_défini-fr</alias></element>
+<name>DefinedTermFr</name><alias>Définition-Terme_défini_fr</alias></element>
 <element>
-<name>DefinitionRef</name><alias>Renvoi-terme_défini</alias></element>
+<name>DefinitionRef</name><alias>Définition-Renvoi_terme_défini</alias></element>
 <element>
 <name>Definition</name><alias>Définition</alias>
 <attribute-list>

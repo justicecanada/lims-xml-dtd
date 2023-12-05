@@ -42,7 +42,7 @@
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
-					 | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | HistoricalNoteSubItem)*" >
+					 | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | IBR | HistoricalNoteSubItem)*" >
 
 <!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
@@ -733,9 +733,18 @@
 			   url		CDATA	#IMPLIED
 			   bilingual	(yes | no)	#IMPLIED
 			   isFree		(yes | no)	#IMPLIED
-			   accessible			(yes | no)	#IMPLIED
-			   incorporatedByRef	(yes | no) #IMPLIED			   			   
+			   accessible			(yes | no)	#IMPLIED		   			   
 			   >
+
+<!ELEMENT IBR  %inline; >
+<!ATTLIST IBR
+	bilingual	(yes | no)	#IMPLIED
+	origin		(internal | external)	#IMPLIED
+	publishedBy	CDATA #IMPLIED
+	incorporationType (ambulatory | static) #IMPLIED
+	cost		CDATA #IMPLIED
+	url			CDATA	#IMPLIED
+>
 
 <!ELEMENT XRefSection  (#PCDATA) >
 <!ATTLIST XRefSection

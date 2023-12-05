@@ -345,6 +345,12 @@
 <textbrk startln="1" endln="1">
 </charlist>
 </e-i-c>
+<e-i-c gi="IBR"><?Pub Lcl _id="f401">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="normal" posture="upright" smallcap="0">
+<highlt bckclr="green" fontclr="blue"></charlist>
+&securityAtt;
+</e-i-c>
 <e-i-c gi="InstrumentNumber">
 <charlist inherit="1" charsubsetref="Block">
 <font inherit="1">

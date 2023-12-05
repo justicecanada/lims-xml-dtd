@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--ArborText, Inc., 1988-2002, v.4002-->
-<!DOCTYPE alias-map PUBLIC "-//Arbortext//DTD Alias Map::20000307//EN" "aliasmap.dtd">
+<!DOCTYPE alias-map PUBLIC "-//Arbortext//DTD Alias Map::20000307//EN"
+ "aliasmap.dtd">
+<?Pub Inc?>
 <alias-map><element-list>
 <element>
-<name>ConsolidatedNumber</name><alias>Numéro_codifié</alias></element>
+<name>ConstitutionAct</name><alias>Loi_constitutionnelle</alias></element>
 <element>
-<name>AnnualStatuteId</name><alias>Loi_annuelle</alias></element>
+<name>Notice</name><alias>Avis</alias></element>
 <element>
-<name>AnnualStatuteNumber</name><alias>Numéro_de_chapitre</alias></element>
+<name>Order</name><alias>Décret</alias></element>
 <element>
 <name>AlternateText</name><alias>Substitut_du_texte</alias></element>
-<element>
-<name>StatuteYear</name><alias>Date_de_codification</alias></element>
 <element>
 <name>AmendedContent</name><alias>Contenu_modifié</alias></element>
 <element>
@@ -52,6 +52,38 @@
 </attribute>
 </attribute-list>
 </element>
+<element>
+<name>List</name><alias>Liste</alias>
+</element>
+<element>
+<name>Regulation</name><alias>Règlement</alias>
+<attribute-list>
+<attribute>
+<name>gazette-part</name><alias>gazette-partie</alias>
+</attribute>
+<attribute>
+<name>regulation-type</name><alias>réglement-genre</alias>
+</attribute>
+<attribute>
+<name>xml:lang</name><alias></alias>
+<value-list>
+<value>
+<name>en</name><alias></alias></value>
+<value>
+<name>fr</name><alias></alias></value>
+</value-list>
+</attribute>
+</attribute-list></element>
+<element>
+<name>EnablingAuthority</name><alias>Loi_habilitante</alias></element>
+<element>
+<name>InstrumentNumber</name><alias>Enregistrement</alias></element>
+<element>
+<name>TableOfProvisions</name><alias>Table_analytique</alias></element>
+<element>
+<name>HistoricalNote</name><alias>Note_historique</alias></element>
+<element>
+<name>Repealed</name><alias>Abrogé</alias></element>
 <element>
 <name>BilingualItemEn</name><alias>Mention_bilingue-angl</alias></element>
 <element>
@@ -131,7 +163,7 @@
 <name>BillSponsor</name><alias>Pl-parrain</alias>
 <attribute-list>
 <attribute>
-<name>billsponsorid</name><alias>pl-parrain-id</alias></attribute>
+<name>billsponsorid</name><alias>pl-parrain,id</alias></attribute>
 </attribute-list>
 </element>
 <element>
@@ -282,7 +314,7 @@
 </attribute-list>
 </element>
 <element>
-<name>ContinuedFormulaParagraph</name><alias>Formule-enjambement-alinéa</alias>
+<name>ContinuedFormulaParagraph</name><alias>Formule-enjambement,_alinéa</alias>
 <attribute-list>
 <attribute>
 <name>indent-level</name><alias>retrait</alias>
@@ -468,7 +500,7 @@
 </value-list>
 </attribute>
 <attribute>
-<name>spanlanguages</name><alias>étendre-col-lang</alias>
+<name>spanlanguages</name><alias>étendre-col,_lang</alias>
 <value-list>
 <value>
 <name>yes</name><alias></alias></value>
@@ -490,7 +522,7 @@
 </value-list>
 </attribute>
 <attribute>
-<name>spanmarginalnotecol</name><alias>étendre-col-note_marg</alias>
+<name>spanmarginalnotecol</name><alias>page_unilingue-col</alias>
 <value-list>
 <value>
 <name>yes</name><alias></alias></value>
@@ -1028,7 +1060,22 @@
 </attribute-list>
 </element>
 <element>
-<name>Identification</name><alias>Identification</alias></element>
+<name>Identification</name><alias>Identification</alias>
+<attribute-list>
+<attribute>
+<name>drafter-en</name><alias>rédacteur-anglophone</alias>
+</attribute>
+<attribute>
+<name>drafter-fr</name><alias>rédacteur-francophone</alias>
+</attribute>
+<attribute>
+<name>file-number</name><alias>numéro-du-fichier</alias>
+</attribute>
+<attribute>
+<name>stage</name><alias></alias>
+</attribute>
+</attribute-list>
+</element>
 <element>
 <name>InLineHeading</name><alias>Intertitre_en_ligne</alias>
 <attribute-list>
@@ -1136,7 +1183,7 @@
 </attribute-list>
 </element>
 <element>
-<name>LeaderRightJustified</name><alias>Point_de_conduite-justif_droite</alias>
+<name>LeaderRightJustified</name><alias>Point_de_conduite-justif,_droite</alias>
 <attribute-list>
 <attribute>
 <name>leader</name><alias>point_de_conduite</alias>
@@ -1224,8 +1271,6 @@
 <element>
 <name>ReadAsText</name><alias>Remplacement_de_termes</alias></element>
 <element>
-<name>ReadAsContent</name><alias>Remplacement_de_contenu</alias></element>
-<element>
 <name>ReaderNote</name><alias>Note_au_lecteur</alias>
 <attribute-list>
 <attribute>
@@ -1240,13 +1285,11 @@
 </attribute-list>
 </element>
 <element>
-<name>Recommendation</name><alias></alias></element>
+<name>Recommendation</name><alias>Recommandation</alias></element>
 <element>
 <name>RegnalYear</name><alias>Année_de_règne</alias></element>
 <element>
-<name>RunningHead</name><alias>Titre_de_haut_de_page</alias></element>
-<element>
-<name>ScheduleFormHeading</name><alias>Annexe-formulaire-intertitre</alias>
+<name>ScheduleFormHeading</name><alias>Annexe-formulaire,_intertitre</alias>
 <attribute-list>
 <attribute>
 <name>change</name><alias></alias>
@@ -1610,7 +1653,7 @@
 <element>
 <name>TableGroup</name><alias>Groupe-tableau</alias></element>
 <element>
-<name>TableOfProvisions</name><alias>Table_analytique</alias></element>
+<name>TableOfContents</name><alias>Table_analytique</alias></element>
 <element>
 <name>Text</name><alias>Texte</alias>
 <attribute-list>
@@ -1960,10 +2003,6 @@
 <name>char</name><alias></alias></global-attribute>
 <global-attribute>
 <name>charoff</name><alias></alias></global-attribute>
-<global-value>
-<name>CIF</name><alias>EEV</alias></global-value>
-<global-value>
-<name>CIFnobold</name><alias>EEVnongras</alias></global-value>
 <global-attribute>
 <name>colname</name><alias>col-nom</alias></global-attribute>
 <global-attribute>
@@ -1987,10 +2026,6 @@
 <global-attribute>
 <name>document-id</name><alias></alias></global-attribute>
 <global-attribute>
-<name>first-line-indent</name><alias>Indentation-première_ligne</alias></global-attribute>
-<global-attribute>
-<name>subsequent-line-indent</name><alias>Indentation-ligne_suivante</alias></global-attribute>
-<global-attribute>
 <name>font-style</name><alias>police-genre</alias></global-attribute>
 <global-attribute>
 <name>font-size</name><alias></alias></global-attribute>
@@ -1998,8 +2033,6 @@
 <name>format-ref</name><alias>format-réf</alias></global-attribute>
 <global-attribute>
 <name>house</name><alias>chambre</alias></global-attribute>
-<global-attribute>
-<name>hyphenation</name><alias>scission</alias></global-attribute>
 <global-attribute>
 <name>id</name><alias></alias></global-attribute>
 <global-attribute>
@@ -2015,6 +2048,8 @@
 <global-attribute>
 <name>indent-distance-subsequent</name><alias></alias></global-attribute>
 <global-attribute>
+<name>first-line-indent</name><alias>Indentation-première_ligne</alias></global-attribute>
+<global-attribute>
 <name>indent-level</name><alias>retrait-niveau</alias></global-attribute>
 <global-attribute>
 <name>indent-type</name><alias>retrait-genre</alias></global-attribute>
@@ -2023,13 +2058,9 @@
 <global-attribute>
 <name>italic</name><alias>italique</alias></global-attribute>
 <global-attribute>
-<name>keep-with-next</name><alias>garder-avec-suivant</alias></global-attribute>
+<name>keep-with-next</name><alias>garder-avec-prochain</alias></global-attribute>
 <global-attribute>
 <name>keep-with-previous</name><alias>garder-avec-précédent</alias></global-attribute>
-<global-attribute>
-<name>topmarginspacing</name><alias>espacemarginesupérieure</alias></global-attribute>
-<global-attribute>
-<name>justification</name><alias>alignement</alias></global-attribute>
 <global-attribute>
 <name>language-align</name><alias>aligner_langues</alias></global-attribute>
 <global-attribute>
@@ -2057,11 +2088,17 @@
 <global-attribute>
 <name>position</name><alias></alias></global-attribute>
 <global-attribute>
-<name>pointsize</name><alias>car-points</alias></global-attribute>
+<name>pointsize</name><alias>tailledepolice</alias></global-attribute>
+<global-attribute>
+<name>bottommarginspacing</name><alias>espacemargineinférieure</alias></global-attribute>
+<global-attribute>
+<name>topmarginspacing</name><alias>espacemarginesupérieure</alias></global-attribute>
+<global-attribute>
+<name>hyphenation</name><alias>coupure-de-mots</alias></global-attribute>
+<global-attribute>
+<name>justification</name><alias>alignement</alias></global-attribute>
 <global-attribute>
 <name>rowsep</name><alias>rang-sép</alias></global-attribute>
-<global-attribute><?Pub Caret?>
-<name>repeat-in-explanatory-notes</name><alias>répéter_dans_notes_explicatiives</alias></global-attribute>
 <global-attribute>
 <name>schedule-id</name><alias>annexe-id</alias></global-attribute>
 <global-attribute>
@@ -2078,6 +2115,8 @@
 <name>special-provision</name><alias>disposition_spéciale</alias></global-attribute>
 <global-attribute>
 <name>stage</name><alias>étape</alias></global-attribute>
+<global-attribute>
+<name>subsequent-line-indent</name><alias>Indentation-ligne_suivante</alias></global-attribute>
 <global-attribute>
 <name>status</name><alias></alias></global-attribute>
 <global-attribute>
@@ -2261,7 +2300,8 @@
 <global-value>
 <name>report-senate</name><alias>rapport-sénat</alias></global-value>
 <global-value>
-<name>ways-and-means-motion</name><alias>motion_de_voies_et_moyens</alias></global-value>
+<name>ways-and-means-motion</name><alias>motion_de_voies_et_moyens</alias>
+</global-value>
 <global-value>
 <name>right</name><alias>droit</alias></global-value>
 <global-value>
@@ -2310,6 +2350,23 @@
 <name>ways-means-motion</name><alias></alias></global-value>
 <global-value>
 <name>yes</name><alias>oui</alias></global-value>
+
+<global-value>
+<name>arabic</name><alias>arabe</alias></global-value>
+<global-value>
+<name>roman-uc</name><alias>romain-maj</alias></global-value>
+<global-value>
+<name>roman-lc</name><alias>romain-min</alias></global-value>
+<global-value>
+<name>alphabet-lc</name><alias>alphabet-min</alias></global-value>
+<global-value>
+<name>alphabet-uc</name><alias>alphabet-maj</alias></global-value>
+<global-value>
+<name>en-dash</name><alias>tiret_demi-cadratin</alias></global-value>
+<global-value>
+<name>em-dash</name><alias>tiret_cadratin</alias></global-value>
+<global-value>
+<name>bullet</name><alias>puce</alias></global-value>
 </global-value-list>
 </alias-map>
-<?Pub *0000059347 0?>
+<?Pub *0000062604 0?>

@@ -1,11 +1,13 @@
 <?xml encoding="utf-8"?>
 
-<!-- This is version 1.2.1 of the Regulations DTD -->
+<!ELEMENT Constitution  (LongTitle?, Identification?, ConstitutionAct+,Schedule*) >
 
-<!-- This is the regulationcontent portion for version 1.2.2 of the Regulations DTD -->
+<!ATTLIST Constitution
+               xml:lang (en | fr)   #REQUIRED  >
+
+<!ELEMENT ConstitutionAct (LongTitle, ShortTitle, Citation?, RunningHead?, Preamble?, Body?, Schedule*) >
 
 <!-- ********************************************************** -->
-<!-- 2016-01-28 - AP - Add attrs to List to match Bills -->
 
 <!ENTITY % blocktext  "(
                            BilingualGroup
@@ -22,6 +24,7 @@
                          | Provision 
                          | ReadAsText
 			 | QuotedText
+			 | Definition
 			 | Heading
 			 | AmendedText
 			 | CommentBlock
@@ -32,6 +35,12 @@
 >
 
 
+<!ELEMENT Identification
+    (ConsolidationDate?, ShortTitle?)
+>
+
+<!ELEMENT ConsolidationDate (Date)>
+
 <!ENTITY % date  "(YYYY, MM, DD)" >
 
 <!ENTITY % formula-block  "(
@@ -40,22 +49,59 @@
                             | TableGroup 
                             | Provision
                            )" >
+						  
+<!-- Old: <!ENTITY % grouppiece  "(
+                           Group1-Part+
+                         | (Group2-Division+, Group1-Part*) 
+                         | (Group3-Subdivision+, Group2-Division*,Group1-Part*)
+                         | (Group4+, Group3-Subdivision*,Group2-Division*, Group1-Part*)
+                         | (Group5+, Group4*, Group3-Subdivision*,Group2-Division*,
+                             Group1-Part*)
+                        )" >
 
+<!ENTITY % grouppiece  "(Heading | Section)" >
+-->
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
-                     | DefinedTermEn | DefinedTermFr | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
+<!-- Old: <!ENTITY % docpart  "(
+                        Title 
+                      | Body 
+                      | (Section*,(%grouppiece;)?) 
+                      | Subsection+ 
+                      | SectionPiece 
+                      | Heading
+                      | (ScheduleFormHeading, ScheduleContent?)
+                      | %blocktext;+ 
+                      | %formulapiece; 
+                      | AmendedText)" >
+-->
+
+<!--ENTITY % docpart  "(
+                         LongTitle
+                       | (Section | Heading | RelatedProvision | CommentBlock)+
+                       | (Subsection, (Subsection | CommentBlock)*)
+		       | SectionPiece 
+                       | (ScheduleFormHeading, ScheduleContent?)
+                       | %blocktext;+ 
+                       | Formula+ 
+                       | Group
+		       | Schedule+
+                     )"
+-->
+
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis 
+                     | DefinedTermEn | DefinedTermFr | EndNoteRef | FootnoteRef 
+                     | Language | Leader | LeaderRightJustified | XRefInternal 
                      | XRefExternal | ImageGroup | HistoricalNote 
-                     | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
-		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | IBR )*" >
+                     | Repealed | DefinitionEnOnly | DefinitionFrOnly | LineBreak 
+		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank)*" >
 
-<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
-                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
-                     | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
-					 | Del | CommentInline | Fraction | Date | MathML)*" >
-			 
-<!ELEMENT AlternateText (#PCDATA | Ins | Del)* >
+<!ELEMENT Citation %inline; >
 
+<!ELEMENT Preamble  (Provision+, HistoricalNote?) >
+
+<!ELEMENT AlternateText (#PCDATA)>
+
+<!-- Old: <!ELEMENT AmendedContent ((Group | Provision)+) > -->
 <!ELEMENT AmendedContent ((Group | Provision | Heading)+, HistoricalNote?) >
 
 <!--FIX: AmendedText
@@ -64,8 +110,7 @@
   be a "RegulationInternal".
 -->
 <!ELEMENT AmendedText 
-	(LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group
-	| (Caption?, title?))+
+	(LongTitle | Section | Subsection | RelatedProvision | Reserved | %blocktext; | Schedule | ScheduleFormHeading | SectionPiece | Formula | Group)+
 >
 
 <!ATTLIST AmendedText
@@ -92,7 +137,7 @@
 	       change  (ins | del | off | alt)   #IMPLIED 
                pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED >
 
-<!ELEMENT Citation (
+<!-- ELEMENT Citation (
                       LongTitle
                     | Section
                     | Subsection
@@ -101,20 +146,19 @@
                     | SectionPiece
                     | ScheduleFormHeading
                     | Schedule
-		    | Definition
                     | %blocktext;
                     | Formula
                     | Group
 		    | RelatedProvision
                    )+ >
 <!ATTLIST Citation
-              LeftOver CDATA #IMPLIED >
+              LeftOver CDATA #IMPLIED -->
 
 <!ELEMENT Clause  
 	(
 	CommentBlock*, 
 	Label, Text, 
-	(Subclause | Definition | %blocktext; | ContinuedClause)*, 
+	(Subclause | %blocktext; | ContinuedClause)*, 
 	HistoricalNote?
 	) 
 >
@@ -150,7 +194,7 @@
                type  (normal | transitional )  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
-
+<!-- Old: <!ELEMENT ContinuedSectionSubsection  (Text) > -->
 <!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text) >
 
 <!ATTLIST ContinuedSectionSubsection
@@ -172,25 +216,29 @@
 <!ATTLIST Date
                date-format (en | fr | gb | international)   #IMPLIED  >
 
+<!-- Old: <!ELEMENT DD  (#PCDATA) > -->
+
+<!-- DD besoin de Sup -->
 <!ELEMENT DD  %inline; >
 
-<!ELEMENT DefinedTermEn  %inlineDefinedTerm; >
+<!ELEMENT DefinedTermEn  %inline; >
 
-<!ATTLIST DefinedTermEn
-               style  (bold | italic | normal)    #IMPLIED  >
                
-<!ELEMENT DefinedTermFr  %inlineDefinedTerm; >
+<!ELEMENT DefinedTermFr  %inline; >
 
-<!ATTLIST DefinedTermFr
-               style  (bold | italic | normal)    #IMPLIED  >
+<!ELEMENT DefinitionEnOnly  %inline; >
 
-<!ELEMENT DefinitionEnOnly  %inlineDefinedTerm; >
+<!ELEMENT DefinitionFrOnly  %inline; >
 
-<!ELEMENT DefinitionFrOnly  %inlineDefinedTerm; >
-
-<!ELEMENT DefinitionRef  %inlineDefinedTerm; >
-               
-
+<!-- Old: <!ELEMENT Definition  (
+                        MarginalNote?,
+                        Text?,
+                        (
+                          (Paragraph |%blocktext;)+,
+                          ContinuedDefinition?
+                        )*
+                      )  >
+-->
 <!ELEMENT Definition
   (
 	CommentBlock*,
@@ -217,6 +265,10 @@
      ) 
 >
 
+<!ELEMENT EndNoteRef  %inline; >
+<!ATTLIST EndNoteRef
+               id_endNote  IDREFS    #IMPLIED  >
+
 <!ELEMENT Emphasis  %inline; >
 <!ATTLIST Emphasis
                style (bold | italic | underline | smallcaps | overbar | regular)   #IMPLIED  >
@@ -238,11 +290,6 @@
 <!ELEMENT FootnoteRef  %inline; >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #IMPLIED  >
-			   
-<!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
-<!ATTLIST InlineFont  font-family CDATA #REQUIRED 
-				font-size CDATA #IMPLIED >
-				
 
 <!ELEMENT FormGroup  (
                        AlternateText?,
@@ -265,9 +312,16 @@
 
 
 
-
+<!-- QUESTION:
+  Why do we need the attributes on FormulaConnector, since this
+  element cannot appear by itself.  It should inherit this attributes
+  instead of having them itself.
+-->
 <!ELEMENT FormulaConnector  %inline; >
-
+<!-- Old: <!ATTLIST FormulaConnector
+               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
+               type  (normal | transitional )  #IMPLIED  >
+-->
 <!ATTLIST FormulaConnector
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
@@ -283,8 +337,10 @@
                                  ContinuedFormulaParagraph?
                                )*
                              ) >
-							 
-
+<!-- Old: <!ATTLIST FormulaDefinition
+               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
+               type  (normal | transitional )  #IMPLIED  >
+-->
 <!ATTLIST FormulaDefinition
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
@@ -299,7 +355,10 @@
                                 ContinuedFormulaParagraph?
                               )*
                             ) >
-
+<!-- Old: <!ATTLIST FormulaParagraph
+               indent-level (0 | 1 | 2 | 3 | 4 | 5 | 6)  #IMPLIED
+               type  (normal | transitional )  #IMPLIED >
+-->
 <!ATTLIST FormulaParagraph
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4
                              | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
@@ -366,7 +425,7 @@
 
 <!ELEMENT HistoricalNote  %inline; >
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image?) >
+<!ELEMENT ImageGroup  (AlternateText?, Caption?, Image?) >
 <!ATTLIST ImageGroup
                bilingual (yes | no) "no"
                spanlanguages	 (yes | no) "no"
@@ -382,10 +441,6 @@
                source  CDATA    #IMPLIED  >
 
 <!ELEMENT Item (Label?, Text, List?) >
-<!ATTLIST Item
-		change  (ins | del | off | alt)   #IMPLIED
-		space-after CDATA #IMPLIED >
-
 
 <!ELEMENT Label  %inline; >
 <!ATTLIST Label
@@ -396,7 +451,7 @@
 
 <!ELEMENT Language  %inline; >
 <!ATTLIST Language
-               xml:lang (en | fr | la | cr| oj | ik | iu )   #REQUIRED  >
+               xml:lang (en | fr | la )   #REQUIRED  >
 
 <!ELEMENT Leader  EMPTY >
 <!ATTLIST Leader
@@ -410,23 +465,11 @@
 <!ELEMENT List (Item+) >
 
 <!ATTLIST List
-		change  (ins | del | off | alt)   #IMPLIED
 		style (arabic | roman-lc | roman-uc | alphabet-lc | alphabet-uc | bullet | en-dash | em-dash) #IMPLIED 
 		subsequent-line-indent CDATA #IMPLIED 
-		first-line-indent CDATA #IMPLIED 
-		justification (justify | left | right | center) #IMPLIED
-		hyphenation (yes | no) #IMPLIED
-		pointsize (6 | 7 | 8 | 9 | 10 | 11 | 12) #IMPLIED
-		keep-with-next (yes | no) #IMPLIED
-		keep-with-previous (yes | no) #IMPLIED
-		topmarginspacing CDATA #IMPLIED
-		xml:lang (en | fr)   #IMPLIED 
-		language-align (yes | no) "no" >
+		first-line-indent CDATA #IMPLIED >
 
 <!ELEMENT LongTitle %inline; >
-
-<!ATTLIST LongTitle
-               type CDATA   #IMPLIED  >
 
 <!ELEMENT MarginalNote  %inline; >
 
@@ -453,12 +496,12 @@
 	MarginalNote?,
 	Label,
         Text,
-        (Subparagraph | Definition | %blocktext; | ContinuedParagraph |Citation)*,
+        (Subparagraph | %blocktext; | ContinuedParagraph |Citation)*,
         HistoricalNote?
   ) 
 >
 <!ATTLIST Paragraph
-          type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
+          type (normal | amending | transitional)   #IMPLIED 
           change  (ins | del | off | alt)   #IMPLIED >
                
 <!ELEMENT Provision
@@ -467,8 +510,7 @@
 	Label?,
 	ProvisionHeading?,
     	(
-	Text | 
-	Definition |  
+	Text |  
 	AmendedContent |
 	%blocktext;
 	)+,
@@ -503,8 +545,7 @@
 <!ATTLIST ProvisionHeading
     		format-ref CDATA #REQUIRED >
 
-<!ELEMENT ReadAsText (LongTitle | Section | Subsection | RelatedProvision | Reserved | Definition | %blocktext; | Schedule | ScheduleFormHeading | OriginatingRef | SectionPiece | Formula | Group
-	| (Caption?, title?))+ >
+<!ELEMENT ReadAsText (Section* | Subsection* | SectionPiece | RelatedProvision | FormulaGroup) >
 <!ATTLIST ReadAsText
     LeftOver CDATA #IMPLIED
 >
@@ -566,7 +607,7 @@
   (
 	(
 		Text, 
-		(Paragraph | Definition | ContinuedSectionSubsection | %blocktext;)*
+		(Paragraph | ContinuedSectionSubsection | %blocktext;)*
 	)
 	|
 	(
@@ -579,12 +620,11 @@
 >
 
 <!ATTLIST Section
-               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
-			change  (ins | del | off | alt)   #IMPLIED >
+               type (normal | amending | transitional)   #IMPLIED 
+	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT SectionPiece  (
                            Definition
-						 | Heading
                          | Paragraph
                          | Subparagraph
                          | Clause 
@@ -602,8 +642,6 @@
 <!ELEMENT Separator %inline; >
 
 <!ELEMENT ShortTitle %inline; >
-
-<!ELEMENT RunningHead %inline; >
 
 <!ELEMENT SignatureBlock  (SignatureLine | SignatureTitle | SignatureName)+ >
 <!ATTLIST SignatureBlock
@@ -636,7 +674,7 @@
   (
 	CommentBlock*, Label,
         Text,
-        (Subsubclause | Definition | %blocktext; | ContinuedSubclause)*,
+        (Subsubclause | %blocktext; | ContinuedSubclause)*,
         HistoricalNote?
   )
 >
@@ -650,7 +688,7 @@
   	CommentBlock*, 
 	Label,
         Text,
-        (Clause | Definition | %blocktext; | ContinuedSubparagraph)*,
+        (Clause | %blocktext; | ContinuedSubparagraph)*,
         HistoricalNote?
   )
 >
@@ -664,19 +702,19 @@
        	MarginalNote?,
 	Label,
        	Text, 
-       	(Paragraph | Definition | ContinuedSectionSubsection | %blocktext;)*,
+       	(Paragraph | ContinuedSectionSubsection | %blocktext;)*,
        	HistoricalNote?
        	) 
 >
 
 <!ATTLIST Subsection
-               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
+               type (normal | amending | transitional)   #IMPLIED 
        	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsubclause (
        CommentBlock*, Label,
        Text, 
-       (%blocktext; | Definition)*,
+       (%blocktext;)*,
        HistoricalNote?
        ) >
 <!ATTLIST Subsubclause
@@ -710,34 +748,13 @@
 
 <!ELEMENT XRefExternal  %inline; >
 <!ATTLIST XRefExternal
-               reference-type (regulation | act | standard | other | canada_gazette | agreement)   #IMPLIED  
-			   reference-level (provincial | federal | other_jurisdiction) #IMPLIED
-			   accessible			(yes | no)	#IMPLIED			   			   
-			   >
-			   
-<!ELEMENT IBR  %inline; >
-<!ATTLIST IBR
-	bilingual	(yes | no)	#IMPLIED
-	origin		(internal | external)	#IMPLIED
-	publishedBy	CDATA #IMPLIED
-	incorporationType (ambulatory | static) #IMPLIED
-	cost		CDATA #IMPLIED
-	lastVerified	CDATA #IMPLIED
-	currency	CDATA	#IMPLIED
-	url			CDATA	#IMPLIED
->
-
-<!ELEMENT XRefSection  (#PCDATA) >
-<!ATTLIST XRefSection
-			   lawid	CDATA	#IMPLIED
-			   sectionid		CDATA	#IMPLIED		   			   
-			   >
+               reference-type (regulation | act | standard | other | citation)   #IMPLIED  >
 
 <!ELEMENT YYYY  (#PCDATA) >
 
 <!ELEMENT CommentInline %inline; >
 <!ATTLIST CommentInline 
-               security (public | public-juril | private)  "public" >
+               security (public | private)  "public" >
 
 <!ELEMENT Ins %inline; >
 
@@ -745,15 +762,13 @@
 
 <!ELEMENT CommentBlock %inline; >
 <!ATTLIST CommentBlock  
-		security (public | public-juril | private)  "public" >
+		security   (public | private )  'public' >
 
 <!ELEMENT RelatedProvision
 		(Label, (Source, (Section | Subsection | SectionPiece | Provision)+)+)
 	>
 
 <!ELEMENT Source %inline; >
-
-<!ELEMENT Preamble (Provision+) >
 
 <!ELEMENT PageBreak EMPTY >
 
@@ -774,32 +789,25 @@
 <!ENTITY % tbl.entry.mdl  "(
                              #PCDATA
                             | Sub
-                            | Sup 
-							| DefinedTermEn 
-							| DefinedTermFr 
-							| DefinitionEnOnly 
-							| DefinitionFrOnly 
-							| DefinitionRef 
-							| Ins
-							| Del
+                            | Sup
+			    | Ins
+			    | Del
                             | Emphasis
-							| InlineFont
                             | BilingualGroup
                             | FootnoteRef
                             | Formula 
                             | XRefInternal
                             | XRefExternal
-							| XRefSection
                             | ImageGroup
                             | Provision
                             | Language 
                             | SignatureBlock
-							| Leader
+			    | Leader
                             | LeaderRightJustified
-							| CommentBlock
-							| Repealed
-							| List
-							| MathMLBlock
+			    | CommentBlock
+			    | Repealed
+			    | List
+			    | MathMLBlock
                            )*" >
 
 <!-- The following entity declaration was move to here. It needs to be
@@ -1146,7 +1154,7 @@ in useability, presentation, and possible structure information degradation.
 
 		rowheader (yes|no) #IMPLIED
 		th-id         NMTOKEN                                 #IMPLIED
-		th-headers        CDATA                                 #IMPLIED
+		th-headers        NMTOKEN                                 #IMPLIED
         colname         NMTOKEN                                 #IMPLIED
         namest          NMTOKEN                                 #IMPLIED
         nameend         NMTOKEN                                 #IMPLIED
@@ -1160,118 +1168,3 @@ in useability, presentation, and possible structure information degradation.
         %tbl.entry.att;
         %secur;
 >
-
-
-
-<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
-%math;
-
-
-<!ELEMENT Regulation
-	(Identification,
-	Recommendation?,
-	Notice?,
-    	Repealed?, 
-	(
-	  (Order+, TableOfProvisions?,  Body?, ConventionAgreementTreaty?, Schedule*) |
-          ( 
-            TableOfProvisions?,
-            (
-	      (Body,ConventionAgreementTreaty?, Schedule*, Order?) |
-	      (ConventionAgreementTreaty, Schedule*, Order?) |
-	      (Schedule+, Order?)
-            )
-          )
-	),
-	RelatedProvision*,
-	ExplanatoryNote?)
->
-
-<!ATTLIST Regulation
-    xml:lang  (en|fr)  #REQUIRED 
-    regulation-type CDATA #IMPLIED 
-    gazette-part (I | II) #IMPLIED 
-    in-force CDATA #IMPLIED
-	startdate CDATA #IMPLIED
-	enddate CDATA #IMPLIED
-	hasPreviousVersion CDATA #IMPLIED
->
-
-<!ELEMENT Identification
-    (InstrumentNumber?, Note?, RegistrationDate?, 
-    	LastAmendedDate?, ConsolidationDate?, LastModifiedDate?, EnablingAuthority?,
-     (ShortTitle, Note*)?,
-     (LongTitle+, Note?)?,
-     RunningHead?,
-     Preamble?,
-     RegulationMakerOrder?,
-     Header?,
-     Footer?)
->
-<!ATTLIST Identification 
-	file-number CDATA #IMPLIED
-	lex-number CDATA #IMPLIED
-	stage CDATA #IMPLIED
-	drafter-en CDATA #IMPLIED
-	drafter-fr CDATA #IMPLIED
-	hasPreviousVersion CDATA #IMPLIED
-	>
-
-
-<!ELEMENT InstrumentNumber (#PCDATA)>
-
-<!ELEMENT RegistrationDate (Date)>
-
-<!ELEMENT LastAmendedDate (Date)>
-
-<!ELEMENT LastModifiedDate %inline;>
-
-<!ELEMENT ConsolidationDate %inline;>
-
-<!ELEMENT EnablingAuthority (XRefExternal+ | OtherAuthority)>
-
-<!ELEMENT OrderDate %inline;>
-
-<!ELEMENT Order
-    (OrderNumber?, OrderDate?,
-     (Group | Provision | CommentBlock)+,
-     HistoricalNote?, Footnote*)
->
-
-<!ELEMENT OtherAuthority %inline;>
-
-<!ELEMENT Organisation (#PCDATA)>
-
-<!ELEMENT RegulationMakerOrder (RegulationMaker, OrderNumber, Date)>
-<!ELEMENT OrderNumber %inline;>
-<!ELEMENT RegulationMaker %inline;>
-
-
-<!-- Do not confuse the following element with the 
-   	ExplanatoryNotes that appear in Bills -->
-<!ELEMENT ExplanatoryNote ( (Group | Provision)+) >
-
-<!ELEMENT Recommendation ( (Group | Provision | CommentBlock)+) >
-
-<!ELEMENT Notice ( (Group | Provision | CommentBlock)+, Footnote*) >
-<!ATTLIST Notice 
-	publication-requirement (STATUTORY | ADMINISTRATIVE) #REQUIRED 
-	>
-
-<!ELEMENT TableOfProvisions (Heading | (Label?, Text))+  >
-
-<!ELEMENT Header (Provision*) >
-
-<!ELEMENT Footer (Provision*) > 
-
-
-	<!ATTLIST Section in-force CDATA #IMPLIED>
-   <!ATTLIST Subsection in-force CDATA #IMPLIED>
- 	<!ATTLIST Paragraph in-force CDATA #IMPLIED>
-   <!ATTLIST Subparagraph in-force CDATA #IMPLIED>
-   <!ATTLIST Clause in-force CDATA #IMPLIED>
- 	<!ATTLIST Subclause in-force CDATA #IMPLIED>
- 	<!ATTLIST Subsubclause in-force CDATA #IMPLIED>
- 	<!ATTLIST Definition in-force CDATA #IMPLIED>
- 	<!ATTLIST Schedule in-force CDATA #IMPLIED>
- 	<!ATTLIST Provision in-force CDATA #IMPLIED> 

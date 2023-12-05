@@ -584,11 +584,11 @@
 <element>
 <name>DefinitionSeparator</name><alias>Définition-séparateur</alias></element>
 <element>
-<name>DefinedTermEn</name><alias>Terme_défini-angl</alias></element>
+<name>DefinedTermEn</name><alias>Définition-Terme_défini_angl</alias></element>
 <element>
-<name>DefinedTermFr</name><alias>Terme_défini-fr</alias></element>
+<name>DefinedTermFr</name><alias>Définition-Terme_défini_fr</alias></element>
 <element>
-<name>DefinitionRef</name><alias>Renvoi-terme_défini</alias></element>
+<name>DefinitionRef</name><alias>Définition-Renvoi_terme_défini</alias></element>
 <element>
 <name>Definition</name><alias>Définition</alias>
 <attribute-list>
@@ -1740,7 +1740,9 @@
 <value>
 <name>act</name><alias></alias></value>
 <value>
-<name>citation</name><alias></alias></value>
+<name>agreement</name><alias>accord</alias></value>
+<value>
+<name>canada_gazette</name><alias>gazette_du_canada</alias></value>
 <value>
 <name>other</name><alias></alias></value>
 <value>
@@ -1761,6 +1763,8 @@
 <name>federal</name><alias>fédéral</alias></value>
 <value>
 <name>otherNation </name><alias>autre_Nation</alias></value>
+<value>
+<name>other_jurisdiction </name><alias>autre_juridiction</alias></value>
 <value>
 <name>international</name><alias>international</alias></value>
 </value-list></attribute>

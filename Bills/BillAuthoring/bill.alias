@@ -1740,7 +1740,10 @@
 <value>
 <name>act</name><alias></alias></value>
 <value>
-<name>agreement</name><alias>accord</alias></value>
+<name>citation</name><alias></alias></value><!-- to be removed-->
+<!--name>agreement</name><alias>accord</alias></value>
+<value>
+<name>canada_gazette</name><alias>gazette_du_canada</alias></value-->
 <value>
 <name>canada_gazette</name><alias>gazette_du_canada</alias></value>
 <value>
@@ -1764,7 +1767,7 @@
 <value>
 <name>otherNation </name><alias>autre_Nation</alias></value>
 <value>
-<name>other_jurisdiction </name><alias>autre_juridiction</alias></value>
+<!--name>other_jurisdiction </name><alias>autre_juridiction</alias></value-->
 <value>
 <name>international</name><alias>international</alias></value>
 </value-list></attribute>

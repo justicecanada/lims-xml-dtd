@@ -1977,7 +1977,7 @@
 <att>
 <specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
 <charsubset>
-<usetext source="\ législature\" placemnt="after">
+<usetext source="\ lï¿½gislature\" placemnt="after">
 </usetext>
 </charsubset>
 </att>
@@ -2312,7 +2312,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-réf inconnu\">
+<usetext source="\Attribut format-rï¿½f inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -2541,7 +2541,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-réf inconnu\">
+<usetext source="\Attribut format-rï¿½f inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -2753,7 +2753,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-réf inconnu\">
+<usetext source="\Attribut format-rï¿½f inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -3465,9 +3465,10 @@
 </charsubset>
 </att>
 <att>
+<!-- #808080 -->
 <specval attname="reference-type" attval="other">
 <charsubset>
-<highlt fontclr="#808080">
+<highlt fontclr="#FF00AA">
 </charsubset>
 </att>
 <att>

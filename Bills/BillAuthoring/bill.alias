@@ -1766,8 +1766,8 @@
 <name>federal</name><alias>fédéral</alias></value>
 <value>
 <name>otherNation </name><alias>autre_Nation</alias></value>
-<value>
-<!--name>other_jurisdiction </name><alias>autre_juridiction</alias></value-->
+<!--value>
+<name>other_jurisdiction </name><alias>autre_juridiction</alias></value-->
 <value>
 <name>international</name><alias>international</alias></value>
 </value-list></attribute>

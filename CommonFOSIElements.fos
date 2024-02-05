@@ -1977,7 +1977,7 @@
 <att>
 <specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
 <charsubset>
-<usetext source="\ lÃ©gislature\" placemnt="after">
+<usetext source="\ législature\" placemnt="after">
 </usetext>
 </charsubset>
 </att>

@@ -36,9 +36,9 @@
 
 
 <!ELEMENT Identification
-    (ConsolidationDate?, ShortTitle?)
+    (ConsolidationDate?, ShortTitle?, ReaderNote?)
 >
-
+<!ELEMENT ReaderNote (Note)>
 <!ELEMENT ConsolidationDate (Date)>
 
 <!ENTITY % date  "(YYYY, MM, DD)" >

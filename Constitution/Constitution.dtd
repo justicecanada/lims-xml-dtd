@@ -1,11 +1,12 @@
 <?xml encoding="utf-8"?>
 
-<!ELEMENT Constitution  (LongTitle?, Identification?, ConstitutionAct+,Schedule*) >
+<!ELEMENT Constitution  (LongTitle?, Identification?, Foreward?, ConstitutionAct+,Schedule*) >
 
 <!ATTLIST Constitution
                xml:lang (en | fr)   #REQUIRED  >
 
 <!ELEMENT ConstitutionAct (LongTitle, ShortTitle, Citation?, RunningHead?, Preamble?, Body?, Schedule*) >
+<!ELEMENT Foreward (LongTitle, ShortTitle, Schedule*) >
 
 <!-- ********************************************************** -->
 

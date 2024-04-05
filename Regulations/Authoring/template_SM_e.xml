@@ -1,1 +1,97 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><!--Arbortext, Inc., 1988-2010, v.4002--><!DOCTYPE Regulation PUBLIC "-//Justice Canada//DTD Regulation v1.3.0//EN" "Regulation.dtd"><?Pub Inc?><Regulation gazette-part="I" regulation-type="SM" xml:lang="en"><Identification stage="draft"><EnablingAuthority><XRefExternal reference-type="act">Aeronautics Act</XRefExternal></EnablingAuthority><LongTitle>Security Measures Respecting ...</LongTitle><Header><Provision format-ref="centered" pointsize="10"><Text>Transport Canada / Transports Canada</Text></Provision><Provision format-ref="centered" pointsize="10" topmarginspacing="1"><Text>Aviation Security / Sûreté aérienne</Text></Provision></Header><Footer><Provision format-ref="indent-0-0" language-align="yes" pointsize="9"><Text>Section 4.79 of the <XRefExternal reference-type="act">Aeronautics Act</XRefExternal> prohibits the disclosure of the substance of this Security Measure. </Text></Provision></Footer></Identification><Order><Provision format-ref="indent-0-0" language-align="yes"><Text>Whereas, pursuant to paragraph 4.72(2)(a) of the <XRefExternal reference-type="act">Aeronautics Act</XRefExternal>, an aviation security regulation can be made in relation to the subject matter of the annexed Security Measures;</Text></Provision><Provision format-ref="indent-0-0" language-align="yes"><Text>Whereas, pursuant to paragraph 4.72(2)(b) of that Act, aviation security, the security of any aircraft or aerodrome or other aviation facility or the safety of the public, passengers or crew members would be compromised if the subject matter of the annexed Security Measures were set out in a regulation and the regulation became public;</Text></Provision><Provision format-ref="indent-0-0" language-align="yes"><Text><CommentInline security="public">[<?Pub _font FontColor="red"?>Subsection to be cited if the Minister has consulted<?Pub /_font?>] </CommentInline>And whereas, pursuant to subsection 4.72(5) of that Act, the Minister of Transport has consulted with the persons and organizations that the Minister considers appropriate in the circumstances concerning the annexed Security Measures;</Text></Provision><Provision format-ref="indent-0-0" language-align="yes"><Text><CommentInline security="public">[<?Pub _font FontColor="red"?>Subsection to be cited if the Minister has not consulted<?Pub /_font?> <?Pub _font FontColor="red"?>(urgent). Either this paragraph OR the previous to be used.<?Pub /_font?>]</CommentInline> And whereas, pursuant to subsection 4.72(6) of that Act, the Minister of Transport is of the opinion that the annexed Security Measures are immediately required for aviation security, the security of any aircraft or aerodrome or other aviation facility or the safety of the public, passengers or crew members;</Text></Provision><Provision format-ref="indent-0-0" language-align="yes"><Text>Therefore, the Minister of Transport, pursuant to subsection 4.72(1) of the <XRefExternal reference-type="act">Aeronautics Act</XRefExternal>, makes the annexed <XRefExternal reference-type="regulation">Security Measures Respecting ...</XRefExternal>.</Text></Provision><Provision format-ref="indent-0-0" language-align="yes"><Text>Ottawa, <Leader leader="none" length="10pc"/>, YEAR</Text></Provision><Provision format-ref="indent-0-0" language-align="yes" topmarginspacing="12"><TableGroup bilingual="yes" orientation="portrait" pointsize="11pt" topmarginspacing="50pt"><table frame="none"><tgroup cols="2"><colspec colname="1" colwidth="100*"/><colspec colname="COLSPEC0" colwidth="100.00*"/><tbody><row rowsep="0"><entry colsep="0" nameend="COLSPEC0" namest="1" rowsep="0" valign="top"><SignatureBlock justification="center" width="20pc"><SignatureTitle justification="center"><Language xml:lang="fr">Le ministre des Transports</Language>,</SignatureTitle><SignatureLine justification="center" topmarginspacing="30"><Leader leader="solid" length="20pc"/></SignatureLine><SignatureName justification="center">Omar Alghabra</SignatureName><SignatureTitle justification="center"><Language xml:lang="en">Minister of Transport</Language></SignatureTitle></SignatureBlock></entry></row></tbody></tgroup></table></TableGroup></Provision></Order><Body></Body><?Pub Caret -1?></Regulation><?Pub *0000004368 0?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2010, v.4002-->
+<!DOCTYPE Regulation PUBLIC "-//Justice Canada//DTD Regulation v1.3.0//EN" "Regulation.dtd">
+<?Pub Inc?>
+<Regulation gazette-part="I" regulation-type="SM" xml:lang="en">
+    <Identification stage="draft">
+        <EnablingAuthority>
+            <XRefExternal reference-type="act">Aeronautics Act</XRefExternal>
+        </EnablingAuthority>
+        <LongTitle>Security Measures Respecting ...</LongTitle>
+        <Header>
+            <Provision format-ref="centered" pointsize="10">
+                <Text>Transport Canada / Transports Canada</Text>
+            </Provision>
+            <Provision format-ref="centered" pointsize="10" topmarginspacing="1">
+                <Text>Aviation Security / Sûreté aérienne</Text>
+            </Provision>
+        </Header>
+        <Footer>
+            <Provision format-ref="indent-0-0" language-align="yes" pointsize="9">
+                <Text>Section 4.79 of the
+                    <XRefExternal reference-type="act">Aeronautics Act</XRefExternal> prohibits the disclosure of the substance of this Security Measure.
+                </Text>
+            </Provision>
+        </Footer>
+    </Identification>
+    <Order>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>Whereas, pursuant to paragraph 4.72(2)(a) of the
+                <XRefExternal reference-type="act">Aeronautics Act</XRefExternal>, an aviation security regulation can be made in relation to the subject matter of the annexed Security Measures;
+            </Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>Whereas, pursuant to paragraph 4.72(2)(b) of that Act, aviation security, the security of any aircraft or aerodrome or other aviation facility or the safety of the public, passengers or crew members would be compromised if the subject matter of the annexed Security Measures were set out in a regulation and the regulation became public;</Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>
+                <CommentInline security="public">[
+                    <?Pub _font FontColor="red"?>Subsection to be cited if the Minister has consulted
+                    <?Pub /_font?>]
+                </CommentInline>And whereas, pursuant to subsection 4.72(5) of that Act, the Minister of Transport has consulted with the persons and organizations that the Minister considers appropriate in the circumstances concerning the annexed Security Measures;
+            </Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>
+                <CommentInline security="public">[
+                    <?Pub _font FontColor="red"?>Subsection to be cited if the Minister has not consulted
+                    <?Pub /_font?>
+                    <?Pub _font FontColor="red"?>(urgent). Either this paragraph OR the previous to be used.
+                    <?Pub /_font?>]
+                </CommentInline> And whereas, pursuant to subsection 4.72(6) of that Act, the Minister of Transport is of the opinion that the annexed Security Measures are immediately required for aviation security, the security of any aircraft or aerodrome or other aviation facility or the safety of the public, passengers or crew members;
+            </Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>Therefore, the Minister of Transport, pursuant to subsection 4.72(1) of the
+                <XRefExternal reference-type="act">Aeronautics Act</XRefExternal>, makes the annexed
+                <XRefExternal reference-type="regulation">Security Measures Respecting ...</XRefExternal>.
+            </Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes">
+            <Text>Ottawa,
+                <Leader leader="none" length="10pc"/>, YEAR
+            </Text>
+        </Provision>
+        <Provision format-ref="indent-0-0" language-align="yes" topmarginspacing="12">
+            <TableGroup bilingual="yes" orientation="portrait" pointsize="11pt" topmarginspacing="50pt">
+                <table frame="none">
+                    <tgroup cols="2">
+                        <colspec colname="1" colwidth="100*"/>
+                        <colspec colname="COLSPEC0" colwidth="100.00*"/>
+                        <tbody>
+                            <row rowsep="0">
+                                <entry colsep="0" nameend="COLSPEC0" namest="1" rowsep="0" valign="top">
+                                    <SignatureBlock justification="center" width="20pc">
+                                        <SignatureTitle justification="center">
+                                            <Language xml:lang="fr">Le ministre des Transports</Language>,
+                                        </SignatureTitle>
+                                        <SignatureLine justification="center" topmarginspacing="30">
+                                            <Leader leader="solid" length="20pc"/>
+                                        </SignatureLine>
+                                        <SignatureName justification="center">Pablo Rodriguez</SignatureName>
+                                        <SignatureTitle justification="center">
+                                            <Language xml:lang="en">Minister of Transport</Language>
+                                        </SignatureTitle>
+                                    </SignatureBlock>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </TableGroup>
+        </Provision>
+    </Order>
+    <Body></Body>
+    <?Pub Caret -1?>
+</Regulation>
+<?Pub *0000004368 0?>

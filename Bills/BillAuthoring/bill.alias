@@ -1740,12 +1740,9 @@
 <value>
 <name>act</name><alias></alias></value>
 <value>
-<name>citation</name><alias></alias></value><!-- to be removed-->
-<!--name>agreement</name><alias>accord</alias></value>
+<name>agreement</name><alias>accord</alias></value>
 <value>
-<name>canada_gazette</name><alias>gazette_du_canada</alias></value-->
-<value>
-<name>canada_gazette</name><alias>gazette_du_canada</alias></value>
+<name>canada-gazette</name><alias>gazette-du-canada</alias></value>
 <value>
 <name>other</name><alias></alias></value>
 <value>
@@ -1759,17 +1756,11 @@
 <attribute><name>reference-level</name><alias>renvoi-niveau</alias>
 <value-list>
 <value>
-<name>municipal</name><alias>municipale</alias></value>
-<value>
 <name>provincial</name><alias>provincial</alias></value>
 <value>
 <name>federal</name><alias>fédéral</alias></value>
 <value>
-<name>otherNation </name><alias>autre_Nation</alias></value>
-<!--value>
-<name>other_jurisdiction </name><alias>autre_juridiction</alias></value-->
-<value>
-<name>international</name><alias>international</alias></value>
+<name>other-jurisdiction </name><alias>autre-juridiction</alias></value>
 </value-list></attribute>
 <attribute><name>incorporatedByRef</name><alias>incorporation_par_renvoi</alias></attribute>
 </attribute-list>

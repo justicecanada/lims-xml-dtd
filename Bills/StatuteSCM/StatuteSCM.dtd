@@ -22,7 +22,8 @@
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | BilingualGroup 
-               | FootnoteRef | Formula | XRefInternal | XRefSection
+               | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Formula 
+			   | XRefInternal | XRefSection 
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep)* " >
@@ -295,6 +296,7 @@
 
 	<!ELEMENT SectionPiece  (
                            Definition
+						 | Heading
                          | Paragraph 
                          | Subparagraph 
                          | Clause 

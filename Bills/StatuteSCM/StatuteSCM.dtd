@@ -385,7 +385,7 @@
 <!ELEMENT AnnualStatuteNumber   (%lowleveltext;)* >
 
 
-<!ELEMENT BillSponsor  (#PCDATA) >
+<!ELEMENT BillSponsor  (%lowleveltext;)* >
 <!ATTLIST BillSponsor
                billsponsorid  CDATA    #IMPLIED  >
                              

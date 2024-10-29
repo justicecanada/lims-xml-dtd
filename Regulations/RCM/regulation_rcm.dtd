@@ -819,6 +819,7 @@
 			    | Repealed
 			    | List
 			    | MathMLBlock
+				| IBR
                            )*" >
 
 <!-- The following entity declaration was move to here. It needs to be

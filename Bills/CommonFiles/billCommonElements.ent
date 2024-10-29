@@ -446,13 +446,7 @@
 <!ELEMENT XRefExternal  (%lowleveltext;)* >
 <!ATTLIST XRefExternal
      reference-type (regulation | act | standard | other | canada-gazette | agreement)   #REQUIRED 
-     reference-level (provincial | federal | other-jurisdiction) #IMPLIED
-     source	CDATA	#IMPLIED
-     url		CDATA	#IMPLIED
-     bilingual	(yes | no)	#IMPLIED
-     isFree		(yes | no)	#IMPLIED
-     accessible			(yes | no)	#IMPLIED
-     incorporatedByRef	(yes | no) #IMPLIED			   			   
+     reference-level (provincial | federal | other-jurisdiction) #IMPLIED		   			   
 >
 
 			   

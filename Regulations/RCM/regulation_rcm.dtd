@@ -462,7 +462,7 @@
   ) 
 >
 <!ATTLIST Paragraph
-          type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+          type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
           change  (ins | del | off | alt)   #IMPLIED >
                
 <!ELEMENT Provision
@@ -594,7 +594,7 @@
 			iroFid CDATA #IMPLIED
 			in-force CDATA #IMPLIED
 			target CDATA #IMPLIED
-            type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+            type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
 			change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT SectionPiece  (
@@ -685,7 +685,7 @@
 >
 
 <!ATTLIST Subsection
-               type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
        	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsubclause (

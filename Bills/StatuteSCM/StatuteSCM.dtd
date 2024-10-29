@@ -155,7 +155,7 @@
                      | AmendedText?), HistoricalNote?) >                
 	<!ATTLIST Paragraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending | CIF | CIFnobold | repeal | application)   #IMPLIED  >
+               type (normal | transitional | amending | CIF | CIFnobold | repeal | application | coord)   #IMPLIED  >
 
 
 	<!ELEMENT Preamble  (Provision+, HistoricalNote?) >
@@ -216,7 +216,7 @@
                iroId  CDATA    #IMPLIED 
                iroFid  CDATA    #IMPLIED 
 		in-force CDATA #IMPLIED
-               type (normal | transitional | amending | CIF | CIFnobold | repeal | application)   #IMPLIED  >
+               type (normal | transitional | amending | CIF | CIFnobold | repeal | application | coord)   #IMPLIED  >
 
 
 	<!ELEMENT Subclause  (Label, Text, ((Subsubclause | %blocktext;)+,
@@ -240,7 +240,7 @@
                        HistoricalNote?) >                      
 	<!ATTLIST Subsection
                id  ID    #IMPLIED 
-               type (normal | transitional | amending | CIF | CIFnobold | repeal | application)   #IMPLIED  >
+               type (normal | transitional | amending | CIF | CIFnobold | repeal | application | coord)   #IMPLIED  >
 
 
 	<!ELEMENT Subsubclause  (Label, Text, 

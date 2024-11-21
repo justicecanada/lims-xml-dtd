@@ -52,8 +52,8 @@
 	<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
 		| %blocktext; | Schedule)*" >
 
-	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | (Section, CommentBlock*))+ 
-                     | (Heading | (Subsection, CommentBlock*))+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | (CommentBlock*, Section, CommentBlock*))+ 
+                     | (Heading | (CommentBlock*, Subsection, CommentBlock*))+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
                      | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 
 <!-- The following line imports the contents of billCommonElements.dtd so that

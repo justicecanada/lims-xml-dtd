@@ -117,27 +117,27 @@
 	) 
 >
 <!ATTLIST Clause
-               type  (normal | transitional | amending)  #IMPLIED 
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedParagraph  (CommentBlock*, Text) >
 <!ATTLIST ContinuedParagraph
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedSubparagraph  (CommentBlock*, Text) >
 <!ATTLIST ContinuedSubparagraph
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedClause  (CommentBlock*, Text) >
 <!ATTLIST ContinuedClause
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedSubclause  (CommentBlock*, Text) >
 <!ATTLIST ContinuedSubclause
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedFormulaParagraph  (Text) >
@@ -151,7 +151,7 @@
 <!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text) >
 
 <!ATTLIST ContinuedSectionSubsection
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedDefinition  (CommentBlock*, Text) >
@@ -656,7 +656,7 @@
   )
 >
 <!ATTLIST Subclause
-         type  (normal | transitional | amending)  #IMPLIED 
+         type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 
@@ -670,7 +670,7 @@
   )
 >
 <!ATTLIST Subparagraph
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
        		change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsection  
@@ -695,7 +695,7 @@
        HistoricalNote?
        ) >
 <!ATTLIST Subsubclause
-               type  (normal | transitional | amending)  #IMPLIED 
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Sup  (#PCDATA | Emphasis)* >

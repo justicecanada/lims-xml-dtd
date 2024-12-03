@@ -102,7 +102,7 @@
                    ContinuedClause?)*, HistoricalNote?) >                 
 	<!ATTLIST Clause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT DocumentInternal
@@ -223,7 +223,7 @@
                       ContinuedSubclause?)*, HistoricalNote?) >                    
 	<!ATTLIST Subclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT Subparagraph  (Label, Text, (((Clause 
@@ -231,7 +231,7 @@
                          | AmendedText?), HistoricalNote?) >                       
 	<!ATTLIST Subparagraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED  >
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED  >
 
 
 	<!ELEMENT Subsection  (MarginalNote*, Label, Text*, 
@@ -247,14 +247,14 @@
                          (%blocktext;)*, HistoricalNote?) >
 	<!ATTLIST Subsubclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedClause  (Text) >
 	<!ATTLIST ContinuedClause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedDefinition  (Text) >
@@ -263,7 +263,7 @@
 	<!ATTLIST ContinuedParagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 
@@ -271,21 +271,21 @@
 	<!ATTLIST ContinuedSectionSubsection
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubclause  (Text) >
 	<!ATTLIST ContinuedSubclause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubparagraph  (Text) >
 	<!ATTLIST ContinuedSubparagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT Definition  ( 

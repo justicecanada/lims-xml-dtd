@@ -90,7 +90,7 @@ element as well as the HistoricalNote element. -->
                    ContinuedClause?)*) >          
 	<!ATTLIST Clause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 
@@ -98,7 +98,7 @@ element as well as the HistoricalNote element. -->
 	<!ATTLIST ContinuedClause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedDefinition  (Text) >
@@ -111,28 +111,28 @@ element as well as the HistoricalNote element. -->
 	<!ATTLIST ContinuedParagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSectionSubsection  (Text, (AmendedText | ReadAsText)?) >
 	<!ATTLIST ContinuedSectionSubsection
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubclause  (Text) >
 	<!ATTLIST ContinuedSubclause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubparagraph  (Text) >
 	<!ATTLIST ContinuedSubparagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT Definition  ( 
@@ -242,14 +242,14 @@ element as well as the HistoricalNote element. -->
                       | %blocktext;)+, ContinuedSubclause?)*) >              
 	<!ATTLIST Subclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 	<!ELEMENT Subsubclause  (Label, Text, 
                          (%blocktext;)*) >                 
 	<!ATTLIST Subsubclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 
@@ -258,7 +258,7 @@ element as well as the HistoricalNote element. -->
                          | AmendedText?)) >                         
 	<!ATTLIST Subparagraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)  #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
                %changeatt;  >
 
 

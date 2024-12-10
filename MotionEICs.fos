@@ -76,7 +76,7 @@
 <specval attname="security" attval="private">
 <charsubset>
 <font weight="bold">
-<highlt fontclr="white" bckclr="brown">
+<highlt fontclr="brown" bckclr="#ccffcc">
 </charsubset>
 </att>
 </e-i-c>

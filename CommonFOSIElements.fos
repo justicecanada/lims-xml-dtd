@@ -2312,7 +2312,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-rÃ©f inconnu\">
+<usetext source="\Attribut format-réf inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -2541,7 +2541,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-rÃ©f inconnu\">
+<usetext source="\Attribut format-réf inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -2753,7 +2753,7 @@
 <charsubset>
 <indent leftind="0" firstln="0">
 <presp nominal="12pt">
-<usetext source="\Attribut format-rÃ©f inconnu\">
+<usetext source="\Attribut format-réf inconnu\">
 </usetext>
 </charsubset>
 </att>
@@ -3491,7 +3491,7 @@
 </charsubset>
 </att>
 <att>
-<specval attname="reference-type" attval="canada_gazette">
+<specval attname="reference-type" attval="canada-gazette">
 <charsubset>
 <highlt fontclr="#FF00AA">
 </charsubset>

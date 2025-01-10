@@ -117,27 +117,27 @@
 	) 
 >
 <!ATTLIST Clause
-               type  (normal | transitional | amending)  #IMPLIED 
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedParagraph  (CommentBlock*, Text) >
 <!ATTLIST ContinuedParagraph
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedSubparagraph  (CommentBlock*, Text) >
 <!ATTLIST ContinuedSubparagraph
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedClause  (CommentBlock*, Text) >
 <!ATTLIST ContinuedClause
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
                change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedSubclause  (CommentBlock*, Text) >
 <!ATTLIST ContinuedSubclause
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedFormulaParagraph  (Text) >
@@ -151,7 +151,7 @@
 <!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text) >
 
 <!ATTLIST ContinuedSectionSubsection
-               type  (normal | transitional | amending)  #IMPLIED  
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT ContinuedDefinition  (CommentBlock*, Text) >
@@ -462,7 +462,7 @@
   ) 
 >
 <!ATTLIST Paragraph
-          type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+          type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
           change  (ins | del | off | alt)   #IMPLIED >
                
 <!ELEMENT Provision
@@ -594,7 +594,7 @@
 			iroFid CDATA #IMPLIED
 			in-force CDATA #IMPLIED
 			target CDATA #IMPLIED
-            type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+            type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
 			change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT SectionPiece  (
@@ -656,7 +656,7 @@
   )
 >
 <!ATTLIST Subclause
-         type  (normal | transitional | amending)  #IMPLIED 
+         type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 
@@ -670,7 +670,7 @@
   )
 >
 <!ATTLIST Subparagraph
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
        		change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsection  
@@ -685,7 +685,7 @@
 >
 
 <!ATTLIST Subsection
-               type (normal | amending | transitional | CIF | CIFnobold | repeal | application)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold | repeal | application | coord)   #IMPLIED 
        	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Subsubclause (
@@ -695,7 +695,7 @@
        HistoricalNote?
        ) >
 <!ATTLIST Subsubclause
-               type  (normal | transitional | amending)  #IMPLIED 
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
 	       change  (ins | del | off | alt)   #IMPLIED >
 
 <!ELEMENT Sup  (#PCDATA | Emphasis)* >
@@ -727,14 +727,9 @@
 <!ELEMENT XRefExternal  %inline; >
 <!ATTLIST XRefExternal
 	link CDATA #IMPLIED
-	reference-type (regulation | act | standard | other | citation)   #IMPLIED  
-	reference-level (municipal| provincial | federal | otherNation | international) #IMPLIED
-			   source	CDATA	#IMPLIED
-			   url		CDATA	#IMPLIED
-			   bilingual	(yes | no)	#IMPLIED
-			   isFree		(yes | no)	#IMPLIED
-			   accessible			(yes | no)	#IMPLIED		   			   
-			   >
+	reference-type (regulation | act | standard | other | canada-gazette | agreement)   #IMPLIED  
+    reference-level (provincial | federal | other-jurisdiction) #IMPLIED		   			   
+>
 
 <!ELEMENT IBR  %inline; >
 <!ATTLIST IBR
@@ -819,6 +814,7 @@
 			    | Repealed
 			    | List
 			    | MathMLBlock
+				| IBR
                            )*" >
 
 <!-- The following entity declaration was move to here. It needs to be

@@ -52,8 +52,8 @@
 	<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
 		| %blocktext; | Schedule)*" >
 
-	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | (Section, CommentBlock*))+ 
-                     | (Heading | (Subsection, CommentBlock*))+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+	<!ENTITY % docpart  "(LongTitle | Preamble | (Heading | (CommentBlock*, Section, CommentBlock*))+ 
+                     | (Heading | (CommentBlock*, Subsection, CommentBlock*))+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
                      | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 
 <!-- The following line imports the contents of billCommonElements.dtd so that
@@ -68,14 +68,14 @@
                    ContinuedClause?)*) >                   
 	<!ATTLIST Clause
                id  ID    #IMPLIED 
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 	<!ELEMENT ContinuedClause  (CommentBlock*,Text, CommentBlock*) >
 	<!ATTLIST ContinuedClause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 	<!ELEMENT ContinuedDefinition  (CommentBlock*, Text, CommentBlock*) >
 	<![%ignorechange;[
@@ -87,28 +87,28 @@
 	<!ATTLIST ContinuedParagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubclause  (CommentBlock*,Text, CommentBlock*) >
 	<!ATTLIST ContinuedSubclause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSubparagraph  (CommentBlock*,Text, CommentBlock*) >
 	<!ATTLIST ContinuedSubparagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT ContinuedSectionSubsection  (CommentBlock*, Text, (AmendedText | ReadAsText)?, CommentBlock*) >
 	<!ATTLIST ContinuedSectionSubsection
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 	<!ELEMENT Definition  (CommentBlock*, MarginalNote*,
@@ -234,7 +234,7 @@
                       | %blocktext;)+, ContinuedSubclause?)*) >                     
 	<!ATTLIST Subclause
                id  ID    #IMPLIED 
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
@@ -243,7 +243,7 @@
                          | AmendedText?)) >                         
 	<!ATTLIST Subparagraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
@@ -262,7 +262,7 @@
                          (%blocktext;)*) >                         
 	<!ATTLIST Subsubclause
                id  ID    #IMPLIED 
-               type (normal | amending | transitional)   #IMPLIED 
+               type (normal | amending | transitional | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 

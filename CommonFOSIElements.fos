@@ -3470,7 +3470,7 @@
 <!-- #808080 -->
 <specval attname="reference-type" attval="other">
 <charsubset>
-<highlt fontclr="#FF00AA">
+<highlt fontclr="teal">
 </charsubset>
 </att>
 <att>

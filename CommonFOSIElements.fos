@@ -1203,6 +1203,7 @@
 <e-i-c gi="FormulaTerm">
 <?Pub Lcl _id="f439">
 <charlist inherit="1" charsubsetref="Inline">
+<font weight="bold" famname="sanserif">
 <indent inherit="1">
 <usetext source="@1pi" placemnt="after">
 </usetext>
@@ -1211,6 +1212,7 @@
 <e-i-c gi="FormulaText">
 <?Pub Lcl _id="f1">
 <charlist inherit="1" charsubsetref="Inline">
+<font weight="bold" famname="sanserif">
 <indent inherit="1">
 </charlist>
 </e-i-c>
@@ -3468,7 +3470,7 @@
 <!-- #808080 -->
 <specval attname="reference-type" attval="other">
 <charsubset>
-<highlt fontclr="#FF00AA">
+<highlt fontclr="#EBAE09">
 </charsubset>
 </att>
 <att>

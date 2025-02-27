@@ -2337,6 +2337,30 @@
 <presp priority="high">
 </charsubset>
 </att>
+<att>
+<specval attname="package-type" attloc="Provision" attval="C">
+<charsubset>
+<usetext source="\(C)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Provision" attval="M">
+<charsubset>
+<usetext source="\(M)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Provision" attval="T">
+<charsubset>
+<usetext source="\(T)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Provision" attval="G">
+<charsubset>
+<usetext source="\(G)\" placemnt="after"></usetext>
+</charsubset>
+</att>
 </e-i-c>
 <e-i-c gi="Provision" context="Provision">
 <charlist>
@@ -2929,6 +2953,37 @@
 <charsubset>
 <font weight="bold">
 <highlt fontclr="#8403fc">
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Section" attval="C">
+<charsubset>
+<usetext source="\(C)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Section" attval="M">
+<charsubset>
+<usetext source="\(M)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Section" attval="T">
+<charsubset>
+<usetext source="\(T)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="package-type" attloc="Section" attval="G">
+<charsubset>
+<usetext source="\(G)\" placemnt="after"></usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
 </charsubset>
 </att>
 &ChangeAtt;

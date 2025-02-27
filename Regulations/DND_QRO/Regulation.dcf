@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Arbortext, Inc., 1988-2004, v.4002-->
+<!DOCTYPE DocumentTypeConfiguration PUBLIC "-//Arbortext//DTD Document Type Configuration 2.0//EN" "dcfdtd.dtd">
+<DocumentTypeConfiguration>
+<Options allowApplicationToolbar="no" allowComposeStylesheetList="no"/>
+<NewDialog>
+<New description="National Defence - QRO" templateFile="template_e.xml" />
+<New description="Défense nationale - ORFC" templateFile="template_f.xml" />
+
+</NewDialog>
+<ElementOptions>
+<ElementOption element="_touchup" allowSpellChecking="no"/>
+<ElementOption element="Label" allowSpellChecking="no"/>
+<ElementOption element="FootnoteRef" allowSpellChecking="no"/>
+<ElementOption element="XRefInternal" allowSpellChecking="no"/>
+<ElementOption element="FormulaTerm" allowSpellChecking="no"/>
+</ElementOptions><AttributeOptions>
+<AttributeOption attribute="hasPreviousVersion" readOnly="yes" screenHidden="yes"/>
+<AttributeOption attribute="startdate" readOnly="yes" screenHidden="yes"/>
+<AttributeOption attribute="enddate" readOnly="yes" screenHidden="yes"/>
+</AttributeOptions>
+<Specials>
+<Graphic element="Image" filename="source"/>
+</Specials>
+</DocumentTypeConfiguration>

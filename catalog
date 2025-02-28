@@ -7,6 +7,7 @@ PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulations/Authoring/Reg
 
 PUBLIC "-//Justice Canada//DTD Regulation v1.3.0//EN" "Regulations/Authoring/Regulation.dtd"
 PUBLIC "-//Justice Canada//DTD Regulation RCM RCM//EN" "Regulations/RCM/Regulation_rcm.dtd"
+PUBLIC "-//Justice Canada//DTD Regulation QRO//EN" "Regulations/DND_QRO/Regulation.dtd"
 
 PUBLIC "-//Justice Canada//FOSI Empty Stages Attributes//EN" "EmptyStagesAtts.fos"
 PUBLIC "-//Justice Canada//FOSI Stages Attributes//EN" "StagesAtts.fos"

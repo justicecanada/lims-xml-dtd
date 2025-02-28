@@ -519,29 +519,6 @@
 	)
  >
 
-			   
-<!ELEMENT IBR  %inline; >
-<!ATTLIST IBR
-	bilingual	(yes | no)	#IMPLIED
-	origin		(internal | external)	#IMPLIED
-	publishedBy	CDATA #IMPLIED
-	incorporationType (ambulatory | static) #IMPLIED
-	cost		CDATA #IMPLIED
-	lastVerified	CDATA #IMPLIED
-	currency	CDATA	#IMPLIED
-	url			CDATA	#IMPLIED
->
-
-<!ELEMENT XRefSection  (#PCDATA) >
-<!ATTLIST XRefSection
-			   lawid	CDATA	#IMPLIED
-			   sectionid		CDATA	#IMPLIED		   			   
-			   >
-			   
-<!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
-<!ATTLIST InlineFont  font-family CDATA #REQUIRED 
-				font-size CDATA #IMPLIED >
-
 <!ELEMENT Repealed  %inline; >
 
 

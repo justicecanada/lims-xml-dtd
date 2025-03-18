@@ -2,7 +2,7 @@ PUBLIC "-//Justice Canada//DTD Constitution//EN" "Constitution/Constitution.dtd"
 
 PUBLIC "-//Justice Canada//DTD RevisionMacro//EN" "RevisionMacro/RevisionMacro.dtd"
 PUBLIC "-//Justice Canada//DTD RSS//EN"  "RSS/rss.dtd"
-
+PUBLIC "-//Justice Canada//DTD TOPS//EN"  "TOPS/TOPS.dtd"
 PUBLIC "-//Justice Canada//DTD Regulation v1.2.2//EN" "Regulations/Authoring/Regulation.dtd"
 
 PUBLIC "-//Justice Canada//DTD Regulation v1.3.0//EN" "Regulations/Authoring/Regulation.dtd"

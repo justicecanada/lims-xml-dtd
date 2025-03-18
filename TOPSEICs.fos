@@ -1,0 +1,137 @@
+<e-i-c gi="Statute"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Title"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1" size="1.5em" weight="bold">
+<indent leftind="1pi" firstln="0pi">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+<e-i-c gi="ChapterNumber"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1" size="1.5em" weight="bold">
+<indent leftind="1pi" firstln="0pi">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+<e-i-c gi="OtherLangTitle"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1" posture="italic">
+<indent leftind="1pi" firstln="2pi">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+<e-i-c gi="Minister"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1" size="1.3em" weight="bold">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+<e-i-c gi="TitleChanged"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1" size="1.3em" weight="bold">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+<e-i-c gi="CIF"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<highlt fontclr="#208000">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+
+<e-i-c gi="Section"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Amendment"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="3pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Schedule"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="LongTitle"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Item"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Terminology"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Transitional"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<highlt fontclr="#800040">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="General"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="CoordinatingAmendment"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="ConditionalAmendment"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Repeal"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="Convention"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<highlt fontclr="#005ba3">
+<presp nominal="1em">
+<postsp nominal="0"></charlist>
+</e-i-c>
+

@@ -1,0 +1,544 @@
+<?Pub UDT Placeholder _touchup>
+<?Pub CX outspec(>
+<rsrcdesc>
+<charfill literal="-" cfid="dash" mincount="3">
+<charfill literal="." cfid="leaders" mincount="3">
+<charfill literal="_" align="1" cfid="solidrule" mincount="3">
+<counter initial="0" enumid="part.ct">
+<counter initial="0" enumid="division.ct">
+<counter initial="0" enumid="subdivision.ct">
+<counter initial="0" enumid="explanatorynote.ct">
+<counter initial="0" enumid="strip.ct">
+<stringdecl textid="sectionLabel.txt" literal="" status="0">
+<stringdecl textid="toc.app" status="1">
+<stringdecl textid="dd.txt" status="1">
+<stringdecl textid="mm.txt" status="1">
+<stringdecl textid="yyyy.txt" status="1">
+<stringdecl textid="longTitle.txt">
+</rsrcdesc>
+<pagedesc>
+<pageset id="bill">
+<rectopg>
+<pagespec>
+<topmarg>
+<botmarg>
+<leftmarg>
+<rtmarg>
+<header>
+</header>
+<footer>
+</footer>
+<flowtext numcols="1">
+<column>
+</flowtext>
+</pagespec>
+</rectopg>
+</pageset>
+</pagedesc>
+<styldesc>
+<charsubset charsubsetid="Inline">
+<textbrk startln="0" endln="0">
+</charsubset>
+<charsubset charsubsetid="Block">
+<?Pub Lcl _id="f356">
+<textbrk startln="1" endln="1">
+</charsubset>
+<charsubset charsubsetid="section">
+<?Pub Lcl _id="f356">
+<font inherit="1" posture="upright" smallcap="0">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="flush-0">
+<?Pub Lcl _id="f356">
+<indent leftind="1em">
+<textbrk endln="1">
+</charsubset>
+
+
+
+<charsubset charsubsetid="centered">
+<?Pub Lcl _id="f356">
+<quadding quad="center">
+<textbrk endln="1">
+</charsubset>
+<charsubset charsubsetid="right-aligned">
+<?Pub Lcl _id="f356">
+<quadding quad="right">
+<textbrk endln="1">
+</charsubset>
+<docdesc>
+<?Pub Lcl _id="f184">
+<charlist>
+<font style="serif" famname="Times" size="12pt">
+<leading lead="1.2em">
+<indent leftind="1pi">
+<quadding quad="left">
+<highlt fontclr="black">
+</charlist>
+</docdesc>
+<e-i-c gi="gray.fmt">
+<?Pub Lcl _id="f649" _comment="Used to format text in the variable for DefinedTermEn.">
+<charlist inherit="1" charsubsetref="Inline">
+<font weight="bold">
+<highlt fontclr="navy">
+</charlist>
+</e-i-c>
+<e-i-c gi="textbreak.fmt">
+<?Pub Lcl _id="f650" _comment='Used in BillNumber element to put the bill number following "Projet de loi" on a separate line.'>
+<charlist inherit="1" charsubsetref="Inline">
+<textbrk startln="1">
+</charlist>
+</e-i-c>
+
+
+
+
+<!-- List and Item FOSI added by Eric Bisaillon -->
+<e-i-c gi="List">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1">
+<highlt inherit="1">
+<postsp nominal="6pt" priority="high">
+</charlist>
+
+</e-i-c>
+
+<e-i-c gi="Item">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent inherit="1" firstln="@+2em" leftind="@+2em">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="4pt" priority="high">
+</charlist>
+
+</e-i-c>
+
+<e-i-c gi="Text" context="Item">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt inherit="1">
+<presp nominal="6pt" priority="med">
+<postsp nominal="0pt" priority="high">
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<indent firstln="@+1em" leftind="@">
+<highlt fontclr="red">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<indent firstln="@+1.5em" leftind="@+1.5em">
+</charsubset>
+</att>
+</e-i-c>
+<!-- / List and Item FOSI -->
+<e-i-c gi="Text">
+<?Pub Lcl _id="f403">
+<charlist inherit="1" charsubsetref="Inline">
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<textbrk startln="1" endln="1">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="0">
+<charsubset>
+<textbrk endln="1">
+</charsubset>
+</att>
+</e-i-c>
+&UniqueEICs;
+<e-i-c gi="Caption">
+<?Pub Lcl _id="f399">
+<charlist charsubsetref="Block">
+<font size="10pt" weight="bold">
+<quadding quad="left" lastquad="relative">
+<highlt inherit="1">
+<presp nominal="18pt" priority="med">
+</charlist>
+
+</e-i-c>
+<e-i-c gi="Chapter">
+<?Pub Lcl _id="f373">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="center">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Date">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+</e-i-c>
+
+
+<e-i-c gi="DefinedTermEn" context="* Text">
+<?Pub Lcl _id="f586" _comment="This is for an inline DefinedTermEn. It does not require any special formats as in regular defined terms. Use Text generates quotation marks and colour and font style are dependant on the language attribute on the root element.">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<specval attname="FOSIutils::englishQuotes" attloc="system-func" attval="2">
+<charsubset>
+<font famname="sanserif" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<font size="10pt" famname="sanserif" weight="bold" posture="italic">
+<highlt fontclr="navy">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<font size="10pt" famname="sanserif" posture="italic">
+<highlt fontclr="blue">
+<presp nominal="24pt" priority="med">
+</charsubset>
+</att>
+</e-i-c>
+
+
+<e-i-c gi="Footnote">
+<?Pub Lcl _id="f396">
+<charlist charsubsetref="Block">
+<font inherit="1" size="10pt">
+<highlt inherit="1" fontclr="green">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Heading">
+<?Pub Lcl _id="f472">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<highlt inherit="1">
+<postsp nominal="18pt" priority="high">
+</charlist>
+</e-i-c>
+<e-i-c gi="InLineHeading">
+<?Pub Lcl _id="f528">
+<charlist inherit="1" charsubsetref="Inline">
+<textbrk endln="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Label">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font size="12pt" inherit="1"  weight="bold" famname="sanserif">
+<indent inherit="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Label" context="Item">
+<?Pub Lcl _id="f402">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt" inherit="1">
+<indent inherit="1">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Label" context="Heading">
+<?Pub Lcl _id="f402">
+<charlist inherit="1">
+<font famname="sanserif" size="12pt" weight="bold">
+<highlt inherit="1">
+<presp minimum="18pt" nominal="18pt" priority="force">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Label" context="Section" occur="first">
+<?Pub Lcl _id="f468" _comment="Used for the bold, numbered section label.">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt" weight="bold">
+</charlist>
+<att>
+<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
+<charsubset>
+<presp minimum="18pt" nominal="18pt" priority="high">
+<textbrk startln="1">
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\s.&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\art.&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+
+<e-i-c gi="Text" context="Section">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt">
+</charlist>
+<att>
+<charsubset>
+<usetext source="\,&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Text" context="Schedule">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt">
+</charlist>
+<att>
+<charsubset>
+<usetext source="\,&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Text" context="Heading">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt">
+</charlist>
+<att>
+<charsubset>
+<usetext source="\,&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Text" context="LongTitle">
+<charlist inherit="1" charsubsetref="Inline">
+<font famname="sanserif" size="12pt">
+</charlist>
+<att>
+<charsubset>
+<usetext source="\,&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+
+<e-i-c gi="LongTitle">
+<?Pub Lcl _id="f364">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt">
+<savetext textid="longtitle.txt" conrule="#CONTENT">
+</charlist>
+</e-i-c>
+
+
+<e-i-c gi="Schedule">
+<?Pub Lcl _id="f447">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<quadding quad="left">
+<highlt inherit="1">
+<presp nominal="24pt">
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Section">
+<charlist charsubsetref="section">
+</charlist>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="amending">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+<att logic="or">
+<specval attname="type" attloc="Section" attval="transitional">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="maroon">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIF">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="CIFnobold">
+<charsubset>
+<highlt fontclr="teal">
+</charsubset>
+</att>
+<att>
+<specval attname="type" attval="repeal">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="black">
+</charsubset>
+</att>
+</e-i-c>
+
+
+<e-i-c gi="ShortTitle">
+<?Pub Lcl _id="f365">
+<charlist charsubsetref="Block">
+<font inherit="1" weight="bold">
+<quadding quad="center">
+<highlt inherit="1">
+<presp nominal="24pt" priority="med">
+<savetext textid="shorttitle.txt" conrule="#CONTENT">
+</charlist>
+</e-i-c>
+<e-i-c gi="Sub">
+<?Pub Lcl _id="f413">
+<charlist inherit="1" charsubsetref="Inline">
+<font size="8pt" offset="-3pt">
+<highlt>
+</charlist>
+</e-i-c>
+
+<e-i-c gi="Sup">
+<?Pub Lcl _id="f414">
+<charlist inherit="1" charsubsetref="Inline">
+<font smallcap="0" size="8pt" offset="6pt">
+<indent inherit="0" leftind="0" rightind="0" firstln="0">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+
+
+<e-i-c gi="title">
+<?Pub Lcl _id="f546">
+<charlist charsubsetref="Block">
+<font size="17pt">
+<indent inherit="0">
+<quadding inherit="1">
+<highlt inherit="1">
+<presp nominal="12" priority="med">
+</charlist>
+</e-i-c>
+<e-i-c gi="TitleText">
+<?Pub Lcl _id="f546">
+<charlist charsubsetref="Block">
+<font inherit="1" famname="sanserif">
+<indent inherit="0">
+<quadding inherit="1">
+<highlt inherit="1">
+<presp nominal="18" priority="med">
+</charlist>
+</e-i-c>
+
+
+<e-i-c gi="XRefExternal">
+<charlist inherit="1" charsubsetref="Inline">
+</charlist>
+<att>
+<specval attname="FOSIutils::italicizeXRefExternal" attloc="system-func" attval="1">
+<charsubset>
+<font posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="act">
+<charsubset>
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<!-- #808080 -->
+<specval attname="reference-type" attval="other">
+<charsubset>
+<highlt fontclr="#FF00AA">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="regulation">
+<charsubset>
+<highlt fontclr="green">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="standard">
+<charsubset>
+<highlt fontclr="#ff6666">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="agreement">
+<charsubset>
+<font posture="normal">
+<highlt fontclr="#ff8000">
+</charsubset>
+</att>
+<att>
+<specval attname="reference-type" attval="canada-gazette">
+<charsubset>
+<highlt fontclr="#FF00AA">
+</charsubset>
+</att>
+</e-i-c>
+
+<e-i-c gi="Emphasis">
+<?Pub Lcl _id="f492" _comment='Used for stylistic formatting based on the value of the "style" attribute. Note that "overbar" does not work.'>
+<charlist inherit="1" charsubsetref="Inline">
+<font>
+<highlt inherit="1">
+</charlist>
+<att>
+<specval attname="style" attloc="Emphasis" attval="bold">
+<charsubset>
+<font weight="bold">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="italic">
+<charsubset>
+<font smallcap="0" posture="italic">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="overbar">
+<charsubset>
+<font>
+<highlt scoring="1" scoreoff="-1pi" scorespc="1">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="normal">
+<charsubset>
+<font weight="normal" posture="upright" smallcap="0">
+<highlt scoring="0">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="smallcaps">
+<charsubset>
+<font smallcap="1">
+</charsubset>
+</att>
+<att>
+<specval attname="style" attloc="Emphasis" attval="underline">
+<charsubset>
+<font>
+<highlt scoring="1">
+</charsubset>
+</att>
+</e-i-c>
+</styldesc>
+<?Pub *0000083781>

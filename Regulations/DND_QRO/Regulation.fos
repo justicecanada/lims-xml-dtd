@@ -1,0 +1,111 @@
+<!--ArborText, Inc., 1988-2002, v.4002-->
+<!DOCTYPE OUTSPEC PUBLIC "-//ArborText//DTD OUTPUT SPEC MIL-PRF-28001 REV B AMEND 1 19961231//EN" [
+<!ENTITY FormulaColours ''>
+<!ENTITY AmendedTextAtt '<att>
+<specval attname="change" attloc="AmendedText" attval="off">
+<charsubset>
+<highlt inherit="1" scoring="0" bckclr="white" fontclr="black" scorespc="0">
+</charsubset>
+</att>
+<att>
+<specval attname="change" attloc="AmendedText" attval="ins">
+<charsubset>
+<highlt inherit="1" bckclr="gray"></charsubset>
+</att>
+<att>
+<specval attname="change" attval="del">
+<charsubset>
+<font inherit="1" posture="upright">
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-"
+scorespc="1" bckclr="#ffe1e1"></charsubset>
+</att>
+<att>
+<specval attname="change" attval="alt">
+<charsubset>
+<highlt inherit="1" fontclr="#a4007b"></charsubset>
+</att>'>
+<!ENTITY ChangeAtt '<att>
+<specval attname="change" attval="off">
+<charsubset>
+<highlt inherit="1" scoring="0" bckclr="white" fontclr="black" scorespc="0">
+</charsubset>
+</att>
+<att>
+<specval attname="change" attval="ins">
+<charsubset>
+<highlt inherit="1" bckclr="gray"></charsubset>
+</att>
+<att>
+<specval attname="change" attval="del">
+<specval attname="FOSIutils::showDelSading" attloc="system-func" attval="1">
+<charsubset>
+<font inherit="1" posture="upright">
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-" scorespc="1" bckclr="#ffe1e1">
+</charsubset>
+</att>
+<att>
+<specval attname="change" attval="del">
+<specval attname="FOSIutils::showDelSading" attloc="system-func" attval="0">
+<charsubset>
+<font inherit="1" posture="upright">
+<highlt scoring="0" scorewt="1pt" scoreoff="-4pt" scorechron="1" scorechr="-" scorespc="1">
+</charsubset>
+</att>
+<att>
+<specval attname="change" attval="alt">
+<charsubset>
+<highlt inherit="1" fontclr="#a4007b"></charsubset>
+</att>
+<att>
+<specval attname="in-force" attval="#ANY">
+<charsubset>
+<highlt inherit="1" bckclr="red"></charsubset>
+</att>'>
+<!ENTITY EmphasisAtt '<att>
+<specval attname="style" attloc="Emphasis" attval="regular">
+<charsubset>
+<font weight="normal" posture="upright" smallcap="0">
+<highlt scoring="0">
+</charsubset>
+</att>'>
+<!ENTITY securityAtt '
+<att>
+<specval attname="security" attval="public">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="private">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="white" bckclr="brown">
+</charsubset>
+</att>
+<att>
+<specval attname="security" attval="public-juril">
+<charsubset>
+<font weight="bold">
+<highlt fontclr="brown"  bckclr="yellow">
+</charsubset>
+</att>'>
+
+<!ENTITY UniqueEICs PUBLIC "-//Justice Canada//FOSI Regulation Elements//EN" "../../RegulationEICs.fos">
+<!ENTITY CommonFOSIElements SYSTEM "../../CommonFOSIElements.fos">
+]>
+<!--May 15, 2001-->
+<!--June 18, 2001, changes to SummarySection structure-->
+<!--June 22, 2001, changes to indent-level in Formula structure-->
+<!--July 10, 2001, changes to CommentBlock-->
+<!--July 12, 2001, changes according to drafters requests-->
+<!--July 13, 2001, changes to reflect new formats-->
+<!--Jan. 2002, changed to reflect DTD changes. J. Julian-->
+<!--Mar. 2002, changed to reflect DTD changes. J. Julian-->
+<!--Apr. 2002, changed to reflect DTD changes. J. Julian-->
+<!--May 2002, changed to reflect DTD changes. J. Julian-->
+<!--November 2002, changed to reflect DTD changes. D Topshee -->
+<outspec><?Pub Lcl _id="652" _label="Adept v8.0">
+&CommonFOSIElements;
+</outspec>
+<?Pub *0000096933>

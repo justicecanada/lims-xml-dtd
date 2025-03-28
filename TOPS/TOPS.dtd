@@ -1,0 +1,57 @@
+<?aptxml encoding="utf-8"?>
+
+<!ELEMENT TOPS (Statute)+ >
+
+<!ELEMENT Statute (Title, ChapterNumber?, TitleChanged?, OtherLangTitle*, Minister*, LongTitle?, (Item | List | Section | Schedule |Heading | General | Terminology | Transitional | Repeal | Application | CoordinatingAmendment | ConditionalAmendment | CIF | Convention)*) >
+<!ATTLIST Statute FlicsId CDATA #IMPLIED 
+				FlicsAlpha	CDATA #IMPLIED>
+
+<!ELEMENT Title (#PCDATA | Emphasis | Sup)* >
+<!ELEMENT ChapterNumber (#PCDATA | Emphasis | Sup)* >
+<!ELEMENT TitleChanged (#PCDATA | Text)* >
+<!ELEMENT OtherLangTitle (#PCDATA | Emphasis | Sup)* >
+<!ELEMENT Minister (Text)* >
+<!ELEMENT LongTitle (Label, Text) >
+
+<!ELEMENT Section (Label, Text, List?) >
+
+<!ELEMENT Schedule (Label, Text?, List?) >
+
+<!ELEMENT Heading (Label, Text?) >
+
+<!ELEMENT Label (#PCDATA | Emphasis)* >
+
+<!ELEMENT Sup (#PCDATA) >
+
+<!ELEMENT List (Item)+ >
+
+<!ELEMENT Item (Label?, Text, List?) >
+
+<!ELEMENT Text (#PCDATA | Emphasis | Sup | XRefExternal | Amendment)* >
+
+<!ELEMENT Amendment (Source | CIFInfo)* >
+
+<!ELEMENT Source (#PCDATA | Emphasis | Sup | XRefExternal)* >
+<!ELEMENT CIFInfo (#PCDATA | Emphasis | Sup | XRefExternal | Date | CIFProv)* >
+
+<!ELEMENT Date (#PCDATA) >
+<!ELEMENT CIFProv (#PCDATA) >
+
+<!ELEMENT CIF (Text | List)* >
+<!ELEMENT Terminology (Text)* >
+<!ELEMENT Transitional (Text)* >
+<!ELEMENT Application (Text)* >
+<!ELEMENT General (Text)* >
+<!ELEMENT Repeal (Text)* >
+<!ELEMENT CoordinatingAmendment (Text)* >
+<!ELEMENT ConditionalAmendment (Text)* >
+
+<!ELEMENT Convention (Text | List | Section | Schedule |Heading | General | Terminology | Transitional | Repeal | CoordinatingAmendment | CIF)* >
+
+<!ELEMENT Emphasis (#PCDATA | Emphasis | Sup)* >
+<!ATTLIST Emphasis
+               style  CDATA    #IMPLIED  >
+			   
+<!ELEMENT XRefExternal (#PCDATA | Emphasis | Sup)* >
+<!ATTLIST XRefExternal
+               reference-type  CDATA    #IMPLIED  >

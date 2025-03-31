@@ -43,7 +43,7 @@
 <charlist charsubsetref="Block">
 <font inherit="1">
 <indent leftind="2pi" firstln="1pi">
-<highlt fontclr="#208000">
+<highlt fontclr="#333399">
 <presp nominal="1em">
 <postsp nominal="0"></charlist>
 </e-i-c>

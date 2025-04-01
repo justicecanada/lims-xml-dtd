@@ -1,0 +1,37 @@
+name: Add comment
+on:
+  issues:
+    types:
+      - labeled
+jobs:
+  add-testcomment:
+    if: github.event.label.name == 'status- in test'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add comment
+        run: gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: >
+            This issue is ready for testing.
+            :sparkles: Thank you for your contribution! :sparkles:
+  add-preprodcomment:
+    if: github.event.label.name == 'status- ready for preprod'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add comment
+        run: gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: >
+            This issue is ready for preprod.
+            :sparkles: Thank you for your contribution! :sparkles:
+

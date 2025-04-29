@@ -19,6 +19,7 @@ PUBLIC "-//Justice Canada//FOSI Strips Elements//EN" "StripsEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Message Elements//EN" "MessagesEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Statute Elements//EN" "StatuteEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Gazette Elements//EN" "GazetteEICs.fos"
+PUBLIC "-//Justice Canada//FOSI TOPS Elements//EN" "TOPSEICs.fos"
 PUBLIC "-//Justice Canada//FOSI Constitution Elements//EN" "ConstitutionEICs.fos"
 
 PUBLIC "-//Justice Canada//DTD Bill Authoring v2.2.1//EN" "Bills/BillAuthoring/BillAuthoring.dtd"
@@ -61,6 +62,7 @@ PUBLIC "-//W3C//DTD MathML 2.0//EN" "mathml2/mathml2.dtd"
 PUBLIC "-//Justice Canada//FOSI Common Bills Elements//EN" "CommonBillsFOSIElements.fos"
 PUBLIC "-//Justice Canada//FOSI Common Fosi Elements v2.0.0//EN" "CommonFOSIElements_2.fos"
 PUBLIC "-//Justice Canada//FOSI Common Fosi Elements//EN" "CommonFOSIElements.fos"
+PUBLIC "-//Justice Canada//FOSI Common Fosi TOPS Elements//EN" "CommonTOPSElements.fos"
 
 
 PUBLIC "ISO 8879:1986//ENTITIES Publishing//EN//XML" "ISOentities/ISOpub.ent"

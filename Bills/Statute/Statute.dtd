@@ -26,7 +26,7 @@
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | LeaderRightJustified | Leader | XRefInternal | XRefSection 
                      | XRefExternal | HistoricalNote | Repealed 
-					 | PageBreak | Keep | ImageGroup | Fraction )*" >
+					 | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | BilingualGroup 
@@ -34,7 +34,7 @@
 			   | XRefInternal | XRefSection 
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 %commonentities;
 

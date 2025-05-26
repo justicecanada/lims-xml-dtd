@@ -25,7 +25,7 @@ element as well as the HistoricalNote element. -->
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
@@ -35,13 +35,13 @@ element as well as the HistoricalNote element. -->
                           | XRefExternal | Provision | Keep)*" >
 
 
-<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
 				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision

@@ -707,7 +707,8 @@
 				font-size CDATA #IMPLIED >
 
 <!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
-<!ATTLIST Preserve  keep-together-line (yes | no) "no"  >
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"  
+                    type CDATA #IMPLIED >
 
 <!ELEMENT Language  (%lowleveltext;)* >
 <!ATTLIST Language

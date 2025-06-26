@@ -23,7 +23,8 @@
                          | Oath
                          | ImageGroup
 						 | Provision
-                         | ReadAsText" > 
+                         | ReadAsText
+                         | MathMLBlock" > 
 
 
 
@@ -41,6 +42,7 @@
 							 | List
                              | Oath
                              | ImageGroup
+                             | MathMLBlock
                            )" >
 
 
@@ -57,7 +59,7 @@
 <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
@@ -65,7 +67,7 @@
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 
 <!--  This dtd uses conditional sections to handle the "changeatt" entity.-->
@@ -504,6 +506,8 @@
 <!ELEMENT Superscript (#PCDATA) >
 <!ELEMENT Subscript (#PCDATA) >
 
+<!ELEMENT MathML (Image?, math) >
+<!ELEMENT MathMLBlock (Image?, math) >
 
 <!ELEMENT AlternateText (#PCDATA)>
 
@@ -552,7 +556,7 @@
 		xml:space (default | preserve) "default"
                %changeatt;  >
 
-<!ELEMENT Formula  (FormulaText | ImageGroup)+ >
+<!ELEMENT Formula  (FormulaText | ImageGroup | MathML)+ >
 <!ATTLIST Formula
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
                %changeatt;
@@ -1125,7 +1129,8 @@ in useability, presentation, and possible structure information degradation.
         %tbl.entry.att;
 >
 
-
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->

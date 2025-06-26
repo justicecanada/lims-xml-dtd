@@ -38,7 +38,7 @@ element as well as the HistoricalNote element. -->
 <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
@@ -46,7 +46,7 @@ element as well as the HistoricalNote element. -->
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 %commonentities;
 

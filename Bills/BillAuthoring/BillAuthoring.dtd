@@ -32,7 +32,7 @@
 <!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont| Preserve | CommentInline 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont |  Preserve
@@ -40,7 +40,7 @@
 			   | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 
 

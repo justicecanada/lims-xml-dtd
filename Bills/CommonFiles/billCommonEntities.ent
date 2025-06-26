@@ -18,7 +18,8 @@
                          | Oath
                          | ImageGroup
 						 | Provision
-                         | ReadAsText" >                         
+                         | ReadAsText
+                         | MathMLBlock" >                         
     
 
 <!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
@@ -35,6 +36,7 @@
 							 | List
                              | Oath
                              | ImageGroup
+                             | MathMLBlock
                            )" >
        
 

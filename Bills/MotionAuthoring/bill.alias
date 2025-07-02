@@ -1926,6 +1926,7 @@
 </element>
 <element>
 <name>title</name><alias>titre</alias></element>
+<element><name>LongDescription</name><alias>Description_longue</alias></element>
 <!-- Motion elements -->
 <element><name>UnilingualMotion</name><alias>Motion_unilingue</alias></element>
 <element><name>BilingualMotion</name><alias>Motion_bilingue</alias></element>

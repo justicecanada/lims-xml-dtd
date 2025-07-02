@@ -1219,8 +1219,24 @@
 <e-i-c gi="Fraction">
 <?Pub Lcl _id="f417">
 <charlist inherit="1" charsubsetref="Inline">
-<font famname="sanserif">
-<highlt inherit="1" fontclr="gray5">
+<font inherit="1">
+<highlt inherit="1">
+</charlist>
+</e-i-c>
+<e-i-c gi="Denominator">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+</charlist>
+<att>
+<charsubset>
+<usetext source="\/\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+<e-i-c gi="Numerator">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
 </charlist>
 </e-i-c>
 <e-i-c gi="graphic">

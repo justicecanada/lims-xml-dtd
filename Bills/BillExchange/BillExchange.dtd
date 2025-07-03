@@ -10,7 +10,10 @@ element as well as the HistoricalNote element. -->
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
 
 <!ENTITY % changeatt "
-              change  (ins | off )   #IMPLIED " >           
+              change  (ins | off )   #IMPLIED " >      
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;   
 
 <!-- The following line identifies the billCommonElements.dtd to be included 
      in BillExchange.dtd -->

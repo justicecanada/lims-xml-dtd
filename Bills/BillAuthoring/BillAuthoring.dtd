@@ -4,9 +4,11 @@
 <!-- The BillAuthoring DTD includes the change attribute with its modified content model. -->
 <!ENTITY % ignorechange 'INCLUDE'>
 
-
 <!ENTITY % changeatt  "
              change  (ins | del | off | alt)   #IMPLIED " >
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
 <!-- The following line identifies the billCommonElements.ent to be included 
      in BillAuthoring.dtd -->

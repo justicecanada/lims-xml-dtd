@@ -7,6 +7,9 @@
 
 <!-- The following line identifies the billCommonElements.dtd to be included 
      in Statute.dtd -->
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
   
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "../CommonFiles/billCommonElements.ent">
 <!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "../CommonFiles/billCommonEntities.ent">

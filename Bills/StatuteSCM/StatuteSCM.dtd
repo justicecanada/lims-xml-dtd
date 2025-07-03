@@ -9,6 +9,8 @@
 <!--                                                                     -->
 <!-- ____________________________________________________________________-->
 
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
 <!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection

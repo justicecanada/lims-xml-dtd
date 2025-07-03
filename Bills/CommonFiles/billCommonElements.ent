@@ -808,6 +808,3 @@ in useability, presentation, and possible structure information degradation.
         valign          (top|middle|bottom)                     #IMPLIED
         %tbl.entry.att;
 >
-
-<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
-%math;

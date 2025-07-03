@@ -1979,6 +1979,7 @@
 </element>
 <element>
 <name>title</name><alias>titre</alias></element>
+<element><name>LongDescription</name><alias>Description_longue</alias></element>
 </element-list>
 <global-attribute-list>
 <global-attribute>

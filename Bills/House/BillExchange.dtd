@@ -49,7 +49,7 @@
                            )" >
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
@@ -59,13 +59,13 @@
                           | XRefExternal | Provision | Keep)*" >
 
 
-<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
                      | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
 				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
@@ -719,6 +719,10 @@
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
 
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"   
+                    type CDATA #IMPLIED >
+
 
 <!ELEMENT Language  (%lowleveltext;)* >
 <!ATTLIST Language
@@ -1127,6 +1131,9 @@ in useability, presentation, and possible structure information degradation.
         valign          (top|middle|bottom)                     #IMPLIED
         %tbl.entry.att;
 >
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->

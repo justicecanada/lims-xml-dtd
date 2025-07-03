@@ -188,7 +188,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;
@@ -216,7 +216,7 @@
 					 
 	 
 <!ELEMENT AlternateText (#PCDATA | Ins | Del)* >
-
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Image   EMPTY  >
 <!ATTLIST Image
@@ -416,6 +416,10 @@
 <!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
+
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no" 
+                    type CDATA #IMPLIED >
 
 
 
@@ -807,4 +811,4 @@ in useability, presentation, and possible structure information degradation.
         charoff         NMTOKEN                                 #IMPLIED
         valign          (top|middle|bottom)                     #IMPLIED
         %tbl.entry.att;
->
+

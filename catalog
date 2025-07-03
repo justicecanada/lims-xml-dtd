@@ -57,6 +57,7 @@ PUBLIC "-//Justice Canada//DTD Statute SCM v2.5.0//EN" "Bills/StatuteSCM/Statute
 
 
 PUBLIC "-//W3C//DTD MathML 2.0//EN" "mathml2/mathml2.dtd"
+PUBLIC "-//W3C//DTD MathML 3.0//EN" "mathml3/mathml3.dtd"
 
 
 PUBLIC "-//Justice Canada//FOSI Common Bills Elements//EN" "CommonBillsFOSIElements.fos"

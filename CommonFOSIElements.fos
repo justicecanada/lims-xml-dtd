@@ -1220,7 +1220,7 @@
 <?Pub Lcl _id="f417">
 <charlist inherit="1" charsubsetref="Inline">
 <font inherit="1">
-<highlt inherit="1">
+<highlt bckclr="aqua">
 </charlist>
 </e-i-c>
 <e-i-c gi="Denominator">

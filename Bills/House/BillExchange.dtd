@@ -6,6 +6,9 @@
 <!ENTITY % changeatt "
               change  (ins | off )   #IMPLIED " >
 
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
+
 
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
 

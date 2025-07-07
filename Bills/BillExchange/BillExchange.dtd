@@ -35,7 +35,7 @@ element as well as the HistoricalNote element. -->
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
                           | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
                           | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection
-                          | XRefExternal | Provision | Keep)*" >
+                          | XRefExternal | Provision | Keep | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve

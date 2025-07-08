@@ -879,6 +879,12 @@
 <element>
 <name>Fraction</name><alias></alias></element>
 <element>
+<name>Numerator</name><alias>Numérateur</alias></element>
+<element>
+<name>Denominator</name><alias>Dénominateur</alias></element>
+<element>
+<name>Preserve</name><alias>Préserver</alias></element>
+<element>
 <name>Group</name><alias>Groupe</alias></element>
 <element>
 <name>Group1-Part</name><alias>Groupe1-partie</alias>

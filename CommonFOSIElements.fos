@@ -1223,6 +1223,30 @@
 <highlt bckclr="aqua">
 </charlist>
 </e-i-c>
+<e-i-c gi="math">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt bckclr="#FFCC66">
+</charlist>
+</e-i-c>
+<e-i-c gi="mi">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt bckclr="#FFCC66">
+</charlist>
+</e-i-c>
+<e-i-c gi="mo">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt bckclr="#FFCC66">
+</charlist>
+</e-i-c>
+<e-i-c gi="mn">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1">
+<highlt bckclr="#FFCC66">
+</charlist>
+</e-i-c>
 <e-i-c gi="Denominator">
 <charlist inherit="1" charsubsetref="Inline">
 <font inherit="1">

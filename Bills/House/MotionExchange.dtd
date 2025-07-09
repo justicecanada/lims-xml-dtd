@@ -101,7 +101,7 @@
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
                           | DefinedTermFr | FootnoteRef | Language | Leader
                           | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision)*" >
+                          | XRefExternal | Provision | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
 
 <!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis

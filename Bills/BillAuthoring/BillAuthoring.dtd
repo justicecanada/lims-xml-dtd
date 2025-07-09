@@ -29,7 +29,7 @@
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | CommentInline  | DefinedTermEn
                           | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
                           | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection
-                          | XRefExternal | Provision)*" >
+                          | XRefExternal | Provision | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
 <!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont| Preserve | CommentInline 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 

@@ -501,7 +501,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;
@@ -513,6 +513,8 @@
 	in-force CDATA #IMPLIED
 		float (right | left | top | bottom) #IMPLIED  
      >
+
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Fraction (Numerator, Denominator) >
 <!ATTLIST Fraction 

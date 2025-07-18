@@ -368,7 +368,7 @@
 
 <!ELEMENT HistoricalNote  %inline; >
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image?) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image?) >
 <!ATTLIST ImageGroup
                bilingual (yes | no) "no"
                spanlanguages	 (yes | no) "no"
@@ -379,6 +379,8 @@
 	in-force CDATA #IMPLIED
 	       float (right | left | top | bottom) #IMPLIED
                  >
+
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Image   EMPTY  >
 <!ATTLIST Image

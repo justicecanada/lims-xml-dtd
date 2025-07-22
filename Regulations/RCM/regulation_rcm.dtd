@@ -440,9 +440,9 @@
 	in-force CDATA #IMPLIED
 >
 
-<!ELEMENT MathML (Image?, math) >
+<!ELEMENT MathML (math) >
 
-<!ELEMENT MathMLBlock (Image?, math) >
+<!ELEMENT MathMLBlock (math) >
 
 <!ELEMENT MM  (#PCDATA) >
 

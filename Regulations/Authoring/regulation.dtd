@@ -42,14 +42,14 @@
                            )" >
 
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
 		     | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | IBR )*" >
 
-<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
 					 | Del | CommentInline | Fraction | Date | MathML)*" >
@@ -242,7 +242,9 @@
 <!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
-				
+
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"  >		
 
 <!ELEMENT FormGroup  (
                        AlternateText?,
@@ -782,7 +784,7 @@
 							| Ins
 							| Del
                             | Emphasis
-							| InlineFont
+							| InlineFont | Preserve
                             | BilingualGroup
                             | FootnoteRef
                             | Formula 

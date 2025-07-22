@@ -509,8 +509,8 @@
 <!ELEMENT Superscript (#PCDATA) >
 <!ELEMENT Subscript (#PCDATA) >
 
-<!ELEMENT MathML (Image?, math) >
-<!ELEMENT MathMLBlock (Image?, math) >
+<!ELEMENT MathML (math) >
+<!ELEMENT MathMLBlock (math) >
 
 <!ELEMENT AlternateText (#PCDATA)>
 

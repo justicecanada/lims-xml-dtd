@@ -474,9 +474,9 @@
 
 <!ELEMENT MarginalNote  %inline; >
 
-<!ELEMENT MathML (Image?, math) >
+<!ELEMENT MathML (math) >
 
-<!ELEMENT MathMLBlock (Image?, math) >
+<!ELEMENT MathMLBlock (math) >
 
 <!ELEMENT MM  (#PCDATA) >
 

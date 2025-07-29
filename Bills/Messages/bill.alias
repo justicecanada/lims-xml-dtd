@@ -2191,6 +2191,8 @@
 <global-attribute>
 <name>keep-with-previous</name><alias></alias></global-attribute>
 <global-attribute>
+<name>keep-together-line</name><alias>garder-avec-ligne</alias></global-attribute>
+<global-attribute>
 <name>language-align</name><alias>aligner_langues</alias></global-attribute>
 <global-attribute>
 <name>leader</name><alias></alias></global-attribute>

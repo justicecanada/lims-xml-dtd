@@ -266,12 +266,6 @@
 <font famname="sanserif" size="12pt" posture="italic">
 </charlist>
 <att>
-<specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
-<charsubset>
-<presp minimum="18pt" nominal="18pt" priority="high">
-</charsubset>
-</att>
-<att>
 <specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
 <charsubset>
 <usetext source="\Note:&#x2009;\" placemnt="before">

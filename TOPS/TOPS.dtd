@@ -2,7 +2,7 @@
 
 <!ELEMENT TOPS (Statute)+ >
 
-<!ELEMENT Statute (Title, ChapterNumber?, TitleChanged?, OtherLangTitle*, Minister*, LongTitle?, (Item | List | Section | Schedule |Heading | General | Terminology | Transitional | Repeal | Application | CoordinatingAmendment | ConditionalAmendment | CIF | Convention)*) >
+<!ELEMENT Statute (Title, ChapterNumber?, TitleChanged?, OtherLangTitle*, Minister*, LongTitle?, (Item | List | Section | Schedule |Heading | General | ReviewReport | Regulations | Terminology | Transitional | Repeal | Application | CoordinatingAmendment | ConsequentialAmendment | ConditionalAmendment | CIF | Convention)*) >
 <!ATTLIST Statute FlicsId CDATA #IMPLIED 
 				FlicsAlpha	CDATA #IMPLIED>
 
@@ -27,7 +27,7 @@
 
 <!ELEMENT Item (Label?, Text, List?) >
 
-<!ELEMENT Text (#PCDATA | Emphasis | Sup | XRefExternal | Amendment)* >
+<!ELEMENT Text (#PCDATA | Emphasis | Sup | XRefExternal | Amendment | Note)* >
 
 <!ELEMENT Amendment (Source | CIFInfo)* >
 
@@ -38,15 +38,19 @@
 <!ELEMENT CIFProv (#PCDATA) >
 
 <!ELEMENT CIF (Text | List)* >
+<!ELEMENT Note (Text, List*)>
 <!ELEMENT Terminology (Text)* >
 <!ELEMENT Transitional (Text)* >
 <!ELEMENT Application (Text)* >
 <!ELEMENT General (Text)* >
+<!ELEMENT Regulations (Text)* >
+<!ELEMENT ReviewReport (Text)* >
 <!ELEMENT Repeal (Text)* >
 <!ELEMENT CoordinatingAmendment (Text)* >
+<!ELEMENT ConsequentialAmendment (Text)* >
 <!ELEMENT ConditionalAmendment (Text)* >
 
-<!ELEMENT Convention (Text | List | Section | Schedule |Heading | General | Terminology | Transitional | Repeal | CoordinatingAmendment | CIF)* >
+<!ELEMENT Convention (Text | List | Section | Schedule |Heading | General | ReviewReport | Regulations | Terminology | Transitional | Repeal | CoordinatingAmendment | ConsequentialAmendment | CIF)* >
 
 <!ELEMENT Emphasis (#PCDATA | Emphasis | Sup)* >
 <!ATTLIST Emphasis

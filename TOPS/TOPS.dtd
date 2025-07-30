@@ -38,7 +38,7 @@
 <!ELEMENT CIFProv (#PCDATA) >
 
 <!ELEMENT CIF (Text | List)* >
-<!ELEMENT Note (Text, List*)>
+<!ELEMENT Note (#PCDATA)>
 <!ELEMENT Terminology (Text)* >
 <!ELEMENT Transitional (Text)* >
 <!ELEMENT Application (Text)* >

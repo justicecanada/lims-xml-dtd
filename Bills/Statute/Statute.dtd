@@ -7,6 +7,9 @@
 
 <!-- The following line identifies the billCommonElements.dtd to be included 
      in Statute.dtd -->
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
   
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "../CommonFiles/billCommonElements.ent">
 <!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "../CommonFiles/billCommonEntities.ent">
@@ -18,23 +21,23 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | LeaderRightJustified | Leader | XRefInternal | XRefSection 
                      | XRefExternal | HistoricalNote | Repealed 
-					 | PageBreak | Keep | ImageGroup | Fraction )*" >
+					 | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | BilingualGroup 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve | BilingualGroup 
                | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Formula 
 			   | XRefInternal | XRefSection 
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 %commonentities;
 

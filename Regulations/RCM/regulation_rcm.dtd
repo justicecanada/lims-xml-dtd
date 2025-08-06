@@ -37,14 +37,14 @@
                            )" >
 
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote 
                      | Repealed | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | LineBreak 
 					 | Ins | Del | CommentInline | Fraction | Date | MathML | FormBlank | IBR | HistoricalNoteSubItem)*" >
 
-<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inlineDefinedTerm  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
                      | XRefExternal | ImageGroup | HistoricalNote | Repealed | LineBreak | Ins 
 					 | Del | CommentInline | Fraction | Date | MathML)*" >
@@ -239,6 +239,10 @@
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
 
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"  
+                    type CDATA #IMPLIED >
+
 <!ELEMENT FormGroup  (
                        AlternateText?,
                        ScheduleFormHeading?,
@@ -368,7 +372,7 @@
 
 <!ELEMENT HistoricalNote  %inline; >
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image?) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image?) >
 <!ATTLIST ImageGroup
                bilingual (yes | no) "no"
                spanlanguages	 (yes | no) "no"
@@ -379,6 +383,8 @@
 	in-force CDATA #IMPLIED
 	       float (right | left | top | bottom) #IMPLIED
                  >
+
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Image   EMPTY  >
 <!ATTLIST Image
@@ -434,9 +440,9 @@
 	in-force CDATA #IMPLIED
 >
 
-<!ELEMENT MathML (Image?, math) >
+<!ELEMENT MathML (math) >
 
-<!ELEMENT MathMLBlock (Image?, math) >
+<!ELEMENT MathMLBlock (math) >
 
 <!ELEMENT MM  (#PCDATA) >
 
@@ -797,7 +803,7 @@
 			    | Ins
 			    | Del
                             | Emphasis
-							| InlineFont
+							| InlineFont | Preserve
                             | BilingualGroup
                             | FootnoteRef
                             | Formula 

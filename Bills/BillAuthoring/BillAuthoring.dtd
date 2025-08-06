@@ -4,9 +4,11 @@
 <!-- The BillAuthoring DTD includes the change attribute with its modified content model. -->
 <!ENTITY % ignorechange 'INCLUDE'>
 
-
 <!ENTITY % changeatt  "
              change  (ins | del | off | alt)   #IMPLIED " >
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
 <!-- The following line identifies the billCommonElements.ent to be included 
      in BillAuthoring.dtd -->
@@ -20,27 +22,27 @@
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Del | Sub | Sup | Emphasis | InlineFont| Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Del | Sub | Sup | Emphasis | InlineFont| Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | CommentInline  | DefinedTermEn
                           | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
                           | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection
-                          | XRefExternal | Provision)*" >
+                          | XRefExternal | Provision | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
-<!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont| CommentInline 
+<!ENTITY % inline  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont| Preserve | CommentInline 
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Del  | Sub | Sup | Emphasis | InlineFont |  Preserve
                | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
 			   | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 
 

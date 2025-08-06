@@ -188,7 +188,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;
@@ -210,10 +210,13 @@
 <!ELEMENT Base (#PCDATA) >
 <!ELEMENT Superscript (#PCDATA) >
 <!ELEMENT Subscript (#PCDATA) >
+
+<!ELEMENT MathML (math) >
+<!ELEMENT MathMLBlock (math) >
 					 
 	 
 <!ELEMENT AlternateText (#PCDATA | Ins | Del)* >
-
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Image   EMPTY  >
 <!ATTLIST Image
@@ -258,7 +261,7 @@
 		xml:space (default | preserve) "default"
                %changeatt;  >
 
-<!ELEMENT Formula  (FormulaText | ImageGroup)+ >
+<!ELEMENT Formula  (FormulaText | ImageGroup | MathML)+ >
 <!ATTLIST Formula
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
                %changeatt;
@@ -413,6 +416,10 @@
 <!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
+
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no" 
+                    type CDATA #IMPLIED >
 
 
 

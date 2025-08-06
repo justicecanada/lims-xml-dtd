@@ -9,24 +9,26 @@
 <!--                                                                     -->
 <!-- ____________________________________________________________________-->
 
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
 
-<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak | HistoricalNoteSubItem" >
 
-<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont 
+<!ENTITY % inline  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | LeaderRightJustified | Leader | XRefInternal  | XRefSection
                      | XRefExternal | HistoricalNote | Repealed 
-					 | PageBreak | Keep | ImageGroup | Fraction | FormBlank)*" >
+					 | PageBreak | Keep | ImageGroup | Fraction | FormBlank | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | BilingualGroup 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Sub | Sup | Emphasis | InlineFont | Preserve | BilingualGroup 
                | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Formula 
 			   | XRefInternal | XRefSection 
                | XRefExternal | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 <!ENTITY % blocktext  "BilingualGroup
                          | FormulaGroup
@@ -499,7 +501,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;
@@ -511,6 +513,8 @@
 	in-force CDATA #IMPLIED
 		float (right | left | top | bottom) #IMPLIED  
      >
+
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Fraction (Numerator, Denominator) >
 <!ATTLIST Fraction 
@@ -706,6 +710,9 @@
 <!ATTLIST InlineFont  font-family CDATA #REQUIRED 
 				font-size CDATA #IMPLIED >
 
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"  
+                    type CDATA #IMPLIED >
 
 <!ELEMENT Language  (%lowleveltext;)* >
 <!ATTLIST Language

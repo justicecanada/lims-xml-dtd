@@ -10,7 +10,10 @@ element as well as the HistoricalNote element. -->
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
 
 <!ENTITY % changeatt "
-              change  (ins | off )   #IMPLIED " >           
+              change  (ins | off )   #IMPLIED " >      
+
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;   
 
 <!-- The following line identifies the billCommonElements.dtd to be included 
      in BillExchange.dtd -->
@@ -25,28 +28,28 @@ element as well as the HistoricalNote element. -->
 <!-- ____________________________________________________________________-->
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Language 
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
                            | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
                           | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
                           | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection
-                          | XRefExternal | Provision | Keep)*" >
+                          | XRefExternal | Provision | Keep | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
                      | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
                      | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
 				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
                | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 %commonentities;
 

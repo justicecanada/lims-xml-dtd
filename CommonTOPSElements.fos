@@ -260,6 +260,27 @@
 </charlist>
 </e-i-c>
 
+<e-i-c gi="Note" context="Text">
+<?Pub Lcl _id="f468" _comment="Used for note to have generated note in element.">
+<charlist inherit="1" charsubsetref="inline">
+<font famname="sanserif" size="12pt" posture="italic">
+</charlist>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="en">
+<charsubset>
+<usetext source="\Note:&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+<att>
+<specval attname="FOSIutils::currentLanguage" attloc="system-func" attval="fr">
+<charsubset>
+<usetext source="\Remarque :&#x2009;\" placemnt="before">
+</usetext>
+</charsubset>
+</att>
+</e-i-c>
+
 <e-i-c gi="Label" context="Section" occur="first">
 <?Pub Lcl _id="f468" _comment="Used for the bold, numbered section label.">
 <charlist inherit="1" charsubsetref="Inline">
@@ -287,7 +308,12 @@
 </charsubset>
 </att>
 </e-i-c>
-
+<e-i-c gi="Text" context="Note">
+<charlist inherit="1" charsubsetref="Inline">
+<font inherit="1" posture="normal" size="12pt">
+<highlt fontclr="#333399">
+</charlist>
+</e-i-c>
 <e-i-c gi="Text" context="Section">
 <charlist inherit="1" charsubsetref="Inline">
 <font famname="sanserif" size="12pt">

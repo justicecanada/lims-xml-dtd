@@ -887,6 +887,12 @@
 <element>
 <name>Fraction</name><alias></alias></element>
 <element>
+<name>Numerator</name><alias>Numérateur</alias></element>
+<element>
+<name>Denominator</name><alias>Dénominateur</alias></element>
+<element>
+<name>Preserve</name><alias>Préserver</alias></element>
+<element>
 <name>Group</name><alias>Groupe</alias></element>
 <element>
 <name>Group1-Part</name><alias>Groupe1-partie</alias>
@@ -1936,6 +1942,7 @@
 </element>
 <element>
 <name>title</name><alias>titre</alias></element>
+<element><name>LongDescription</name><alias>Description_longue</alias></element>
 </element-list>
 <global-attribute-list>
 <global-attribute>
@@ -2026,6 +2033,8 @@
 <name>keep-with-next</name><alias>garder-avec-suivant</alias></global-attribute>
 <global-attribute>
 <name>keep-with-previous</name><alias>garder-avec-précédent</alias></global-attribute>
+<global-attribute>
+<name>keep-together-line</name><alias>garder-avec-ligne</alias></global-attribute>
 <global-attribute>
 <name>topmarginspacing</name><alias>espacemarginesupérieure</alias></global-attribute>
 <global-attribute>

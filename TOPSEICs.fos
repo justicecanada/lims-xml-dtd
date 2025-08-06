@@ -47,7 +47,6 @@
 <presp nominal="1em">
 <postsp nominal="0"></charlist>
 </e-i-c>
-
 <e-i-c gi="Section"><?Pub Lcl _id="f1">
 <charlist charsubsetref="Block">
 <font inherit="1">
@@ -105,7 +104,28 @@
 <presp nominal="1em">
 <postsp nominal="1em"></charlist>
 </e-i-c>
+<e-i-c gi="Regulations"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="ReviewReport"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
 <e-i-c gi="CoordinatingAmendment"><?Pub Lcl _id="f1">
+<charlist charsubsetref="Block">
+<font inherit="1">
+<indent leftind="2pi" firstln="1pi">
+<presp nominal="1em">
+<postsp nominal="1em"></charlist>
+</e-i-c>
+<e-i-c gi="ConsequentialAmendment"><?Pub Lcl _id="f1">
 <charlist charsubsetref="Block">
 <font inherit="1">
 <indent leftind="2pi" firstln="1pi">

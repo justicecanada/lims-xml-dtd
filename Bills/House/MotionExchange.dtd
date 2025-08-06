@@ -57,9 +57,14 @@
               change  (ins | off )   #IMPLIED " >
 
 
+<!ENTITY % math PUBLIC "-//W3C//DTD MathML 2.0//EN" "../../mathml2/mathml2.dtd">
+%math;
+
+
 <!-- The BillExchange DTD includes the flat entity which defines the flattened model for the Body and Heading elements. -->
 
-<!ENTITY % blockfragment  "BilingualGroup
+
+<!ENTITY % blocktext  "BilingualGroup
                          | FormulaGroup
                          | FormulaDefinition 
                          | FormulaParagraph
@@ -71,10 +76,10 @@
                          | Note
                          | Oath
                          | ImageGroup
-                         | ReadAsText" >
+						 | Provision
+                         | ReadAsText
+                         | MathMLBlock" > 
 
-
-<!ENTITY % blocktext  "( %blockfragment; | Provision)" >
 
 
 <!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
@@ -91,30 +96,32 @@
 							 | List
                              | Oath
                              | ImageGroup
+                             | MathMLBlock
                            )" >
 
 
-<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | Language 
-                           | FootnoteRef | XRefInternal | XRefExternal
+<!ENTITY % lowleveltext  "#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve | Language 
+                           | FootnoteRef | XRefInternal | XRefExternal | XRefSection
                            | PageBreak | Keep | LineBreak" >
 
 <!ENTITY % changedtext  "(#PCDATA | Emphasis | DefinedTermEn
-                          | DefinedTermFr | FootnoteRef | Language | Leader
-                          | LeaderRightJustified | Sub | Sup | XRefInternal 
-                          | XRefExternal | Provision | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
+                          | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef | Language | Leader
+                          | LeaderRightJustified | Sub | Sup | XRefInternal | XRefSection 
+                          | XRefExternal | Provision | Keep | InlineFont | Preserve| ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis
-                     | DefinedTermEn | DefinedTermFr | FootnoteRef 
-                     | Language | Leader | LeaderRightJustified | XRefInternal 
-                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction )*" >
+<!ENTITY % inline  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
+                     | DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef | FootnoteRef 
+                     | Language | Leader | LeaderRightJustified | XRefInternal | XRefSection 
+                     | XRefExternal | PageBreak | Keep | ImageGroup | Fraction | MathML)*" >
 
 
-<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis 
+<!ENTITY % tbl.entry.mdl  "(#PCDATA | Ins | Sub | Sup | Emphasis | InlineFont | Preserve
+				| DefinedTermEn | DefinedTermFr | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef 
                | BilingualGroup | FootnoteRef | Formula 
-               | XRefInternal | XRefExternal | ImageGroup | Provision
+               | XRefInternal | XRefExternal | XRefSection | ImageGroup | Provision
                | Language | Leader | SignatureBlock | LeaderRightJustified 
-               | PageBreak | Keep)* " >
+               | PageBreak | Keep | MathMLBlock)* " >
 
 
 <!--  This dtd uses conditional sections to handle the "changeatt" entity.-->
@@ -130,13 +137,13 @@
 
 
 
-<!ENTITY % schedulecontent  "(BillPiece | DocumentInternal | BillInternal
+<!ENTITY % schedulecontent  "(AmendedText | BillPiece | DocumentInternal | BillInternal
 	| %blocktext; | Schedule)*" >
 
 
 <!ENTITY % docpart  "(LongTitle | Preamble | (Heading | Section)+ 
-                     | Subsection+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
+                     | (Heading | Subsection)+ | SectionPiece | (ScheduleFormHeading, %schedulecontent;)
+                     | (%blocktext;)+ | Formula | (Caption?, title?) | (Group | GroupHeading | Provision)+)" >
 
 
 <!ELEMENT AmendedContent ((Group | Provision | GroupHeading)+) >
@@ -146,7 +153,7 @@
                    ContinuedClause?)*) >
 <!ATTLIST Clause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 
@@ -154,7 +161,7 @@
 <!ATTLIST ContinuedClause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 <!ELEMENT ContinuedDefinition  (Text) >
@@ -167,28 +174,28 @@
 <!ATTLIST ContinuedParagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 <!ELEMENT ContinuedSectionSubsection  (Text, (AmendedText | ReadAsText)?) >
 <!ATTLIST ContinuedSectionSubsection
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 <!ELEMENT ContinuedSubclause  (Text) >
 <!ATTLIST ContinuedSubclause
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 <!ELEMENT ContinuedSubparagraph  (Text) >
 <!ATTLIST ContinuedSubparagraph
                id  ID    #IMPLIED 
                %changeatt;
-               type  (normal | transitional | amending)  #IMPLIED  >
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED  >
 
 
 <!ELEMENT Definition  ( 
@@ -215,7 +222,7 @@
                         | AmendedText?)) >
 <!ATTLIST Paragraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
@@ -272,12 +279,13 @@
                     ExplanatoryNote?) >
 <!ATTLIST Section 
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)   #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)   #IMPLIED 
                %changeatt;  >
 
 
 <!ELEMENT SectionPiece  (
                            Definition
+						 | Heading
                          | Paragraph 
                          | Subparagraph 
                          | Clause 
@@ -297,14 +305,14 @@
                       | %blocktext;)+, ContinuedSubclause?)*) >
 <!ATTLIST Subclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 <!ELEMENT Subsubclause  (Label, Text, 
                          (%blocktext;)*) >
 <!ATTLIST Subsubclause
                id  ID    #IMPLIED 
-               type  (normal | transitional | amending)  #IMPLIED
+               type  (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED
                %changeatt;  >
 
 
@@ -313,7 +321,7 @@
                          | AmendedText?)) >
 <!ATTLIST Subparagraph
                id  ID    #IMPLIED 
-               type (normal | transitional | amending)  #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold)  #IMPLIED 
                %changeatt;  >
 
 
@@ -324,7 +332,7 @@
                        ExplanatoryNote?) >
 <!ATTLIST Subsection
                id  ID    #IMPLIED 
-               type (normal | transitional | amending) #IMPLIED 
+               type (normal | transitional | amending | CIF | CIFnobold) #IMPLIED 
                %changeatt;  >
 
 <!ELEMENT Summary  (TitleText, Provision+) >
@@ -340,17 +348,6 @@
 	    type (normal | transitional | amending) #IMPLIED
 	    %changeatt;  >
 
-<!ENTITY % grouppiece  "(Group1-Part+ | (Group2-Division+, Group1-Part*) 
-                         | (Group3-Subdivision+, Group2-Division*,
-                         Group1-Part*) | (Group4+, Group3-Subdivision*,
-                         Group2-Division*, Group1-Part*) | (Group5+,
-                         Group4*, Group3-Subdivision*, Group2-Division*,
-                         Group1-Part*))" >
-
-<!ENTITY % docpart-nested  "(LongTitle | Preamble | (Section*,(%grouppiece;)?) 
-                     | Subsection+ | SectionPiece | Heading+ | (ScheduleFormHeading, %schedulecontent;)
-                     | (%blockfragment;)+ | Formula | (Group | GroupHeading | Provision)+)" >
-
 
 
 <!-- ____________________________________________________________________-->
@@ -364,6 +361,8 @@
 
 <!ELEMENT LongTitle  (%lowleveltext;)* >
 
+<!ATTLIST LongTitle
+               type CDATA   #IMPLIED  >
 
 <!ELEMENT ShortTitle  (%lowleveltext;)* >
 
@@ -414,7 +413,7 @@
                | gazette | consolidation)   #REQUIRED  >
 
 
-<!ELEMENT StageText  (#PCDATA) >
+<!ELEMENT StageText  (%lowleveltext;)* >
 
 
 <!ELEMENT RelatedInformation  (%lowleveltext;)* >
@@ -458,7 +457,7 @@
 
 <!ELEMENT MarginalNote  (%lowleveltext;
                           | DefinedTermEn | DefinedTermFr
-                          | DefinitionEnOnly | DefinitionFrOnly
+                          | DefinitionEnOnly | DefinitionFrOnly | DefinitionRef
 								  | HistoricalNote
                          )* >
 <!ATTLIST MarginalNote
@@ -537,7 +536,7 @@
 <!ATTLIST BilingualItemFr font-style (regular | italic) #IMPLIED  >
 
 
-<!ELEMENT ImageGroup  (AlternateText?, Caption?, Image) >
+<!ELEMENT ImageGroup  (Caption*, title*, AlternateText?, LongDescription?, Image) >
 <!ATTLIST ImageGroup
                id  ID    #IMPLIED 
                %changeatt;
@@ -561,9 +560,11 @@
 <!ELEMENT Superscript (#PCDATA) >
 <!ELEMENT Subscript (#PCDATA) >
 
+<!ELEMENT MathML (math) >
+<!ELEMENT MathMLBlock (math) >
 
 <!ELEMENT AlternateText (#PCDATA)>
-
+<!ELEMENT LongDescription (Provision)* >
 
 <!ELEMENT Image   EMPTY  >
 <!ATTLIST Image
@@ -585,15 +586,20 @@
                type  (normal | transitional )  #IMPLIED  >
 
 <!ELEMENT DefinedTermEn  (%lowleveltext;)* >
-
+<!ATTLIST DefinedTermEn
+               style  (bold | italic | normal)    #IMPLIED  >
 
 <!ELEMENT DefinedTermFr  (%lowleveltext;)* >
+<!ATTLIST DefinedTermFr
+               style  (bold | italic | normal)    #IMPLIED  >
 
 
 <!ELEMENT DefinitionEnOnly  (%lowleveltext;)* >
 
 
 <!ELEMENT DefinitionFrOnly  (%lowleveltext;)* >
+
+<!ELEMENT DefinitionRef  (%lowleveltext;)* >
 
 
 <!ELEMENT Footnote  (Label, Text) >
@@ -604,14 +610,14 @@
 		xml:space (default | preserve) "default"
                %changeatt;  >
 
-<!ELEMENT Formula  (FormulaText | ImageGroup)+ >
+<!ELEMENT Formula  (FormulaText | ImageGroup | MathML)+ >
 <!ATTLIST Formula
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
                %changeatt;
                type  (normal | transitional )  #IMPLIED  >
 
 
-<!ELEMENT FormulaText  (%lowleveltext;)* >
+<!ELEMENT FormulaText  (%lowleveltext; | Fraction)* >
 
 
 <!ELEMENT FormulaTerm  %inline; >
@@ -671,7 +677,7 @@
 
 
 
-<!ELEMENT Note  (%lowleveltext;)* >
+<!ELEMENT Note  (%lowleveltext; | Provision)* >
 <!ATTLIST Note
                id  ID    #IMPLIED 
 		status (official | unofficial | editorial) "official"
@@ -685,7 +691,7 @@
 ]]>
 
 
-<!ELEMENT ReadAsText (Section* | Subsection* | SectionPiece | FormulaGroup) >
+<!ELEMENT ReadAsText %docpart; >
 
 
 <!ELEMENT SignatureBlock  (SignatureLine | SignatureTitle | SignatureName)+ >
@@ -759,11 +765,19 @@
 <!ELEMENT FootnoteRef  (%lowleveltext;)* >
 <!ATTLIST FootnoteRef
                idref  IDREFS    #REQUIRED >
+			   
+<!ELEMENT InlineFont (#PCDATA | Sub | Sup | Emphasis)* > 
+<!ATTLIST InlineFont  font-family CDATA #REQUIRED 
+				font-size CDATA #IMPLIED >
+
+<!ELEMENT Preserve (#PCDATA | Sub | Sup | Emphasis | InlineFont)* > 
+<!ATTLIST Preserve  keep-together-line (yes | no) "no"   
+                    type CDATA #IMPLIED >
 
 
 <!ELEMENT Language  (%lowleveltext;)* >
 <!ATTLIST Language
-               xml:lang (en | fr | la )   #REQUIRED  >
+               xml:lang (en | fr | la | cr| oj | ik | iu )   #REQUIRED  >
 
 
 <!ELEMENT LeaderRightJustified  EMPTY >
@@ -807,9 +821,16 @@
 
 <!ELEMENT XRefExternal  (%lowleveltext;)* >
 <!ATTLIST XRefExternal
-               reference-type (regulation | act | standard | other )   #REQUIRED >
+               reference-type (regulation | act | standard | other | canada-gazette | agreement)   #REQUIRED 
+				reference-level (provincial | federal | other-jurisdiction) #IMPLIED		   			   
+			   >
 
-
+<!ELEMENT XRefSection  (#PCDATA) >
+<!ATTLIST XRefSection
+			   lawid	CDATA	#IMPLIED
+			   sectionid		CDATA	#IMPLIED		   			   
+			   >
+			   
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
 <!--            REDEFINITION OF CALS XML EXCHANGE ENTITIES               -->
@@ -1146,9 +1167,9 @@ in useability, presentation, and possible structure information degradation.
 <!ELEMENT entry %tbl.entry.mdl;>
 
 <!ATTLIST entry
-		th-headers            CDATA                                #IMPLIED
-		th-id        CDATA                 #IMPLIED
-		  rowheader (yes | no) #IMPLIED		  
+		th-headers      CDATA                             		#IMPLIED
+		th-id        	CDATA                 					#IMPLIED
+		rowheader (yes | no) 									#IMPLIED		  
         colname         NMTOKEN                                 #IMPLIED
         namest          NMTOKEN                                 #IMPLIED
         nameend         NMTOKEN                                 #IMPLIED
@@ -1161,7 +1182,6 @@ in useability, presentation, and possible structure information degradation.
         valign          (top|middle|bottom)                     #IMPLIED
         %tbl.entry.att;
 >
-
 
 
 <!-- ____________________________________________________________________-->
@@ -1238,7 +1258,7 @@ in useability, presentation, and possible structure information degradation.
 <!ATTLIST ExistingText
                xml:lang (en | fr)   #IMPLIED  >
 
-<!ELEMENT AmendedText  (%docpart; | BillInternal | Schedule) >
+<!ELEMENT AmendedText  (%docpart; | BillInternal | OriginatingRef | Schedule) >
 <!ATTLIST AmendedText
                xml:lang (en | fr )   #IMPLIED 
                change  (ins | off) #IMPLIED
@@ -1259,12 +1279,11 @@ in useability, presentation, and possible structure information degradation.
 <!-- ____________________________________________________________________-->
 
 <!ELEMENT Keep  (%lowleveltext;)* >
+<!ATTLIST Keep
+               svc CDATA #IMPLIED >
 
 
 <!ELEMENT PageBreak  EMPTY >
 
 
 <!ELEMENT LineBreak  EMPTY >
-
-
-

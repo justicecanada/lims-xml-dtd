@@ -1,0 +1,35 @@
+trigger:
+  branches:
+    include:
+      - main   # trigger when GitHub main is updated
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+# 1. Install SSH key from secure files
+- task: InstallSSHKey@0
+  inputs:
+    knownHostsEntry: 'ssh.dev.azure.com'
+    sshKeySecureFile: 'xmldtd_id'
+
+# 2. Checkout GitHub repo
+- checkout: self
+  clean: true
+
+# 3. Configure Git identity
+- script: |
+    git config user.name "Azure Pipelines"
+    git config user.email "buildagent@azure.com"
+  displayName: "Configuring Git"
+
+# 4. Push into Azure DevOps repo
+- script: |
+    echo "Cloning GitHub repository with full history"
+    git clone --mirror git@github.com:justicecanada/lims-xml-dtd.git github-repo
+    cd github-repo
+    
+    echo "Pushing to Azure DevOps repo..."
+    git remote add azure git@ssh.dev.azure.com:v3/JUSTICEISB/LIMS/lims-xml-dtd
+    git push azure HEAD:refs/heads/main --force
+  displayName: "Mirroring GitHub → Azure DevOps"

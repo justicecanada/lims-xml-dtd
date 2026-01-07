@@ -1,11 +1,8 @@
 <?xml encoding="utf-8"?>
 
-<!-- This is version 1.2.1 of the Regulations DTD -->
+<!-- This is version 1.3 of the Regulations DTD -->
 
-<!-- This is the regulationcontent portion for version 1.2.2 of the Regulations DTD -->
-
-<!-- ********************************************************** -->
-<!-- 2016-01-28 - AP - Add attrs to List to match Bills -->
+<!-- This is the regulationcontent portion for version 1.3 of the Regulations DTD -->
 
 <!ENTITY % blocktext  "(
                            BilingualGroup

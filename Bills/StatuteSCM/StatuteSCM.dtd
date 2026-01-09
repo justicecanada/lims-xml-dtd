@@ -43,7 +43,8 @@
                          | Oath
                          | ImageGroup
 						 | Provision
-                         | ReadAsText" >
+                         | ReadAsText
+                         | MathMLBlock" >
                            
     
 
@@ -60,6 +61,7 @@
 							 | List
                              | Oath
                              | ImageGroup
+                             | MathMLBlock
                            )" >
        
 	   
@@ -579,7 +581,7 @@
 	width CDATA #REQUIRED >
 	
 	
-<!ELEMENT Formula  (FormulaText | ImageGroup)+ >
+<!ELEMENT Formula  (FormulaText | ImageGroup | MathML)+ >
 <!ATTLIST Formula
                indent-level (0 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | 5.5 | 6 | 6.5)   #IMPLIED
                %changeatt;

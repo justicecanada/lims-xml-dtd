@@ -4,8 +4,8 @@
 <DocumentTypeConfiguration>
 <Options allowApplicationToolbar="no" allowComposeStylesheetList="no" dictionaryName="apostrop"/><?Pub Caret?>
 <NewDialog>
-<New description="Bill" templateFile="template_e.xml"/>
-<New description="Projet de loi" templateFile="template_f.xml"/></NewDialog>
+<New description="TOPS" templateFile="tops_template_e.xml"/>
+<New description="TDLP" templateFile="tops_template_f.xml"/></NewDialog>
 <ElementOptions>
 <ElementOption element="_touchup" allowSpellChecking="no"/>
 <ElementOption element="Label" allowSpellChecking="no"/>

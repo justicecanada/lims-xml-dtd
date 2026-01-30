@@ -1306,7 +1306,7 @@
 <element>
 <name>RelatedInformation</name><alias>Renseignements_afférents</alias></element>
 <element>
-<name>ReadAsText</name><alias>Remplacement_de_termes</alias></element>
+<name>ReadAsText</name><alias>Libellé-réputé</alias></element>
 <element>
 <name>ReadAsContent</name><alias>Remplacement_de_contenu</alias></element>
 <element>

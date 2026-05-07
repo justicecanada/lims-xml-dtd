@@ -460,7 +460,7 @@
 
 <!ELEMENT TableOfProvisions (Heading | (Label?, Text))+  >
 <!ATTLIST TableOfProvisions
-               label-column-width (2.5 | 3 | 3.5 | 4 | 4.5)   "2.5"  >
+               label-column-width (0 | 2.5 | 3 | 3.5 | 4 | 4.5)   "2.5"  >
 
 
 <!ELEMENT TitleText  (%lowleveltext;)* >

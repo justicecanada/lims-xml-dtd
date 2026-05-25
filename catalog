@@ -48,7 +48,6 @@ PUBLIC "-//Justice Canada//DTD Bill Authoring v2.5.0//EN" "Bills/BillAuthoring/B
 PUBLIC "-//Justice Canada//DTD Statute v2.5.0//EN" "Bills/Statute/Statute.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Exchange v2.5.0//EN" "Bills/House/BillExchange.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "Bills/CommonFiles/BillCommonElements.ent"
-PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "Bills/CommonFiles/BillCommonEntities.ent"
 PUBLIC "-//Justice Canada//DTD Bill Motion Authoring v2.5.0//EN" "Bills/MotionAuthoring/MotionAuthoring.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Motion Exchange v2.5.0//EN" "Bills/MotionExchange/MotionExchange.dtd"
 PUBLIC "-//Justice Canada//DTD Bill Messages v2.5.0//EN" "Bills/Messages/Messages.dtd"

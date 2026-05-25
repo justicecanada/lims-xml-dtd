@@ -19,7 +19,6 @@ element as well as the HistoricalNote element. -->
      in BillExchange.dtd -->
  
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.4.2//EN" "../CommonFiles/billCommonElements.ent">
-<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.4.2//EN" "../CommonFiles/billCommonEntities.ent">
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -51,7 +50,39 @@ element as well as the HistoricalNote element. -->
                | Language | Leader | SignatureBlock | LeaderRightJustified 
                | PageBreak | Keep | MathMLBlock)* " >
 
-%commonentities;
+<!ENTITY % blocktext  "BilingualGroup
+                         | FormulaGroup
+                         | FormulaDefinition 
+                         | FormulaParagraph
+                         | FormGroup 
+                         | TableGroup
+                         | SignatureBlock
+                         | Footnote 
+                         | List
+                         | Note
+                         | Oath
+                         | ImageGroup
+						 | Provision
+                         | ReadAsText
+                         | MathMLBlock" >                         
+    
+
+<!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
+
+
+<!ENTITY % provisionblock "(
+                               BilingualGroup
+                             | FormulaGroup
+                             | FormGroup
+                             | TableGroup
+                             | SignatureBlock
+                             | Footnote
+                             | Note
+							 | List
+                             | Oath
+                             | ImageGroup
+                             | MathMLBlock
+                           )" >
 
 <!--  These elements' model exclude the CommentBlock and HistoricalNote elements.-->
 

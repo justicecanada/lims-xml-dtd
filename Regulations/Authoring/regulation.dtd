@@ -572,7 +572,7 @@
 	)
 	|
 	(
-		(Subsection | Heading)+, 
+		(Subsection | Heading | CommentBlock)+, 
 		Footnote*
 	)
   ),

@@ -13,7 +13,7 @@
 <!-- The following line identifies the billCommonElements.ent to be included 
      in BillAuthoring.dtd -->
 <!ENTITY % commonelements PUBLIC "-//Justice Canada//DTD Bill Common Elements v2.5.0//EN" "../CommonFiles/billCommonElements.ent">
-<!ENTITY % commonentities PUBLIC "-//Justice Canada//DTD Bill Common Entities v2.5.0//EN" "../CommonFiles/billCommonEntities.ent">
+
 
 <!-- ____________________________________________________________________-->
 <!--                                                                     -->
@@ -46,7 +46,39 @@
 
 
 
-%commonentities;
+<!ENTITY % blocktext  "BilingualGroup
+                         | FormulaGroup
+                         | FormulaDefinition 
+                         | FormulaParagraph
+                         | FormGroup 
+                         | TableGroup
+                         | SignatureBlock
+                         | Footnote 
+                         | List
+                         | Note
+                         | Oath
+                         | ImageGroup
+						 | Provision
+                         | ReadAsText
+                         | MathMLBlock" >                         
+    
+
+<!ENTITY % formula-block  "(FormulaGroup | ImageGroup | TableGroup | Provision | List)" >
+
+
+<!ENTITY % provisionblock "(
+                               BilingualGroup
+                             | FormulaGroup
+                             | FormGroup
+                             | TableGroup
+                             | SignatureBlock
+                             | Footnote
+                             | Note
+							 | List
+                             | Oath
+                             | ImageGroup
+                             | MathMLBlock
+                           )" >
 
 
 <!--  These elements' model include the CommentBlock element.-->

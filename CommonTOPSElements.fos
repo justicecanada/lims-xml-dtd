@@ -128,7 +128,7 @@
 <specval attname="FOSIutils::firstChildOfParent" attloc="system-func" attval="1">
 <charsubset>
 <indent firstln="@+1em" leftind="@">
-<highlt fontclr="red">
+<highlt fontclr="black">
 </charsubset>
 </att>
 <att>

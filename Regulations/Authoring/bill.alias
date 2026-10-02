@@ -1150,16 +1150,6 @@
 <name>stage</name><alias></alias>
 </attribute>
 </attribute-list>
-<name>off</name><alias></alias></value>
-</value-list>
-</attribute>
-<attribute>
-<name>cabinet-confidence</name><alias>confidentiel-du-cabinet</alias>
-</attribute>
-<attribute>
-<name>stage</name><alias></alias>
-</attribute>
-</attribute-list>
 </element>
 <element>
 <name>InLineHeading</name><alias>Intertitre_en_ligne</alias>

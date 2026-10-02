@@ -1217,6 +1217,8 @@ in useability, presentation, and possible structure information degradation.
 	drafter-en CDATA #IMPLIED
 	drafter-fr CDATA #IMPLIED
 	hasPreviousVersion CDATA #IMPLIED
+  security-level (protected-b | protected-a | protected-c | confidential | secret) "protected-b" #IMPLIED
+  cabinet-confidence (yes | no) "yes" #IMPLIED
 	>
 
 
